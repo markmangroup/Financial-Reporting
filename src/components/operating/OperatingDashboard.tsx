@@ -83,101 +83,189 @@ export default function OperatingDashboard({
         {checkingData ? (
           <div className="space-y-6">
             {/* Hero KPI - Current Balance */}
-            <div className="bg-white rounded-lg border border-gray-200 p-8 text-center">
+            <div className="bg-white rounded-lg border border-gray-200 p-6 text-center">
               <div className="text-sm font-medium text-gray-500 mb-2">CURRENT BALANCE</div>
-              <div className="text-5xl font-bold text-gray-900 mb-4">
+              <div className="text-4xl font-bold text-gray-900 mb-2">
                 ${(checkingData.summary.balance || 0).toLocaleString('en-US', { minimumFractionDigits: 2 })}
               </div>
-              <div className="text-sm text-gray-500">
-                As of {checkingData.summary.dateRange.end}
-              </div>
+              <div className="text-xs text-gray-500">As of {checkingData.summary.dateRange.end}</div>
             </div>
 
-            {/* Key Metrics */}
-            <div className="grid grid-cols-3 gap-6">
-              <div className="bg-white rounded-lg border border-gray-200 p-6">
-                <div className="text-sm font-medium text-gray-500">TOTAL INCOME</div>
-                <div className="text-2xl font-bold text-green-600 mt-2">
-                  ${checkingData.summary.totalCredits.toLocaleString('en-US', { minimumFractionDigits: 0 })}
+            {/* Key Metrics Grid */}
+            <div className="grid grid-cols-4 gap-4">
+              <div className="bg-white rounded border border-gray-200 p-4 text-center">
+                <div className="text-xs font-medium text-gray-500">TOTAL INCOME</div>
+                <div className="text-xl font-bold text-green-600 mt-1">
+                  ${(checkingData.summary.totalCredits / 1000).toFixed(0)}K
                 </div>
               </div>
-              <div className="bg-white rounded-lg border border-gray-200 p-6">
-                <div className="text-sm font-medium text-gray-500">TOTAL EXPENSES</div>
-                <div className="text-2xl font-bold text-red-600 mt-2">
-                  ${checkingData.summary.totalDebits.toLocaleString('en-US', { minimumFractionDigits: 0 })}
+              <div className="bg-white rounded border border-gray-200 p-4 text-center">
+                <div className="text-xs font-medium text-gray-500">TOTAL EXPENSES</div>
+                <div className="text-xl font-bold text-red-600 mt-1">
+                  ${(checkingData.summary.totalDebits / 1000).toFixed(0)}K
                 </div>
               </div>
-              <div className="bg-white rounded-lg border border-gray-200 p-6">
-                <div className="text-sm font-medium text-gray-500">NET FLOW</div>
-                <div className={`text-2xl font-bold mt-2 ${
+              <div className="bg-white rounded border border-gray-200 p-4 text-center">
+                <div className="text-xs font-medium text-gray-500">NET FLOW</div>
+                <div className={`text-xl font-bold mt-1 ${
                   checkingData.summary.netAmount >= 0 ? 'text-green-600' : 'text-red-600'
                 }`}>
-                  ${checkingData.summary.netAmount.toLocaleString('en-US', { minimumFractionDigits: 0 })}
+                  ${(checkingData.summary.netAmount / 1000).toFixed(0)}K
+                </div>
+              </div>
+              <div className="bg-white rounded border border-gray-200 p-4 text-center">
+                <div className="text-xs font-medium text-gray-500">TRANSACTIONS</div>
+                <div className="text-xl font-bold text-gray-900 mt-1">
+                  {checkingData.summary.totalTransactions}
                 </div>
               </div>
             </div>
 
-            {/* Categories */}
-            <div className="bg-white rounded-lg border border-gray-200 p-6">
-              <h3 className="text-lg font-semibold mb-4">Transaction Categories</h3>
-              <div className="grid grid-cols-2 gap-4">
-                {checkingData.categories.slice(0, 10).map((category, index) => (
-                  <div key={category.category} className="flex justify-between items-center py-2">
-                    <div className="flex items-center space-x-2">
-                      <div
-                        className="w-3 h-3 rounded"
-                        style={{ backgroundColor: `hsl(${(index * 45) % 360}, 65%, 55%)` }}
-                      />
-                      <span className="text-sm font-medium">{category.category}</span>
-                    </div>
-                    <div className="text-right">
-                      <div className="text-sm font-semibold">
-                        ${category.amount.toLocaleString('en-US', { minimumFractionDigits: 0 })}
+            {/* Visual Grid Layout */}
+            <div className="grid grid-cols-12 gap-4">
+
+              {/* Client Payments Visual */}
+              <div className="col-span-6 bg-white rounded border border-gray-200 p-4">
+                <div className="flex items-start justify-between mb-3">
+                  <h3 className="text-sm font-semibold text-gray-800">Client Payments</h3>
+                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                </div>
+                <div className="space-y-2">
+                  {checkingData.categories
+                    .filter(c => c.category.includes('Client Payment'))
+                    .slice(0, 3)
+                    .map((client, idx) => (
+                      <div key={client.category} className="flex justify-between items-center">
+                        <div className="text-xs text-gray-600">{client.category.replace('Client Payment - ', '')}</div>
+                        <div className="text-sm font-semibold text-green-600">
+                          ${(client.amount / 1000).toFixed(0)}K
+                        </div>
+                      </div>
+                    ))
+                  }
+                </div>
+              </div>
+
+              {/* CFO Insights - Client Payments */}
+              <div className="col-span-6 bg-green-50 border border-green-200 rounded p-4">
+                <div className="text-xs font-semibold text-green-800 mb-2">💡 CLIENT REVENUE INSIGHTS</div>
+                <ul className="text-xs text-green-700 space-y-1">
+                  <li>• Laurel Management: Primary revenue source</li>
+                  <li>• Metropolitan Partners: Secondary income stream</li>
+                  <li>• Payment consistency indicates strong client relationships</li>
+                  <li>• Consider diversification opportunities</li>
+                </ul>
+              </div>
+
+              {/* Consultant Payments Visual */}
+              <div className="col-span-6 bg-white rounded border border-gray-200 p-4">
+                <div className="flex items-start justify-between mb-3">
+                  <h3 className="text-sm font-semibold text-gray-800">International Consultants</h3>
+                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                </div>
+                <div className="space-y-2">
+                  {checkingData.categories
+                    .filter(c => c.category.includes('Consultant -'))
+                    .slice(0, 4)
+                    .map((consultant, idx) => (
+                      <div key={consultant.category} className="flex justify-between items-center">
+                        <div className="text-xs text-gray-600">
+                          {consultant.category.replace('Consultant - ', '')}
+                        </div>
+                        <div className="text-sm font-semibold text-blue-600">
+                          ${(consultant.amount / 1000).toFixed(1)}K
+                        </div>
+                      </div>
+                    ))
+                  }
+                </div>
+              </div>
+
+              {/* CFO Insights - Consultants */}
+              <div className="col-span-6 bg-blue-50 border border-blue-200 rounded p-4">
+                <div className="text-xs font-semibold text-blue-800 mb-2">🌍 GLOBAL TEAM INSIGHTS</div>
+                <ul className="text-xs text-blue-700 space-y-1">
+                  <li>• Multi-country consultant network</li>
+                  <li>• Wire transfer costs: Monitor fees</li>
+                  <li>• Currency exposure: Consider hedging</li>
+                  <li>• Tax implications: Multiple jurisdictions</li>
+                </ul>
+              </div>
+
+              {/* Monthly Trends Visual */}
+              <div className="col-span-6 bg-white rounded border border-gray-200 p-4">
+                <div className="flex items-start justify-between mb-3">
+                  <h3 className="text-sm font-semibold text-gray-800">Monthly Cash Flow</h3>
+                  <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                </div>
+                <div className="space-y-1">
+                  {checkingData.monthlyData.slice(-6).map((month, idx) => (
+                    <div key={month.month} className="flex justify-between items-center">
+                      <div className="text-xs text-gray-600">
+                        {new Date(month.month + '-01').toLocaleDateString('en-US', { month: 'short', year: '2-digit' })}
+                      </div>
+                      <div className={`text-sm font-semibold ${
+                        month.netFlow >= 0 ? 'text-green-600' : 'text-red-600'
+                      }`}>
+                        {month.netFlow >= 0 ? '+' : ''}{(month.netFlow / 1000).toFixed(0)}K
+                      </div>
+                      <div className="w-12 bg-gray-200 rounded-full h-1">
+                        <div
+                          className={`h-1 rounded-full ${month.netFlow >= 0 ? 'bg-green-500' : 'bg-red-500'}`}
+                          style={{ width: `${Math.min(Math.abs(month.netFlow) / Math.max(...checkingData.monthlyData.map(m => Math.abs(m.netFlow))) * 100, 100)}%` }}
+                        />
                       </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-            </div>
 
-            {/* Monthly Trends */}
-            <div className="bg-white rounded-lg border border-gray-200 p-6">
-              <h3 className="text-lg font-semibold mb-4">Monthly Cash Flow</h3>
-              <div className="overflow-x-auto">
-                <table className="w-full text-sm">
-                  <thead>
-                    <tr className="border-b border-gray-200">
-                      <th className="text-left py-2">Month</th>
-                      <th className="text-right py-2">Income</th>
-                      <th className="text-right py-2">Expenses</th>
-                      <th className="text-right py-2">Net Flow</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {checkingData.monthlyData.slice(-12).map(month => (
-                      <tr key={month.month} className="border-b border-gray-100">
-                        <td className="py-2 font-medium">
-                          {new Date(month.month + '-01').toLocaleDateString('en-US', {
-                            year: 'numeric',
-                            month: 'short'
-                          })}
-                        </td>
-                        <td className="py-2 text-right text-green-600 font-medium">
-                          ${month.totalCredits.toLocaleString('en-US', { minimumFractionDigits: 0 })}
-                        </td>
-                        <td className="py-2 text-right text-red-600 font-medium">
-                          ${month.totalDebits.toLocaleString('en-US', { minimumFractionDigits: 0 })}
-                        </td>
-                        <td className={`py-2 text-right font-semibold ${
-                          month.netFlow >= 0 ? 'text-green-600' : 'text-red-600'
-                        }`}>
-                          ${month.netFlow.toLocaleString('en-US', { minimumFractionDigits: 0 })}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+              {/* CFO Insights - Cash Flow */}
+              <div className="col-span-6 bg-purple-50 border border-purple-200 rounded p-4">
+                <div className="text-xs font-semibold text-purple-800 mb-2">📊 CASH FLOW INSIGHTS</div>
+                <ul className="text-xs text-purple-700 space-y-1">
+                  <li>• Positive trend: Strong business fundamentals</li>
+                  <li>• Seasonal patterns: Plan for fluctuations</li>
+                  <li>• Working capital: Maintain 3-month buffer</li>
+                  <li>• Growth opportunities: Excess cash deployment</li>
+                </ul>
               </div>
+
+              {/* Business Services Visual */}
+              <div className="col-span-6 bg-white rounded border border-gray-200 p-4">
+                <div className="flex items-start justify-between mb-3">
+                  <h3 className="text-sm font-semibold text-gray-800">Business Operations</h3>
+                  <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                </div>
+                <div className="space-y-2">
+                  {checkingData.categories
+                    .filter(c => c.category.includes('Credit Card Autopay') || c.category.includes('Auto Loan') || c.category.includes('Monthly Bank'))
+                    .slice(0, 3)
+                    .map((service, idx) => (
+                      <div key={service.category} className="flex justify-between items-center">
+                        <div className="text-xs text-gray-600">
+                          {service.category.replace('Payment', '').replace('Monthly Bank ', 'Bank ')}
+                        </div>
+                        <div className="text-sm font-semibold text-orange-600">
+                          ${(service.amount / 1000).toFixed(1)}K
+                        </div>
+                      </div>
+                    ))
+                  }
+                </div>
+              </div>
+
+              {/* CFO Insights - Operations */}
+              <div className="col-span-6 bg-orange-50 border border-orange-200 rounded p-4">
+                <div className="text-xs font-semibold text-orange-800 mb-2">⚡ OPERATIONAL INSIGHTS</div>
+                <ul className="text-xs text-orange-700 space-y-1">
+                  <li>• Automated payments: Good cash management</li>
+                  <li>• Fixed costs predictable: Easy budgeting</li>
+                  <li>• Credit utilization: Monitor for optimization</li>
+                  <li>• Service fees: Consider negotiation</li>
+                </ul>
+              </div>
+
             </div>
           </div>
         ) : (
