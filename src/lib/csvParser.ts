@@ -71,42 +71,88 @@ function parseCSVLine(line: string): string[] {
 function categorizeCheckingTransaction(description: string, type: string): string {
   const desc = description.toLowerCase()
 
-  // Major client payments
-  if (desc.includes('laurel managemen') || desc.includes('metropolitan')) {
-    return 'Client Payments'
+  // Major client payments - specific to your business
+  if (desc.includes('laurel managemen')) {
+    return 'Client Payment - Laurel Management'
+  }
+  if (desc.includes('metropolitan') && (desc.includes('par') || desc.includes('eq'))) {
+    return 'Client Payment - Metropolitan Partners'
   }
 
-  // Consultant payments
-  if (desc.includes('wire transfer') && (desc.includes('consultancy') || desc.includes('spain') || desc.includes('bulgaria') || desc.includes('slovakia'))) {
-    return 'Consultant Payments'
+  // International consultant payments - very specific patterns
+  if (desc.includes('wire transfer') && desc.includes('consultancy')) {
+    if (desc.includes('spain') || desc.includes('bilbao') || desc.includes('carmen')) {
+      return 'Consultant - Spain (Carmen)'
+    }
+    if (desc.includes('bulgaria') || desc.includes('unicredit bulbank') || desc.includes('pepi')) {
+      return 'Consultant - Bulgaria (Pepi)'
+    }
+    if (desc.includes('slovakia') || desc.includes('tatra banka') || desc.includes('ivana')) {
+      return 'Consultant - Slovakia (Ivana)'
+    }
+    if (desc.includes('london') || desc.includes('jpmorgan chase bank na - london')) {
+      if (desc.includes('petrana')) return 'Consultant - UK (Petrana)'
+      if (desc.includes('beata')) return 'Consultant - UK (Beata)'
+      if (desc.includes('marianna')) return 'Consultant - UK (Marianna)'
+      if (desc.includes('nikoleta')) return 'Consultant - UK (Nikoleta)'
+      if (desc.includes('jan dzubak')) return 'Consultant - UK (Jan)'
+      return 'Consultant - UK (Other)'
+    }
+    return 'Consultant Payment - International'
   }
 
-  // Credit card payments
-  if (desc.includes('chase credit') && type === 'ACH_DEBIT') {
-    return 'Credit Card Payment'
+  // Credit card autopay - exact pattern
+  if (desc.includes('chase credit crd') && desc.includes('autopaybussec') && type === 'ACH_DEBIT') {
+    return 'Credit Card Autopay'
   }
 
-  // Business services
-  if (desc.includes('bill.com') || desc.includes('swan softweb')) {
-    return 'Business Services'
+  // Business software and services
+  if (desc.includes('bill.com')) {
+    return 'Business Services - Bill.com'
+  }
+  if (desc.includes('swan softweb')) {
+    return 'Development Services - Swan'
   }
 
-  // Auto loan
-  if (desc.includes('auto loan') || type === 'LOAN_PMT') {
-    return 'Auto Loan'
+  // Auto loan payments - specific pattern
+  if (desc.includes('online payment') && desc.includes('auto loan 1105')) {
+    return 'Auto Loan Payment'
   }
 
-  // Fees
-  if (type === 'FEE_TRANSACTION' || desc.includes('service charges')) {
-    return 'Bank Fees'
+  // Monthly fees
+  if (type === 'FEE_TRANSACTION' || desc.includes('service charges for the month')) {
+    return 'Monthly Bank Fees'
   }
 
-  // Transfers
-  if (type === 'ACCT_XFER') {
+  // Account transfers
+  if (type === 'ACCT_XFER' || desc.includes('online transfer')) {
     return 'Account Transfer'
   }
 
-  return type || 'Other'
+  // Specific payment services
+  if (desc.includes('abri') && type === 'ACH_PAYMENT') {
+    return 'Business Service - Abri'
+  }
+
+  // Wire reversals
+  if (desc.includes('wire reversal')) {
+    return 'Wire Transfer Reversal'
+  }
+
+  // Account verification micro-transactions
+  if (desc.includes('acctverifysec')) {
+    return 'Account Verification'
+  }
+
+  // Default categorization
+  if (type === 'ACH_CREDIT') return 'ACH Credit - Unknown'
+  if (type === 'ACH_DEBIT') return 'ACH Debit - Unknown'
+  if (type === 'WIRE_OUTGOING') return 'Wire Transfer - Outgoing'
+  if (type === 'WIRE_INCOMING') return 'Wire Transfer - Incoming'
+  if (type === 'MISC_DEBIT') return 'Miscellaneous Debit'
+  if (type === 'MISC_CREDIT') return 'Miscellaneous Credit'
+
+  return type || 'Uncategorized'
 }
 
 function generateSummaryData(transactions: BankTransaction[], accountType: 'checking' | 'credit'): ParsedCSVData {
@@ -115,15 +161,18 @@ function generateSummaryData(transactions: BankTransaction[], accountType: 'chec
   const totalDebits = transactions.filter(t => t.amount < 0).reduce((sum, t) => sum + Math.abs(t.amount), 0)
   const totalCredits = transactions.filter(t => t.amount > 0).reduce((sum, t) => sum + t.amount, 0)
 
+  // Find the most recent transaction (latest date) for current balance
+  const mostRecentTransaction = sortedTransactions[sortedTransactions.length - 1]
+
   const summary: AccountSummary = {
     account: transactions[0]?.account || '',
     accountType,
     totalTransactions: transactions.length,
     dateRange: {
       start: sortedTransactions[0]?.date || '',
-      end: sortedTransactions[sortedTransactions.length - 1]?.date || ''
+      end: mostRecentTransaction?.date || ''
     },
-    balance: transactions[0]?.balance,
+    balance: mostRecentTransaction?.balance, // Use balance from most recent transaction
     totalDebits,
     totalCredits,
     netAmount: totalCredits - totalDebits

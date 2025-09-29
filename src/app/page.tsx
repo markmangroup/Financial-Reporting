@@ -3,12 +3,16 @@
 import { useState } from 'react'
 import FileUpload from '@/components/ui/FileUpload'
 import FinancialCharts from '@/components/charts/FinancialCharts'
+import DataValidation from '@/components/validation/DataValidation'
+import TransactionAudit from '@/components/validation/TransactionAudit'
 import { parseChaseCheckingCSV, parseChaseCreditCSV } from '@/lib/csvParser'
 import { ParsedCSVData } from '@/types'
 
 export default function HomePage() {
   const [checkingData, setCheckingData] = useState<ParsedCSVData | null>(null)
   const [creditData, setCreditData] = useState<ParsedCSVData | null>(null)
+  const [rawCheckingCSV, setRawCheckingCSV] = useState<string>('')
+  const [rawCreditCSV, setRawCreditCSV] = useState<string>('')
   const [uploadStatus, setUploadStatus] = useState<string>('')
 
   const handleFileUpload = (file: File, content: string, filename: string) => {
@@ -20,11 +24,13 @@ export default function HomePage() {
         // Credit card CSV
         const parsed = parseChaseCreditCSV(content)
         setCreditData(parsed)
+        setRawCreditCSV(content)
         setUploadStatus(`✅ Credit card data loaded: ${parsed.transactions.length} transactions`)
       } else if (content.includes('Details,Posting Date,Description,Amount,Type,Balance')) {
         // Checking account CSV
         const parsed = parseChaseCheckingCSV(content)
         setCheckingData(parsed)
+        setRawCheckingCSV(content)
         setUploadStatus(`✅ Checking account data loaded: ${parsed.transactions.length} transactions`)
       } else {
         setUploadStatus(`❌ Unrecognized CSV format in ${filename}`)
@@ -38,6 +44,8 @@ export default function HomePage() {
   const resetData = () => {
     setCheckingData(null)
     setCreditData(null)
+    setRawCheckingCSV('')
+    setRawCreditCSV('')
     setUploadStatus('')
   }
 
@@ -84,6 +92,20 @@ export default function HomePage() {
             )}
           </div>
         </div>
+
+        {/* Data Validation */}
+        <DataValidation
+          checkingData={checkingData}
+          creditData={creditData}
+          rawCheckingCSV={rawCheckingCSV}
+          rawCreditCSV={rawCreditCSV}
+        />
+
+        {/* Transaction Audit */}
+        <TransactionAudit
+          checkingData={checkingData}
+          creditData={creditData}
+        />
 
         {/* Financial Analysis */}
         <FinancialCharts
