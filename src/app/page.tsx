@@ -51,39 +51,32 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-2">
-            Markman Group Financial Reporting
+      <div className="flex">
+        {/* Sidebar */}
+        <div className="w-80 bg-white border-r border-gray-200 p-6 min-h-screen">
+          <h1 className="text-xl font-bold text-gray-900 mb-6">
+            Markman Group<br/>Financial Dashboard
           </h1>
-          <p className="text-xl text-gray-600">
-            CFO-level financial analysis and reporting dashboard
-          </p>
-        </div>
 
-        {/* Upload Section */}
-        <div className="mb-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-6 mb-4">
-              <FileUpload
-                onFileUpload={handleFileUpload}
-                label="Chase Checking Account CSV"
-              />
-              <FileUpload
-                onFileUpload={handleFileUpload}
-                label="Chase Credit Card CSV"
-              />
-            </div>
+          {/* Upload Section */}
+          <div className="space-y-4 mb-6">
+            <div className="text-sm font-medium text-gray-700">Data Upload</div>
+            <FileUpload
+              onFileUpload={handleFileUpload}
+              label="Checking CSV"
+            />
+            <FileUpload
+              onFileUpload={handleFileUpload}
+              label="Credit CSV"
+            />
 
-            {/* Upload Status */}
             {uploadStatus && (
-              <div className="text-center">
-                <p className="text-sm font-medium text-gray-700 mb-2">{uploadStatus}</p>
+              <div className="text-xs text-gray-600 mt-2">
+                {uploadStatus}
                 {(checkingData || creditData) && (
                   <button
                     onClick={resetData}
-                    className="text-sm text-red-600 hover:text-red-700 underline"
+                    className="block text-red-600 hover:text-red-700 underline mt-1"
                   >
                     Reset Data
                   </button>
@@ -91,57 +84,140 @@ export default function HomePage() {
               </div>
             )}
           </div>
-        </div>
 
-        {/* Data Validation */}
-        <DataValidation
-          checkingData={checkingData}
-          creditData={creditData}
-          rawCheckingCSV={rawCheckingCSV}
-          rawCreditCSV={rawCreditCSV}
-        />
-
-        {/* Transaction Audit */}
-        <TransactionAudit
-          checkingData={checkingData}
-          creditData={creditData}
-        />
-
-        {/* Financial Analysis */}
-        <FinancialCharts
-          checkingData={checkingData}
-          creditData={creditData}
-        />
-
-        {/* Instructions */}
-        {!checkingData && !creditData && (
-          <div className="max-w-3xl mx-auto mt-12">
-            <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-                Getting Started
-              </h2>
-              <div className="space-y-4 text-gray-600">
-                <p>
-                  Upload your Chase bank CSV files to generate comprehensive financial analysis:
-                </p>
-                <ul className="space-y-2 ml-4">
-                  <li>• <strong>Checking Account:</strong> Business transactions, client payments, expenses</li>
-                  <li>• <strong>Credit Card:</strong> Categorized spending analysis and trends</li>
-                </ul>
-                <div className="p-4 bg-blue-50 rounded-lg border border-blue-200 mt-6">
-                  <h3 className="font-medium text-blue-900 mb-2">Reports Include:</h3>
-                  <ul className="text-blue-700 text-sm space-y-1">
-                    <li>• Monthly cash flow analysis</li>
-                    <li>• Category breakdowns and spending patterns</li>
-                    <li>• Client payment tracking</li>
-                    <li>• Consultant and vendor analysis</li>
-                    <li>• Executive-level financial summaries</li>
-                  </ul>
+          {/* Quick Stats */}
+          {checkingData && (
+            <div className="space-y-4 border-t pt-4">
+              <div className="text-sm font-medium text-gray-700">Account Info</div>
+              <div className="text-xs space-y-2">
+                <div>
+                  <div className="text-gray-500">Account</div>
+                  <div className="font-medium">Chase 5939</div>
+                </div>
+                <div>
+                  <div className="text-gray-500">Date Range</div>
+                  <div className="font-medium">
+                    {checkingData.summary.dateRange.start} to<br/>
+                    {checkingData.summary.dateRange.end}
+                  </div>
+                </div>
+                <div>
+                  <div className="text-gray-500">Transactions</div>
+                  <div className="font-medium">{checkingData.summary.totalTransactions}</div>
                 </div>
               </div>
             </div>
-          </div>
-        )}
+          )}
+        </div>
+
+        {/* Main Content */}
+        <div className="flex-1 p-6">
+          {checkingData ? (
+            <div className="space-y-6">
+              {/* Hero KPI - Current Balance */}
+              <div className="bg-white rounded-lg border border-gray-200 p-8 text-center">
+                <div className="text-sm font-medium text-gray-500 mb-2">CURRENT BALANCE</div>
+                <div className="text-5xl font-bold text-gray-900 mb-4">
+                  ${(checkingData.summary.balance || 0).toLocaleString('en-US', { minimumFractionDigits: 2 })}
+                </div>
+                <div className="text-sm text-gray-500">
+                  As of {checkingData.summary.dateRange.end}
+                </div>
+              </div>
+
+              {/* Key Metrics */}
+              <div className="grid grid-cols-3 gap-6">
+                <div className="bg-white rounded-lg border border-gray-200 p-6">
+                  <div className="text-sm font-medium text-gray-500">TOTAL INCOME</div>
+                  <div className="text-2xl font-bold text-green-600 mt-2">
+                    ${checkingData.summary.totalCredits.toLocaleString('en-US', { minimumFractionDigits: 0 })}
+                  </div>
+                </div>
+                <div className="bg-white rounded-lg border border-gray-200 p-6">
+                  <div className="text-sm font-medium text-gray-500">TOTAL EXPENSES</div>
+                  <div className="text-2xl font-bold text-red-600 mt-2">
+                    ${checkingData.summary.totalDebits.toLocaleString('en-US', { minimumFractionDigits: 0 })}
+                  </div>
+                </div>
+                <div className="bg-white rounded-lg border border-gray-200 p-6">
+                  <div className="text-sm font-medium text-gray-500">NET FLOW</div>
+                  <div className={`text-2xl font-bold mt-2 ${
+                    checkingData.summary.netAmount >= 0 ? 'text-green-600' : 'text-red-600'
+                  }`}>
+                    ${checkingData.summary.netAmount.toLocaleString('en-US', { minimumFractionDigits: 0 })}
+                  </div>
+                </div>
+              </div>
+
+              {/* Categories */}
+              <div className="bg-white rounded-lg border border-gray-200 p-6">
+                <h3 className="text-lg font-semibold mb-4">Transaction Categories</h3>
+                <div className="grid grid-cols-2 gap-4">
+                  {checkingData.categories.slice(0, 10).map((category, index) => (
+                    <div key={category.category} className="flex justify-between items-center py-2">
+                      <div className="flex items-center space-x-2">
+                        <div
+                          className="w-3 h-3 rounded"
+                          style={{ backgroundColor: `hsl(${(index * 45) % 360}, 65%, 55%)` }}
+                        />
+                        <span className="text-sm font-medium">{category.category}</span>
+                      </div>
+                      <div className="text-right">
+                        <div className="text-sm font-semibold">
+                          ${category.amount.toLocaleString('en-US', { minimumFractionDigits: 0 })}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Monthly Trends */}
+              <div className="bg-white rounded-lg border border-gray-200 p-6">
+                <h3 className="text-lg font-semibold mb-4">Monthly Cash Flow</h3>
+                <div className="overflow-x-auto">
+                  <table className="w-full text-sm">
+                    <thead>
+                      <tr className="border-b border-gray-200">
+                        <th className="text-left py-2">Month</th>
+                        <th className="text-right py-2">Income</th>
+                        <th className="text-right py-2">Expenses</th>
+                        <th className="text-right py-2">Net Flow</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {checkingData.monthlyData.slice(-12).map(month => (
+                        <tr key={month.month} className="border-b border-gray-100">
+                          <td className="py-2 font-medium">
+                            {new Date(month.month + '-01').toLocaleDateString('en-US', {
+                              year: 'numeric',
+                              month: 'short'
+                            })}
+                          </td>
+                          <td className="py-2 text-right text-green-600 font-medium">
+                            ${month.totalCredits.toLocaleString('en-US', { minimumFractionDigits: 0 })}
+                          </td>
+                          <td className="py-2 text-right text-red-600 font-medium">
+                            ${month.totalDebits.toLocaleString('en-US', { minimumFractionDigits: 0 })}
+                          </td>
+                          <td className={`py-2 text-right font-semibold ${
+                            month.netFlow >= 0 ? 'text-green-600' : 'text-red-600'
+                          }`}>
+                            ${month.netFlow.toLocaleString('en-US', { minimumFractionDigits: 0 })}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div className="text-center py-20">
+              <div className="text-gray-400 text-lg mb-4">Upload your Chase checking account CSV to view financial dashboard</div>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   )
