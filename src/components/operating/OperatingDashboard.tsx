@@ -2,6 +2,10 @@
 
 import { ParsedCSVData } from '@/types'
 import FileUpload from '@/components/ui/FileUpload'
+import FinancialCharts from '@/components/charts/FinancialCharts'
+import DataValidation from '@/components/validation/DataValidation'
+import TransactionAudit from '@/components/validation/TransactionAudit'
+import ExportPanel from '@/components/ui/ExportPanel'
 
 interface OperatingDashboardProps {
   checkingData: ParsedCSVData | null
@@ -9,6 +13,8 @@ interface OperatingDashboardProps {
   uploadStatus: string
   onFileUpload: (file: File, content: string, filename: string) => void
   onResetData: () => void
+  rawCheckingCSV?: string
+  rawCreditCSV?: string
 }
 
 export default function OperatingDashboard({
@@ -16,7 +22,9 @@ export default function OperatingDashboard({
   creditData,
   uploadStatus,
   onFileUpload,
-  onResetData
+  onResetData,
+  rawCheckingCSV,
+  rawCreditCSV
 }: OperatingDashboardProps) {
   return (
     <div className="flex">
@@ -76,10 +84,21 @@ export default function OperatingDashboard({
             </div>
           </div>
         )}
+
+        {/* Export Panel */}
+        {(checkingData || creditData) && (
+          <div className="border-t pt-4">
+            <ExportPanel 
+              checkingData={checkingData}
+              creditData={creditData}
+              dashboardElementId="dashboard-content"
+            />
+          </div>
+        )}
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 p-6">
+      <div id="dashboard-content" className="flex-1 p-6">
         {checkingData ? (
           <div className="space-y-6">
             {/* Hero KPI - Current Balance */}
@@ -266,6 +285,28 @@ export default function OperatingDashboard({
                 </ul>
               </div>
 
+            </div>
+
+            {/* Financial Charts Section */}
+            <div className="mt-8">
+              <FinancialCharts 
+                checkingData={checkingData} 
+                creditData={creditData} 
+              />
+            </div>
+
+            {/* Data Validation & Audit Section */}
+            <div className="mt-8 space-y-6">
+              <DataValidation 
+                checkingData={checkingData}
+                creditData={creditData}
+                rawCheckingCSV={rawCheckingCSV}
+                rawCreditCSV={rawCreditCSV}
+              />
+              <TransactionAudit 
+                checkingData={checkingData}
+                creditData={creditData}
+              />
             </div>
           </div>
         ) : (
