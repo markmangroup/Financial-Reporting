@@ -1,11 +1,12 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Navigation from '@/components/layout/Navigation'
 import OperatingDashboard from '@/components/operating/OperatingDashboard'
 import BTCDashboard from '@/components/currencies/BTCDashboard'
 import { parseChaseCheckingCSV, parseChaseCreditCSV } from '@/lib/csvParser'
 import { ParsedCSVData } from '@/types'
+import { loadFinancialData, saveFinancialData, clearFinancialData, getStorageInfo } from '@/lib/dataPersistence'
 
 export default function HomePage() {
   const [activeTab, setActiveTab] = useState<'operating' | 'currencies'>('operating')
@@ -14,6 +15,38 @@ export default function HomePage() {
   const [rawCheckingCSV, setRawCheckingCSV] = useState<string>('')
   const [rawCreditCSV, setRawCreditCSV] = useState<string>('')
   const [uploadStatus, setUploadStatus] = useState<string>('')
+  const [storageInfo, setStorageInfo] = useState({
+    hasData: false,
+    dataAge: 0,
+    isStale: false,
+    lastUpdated: 'Never'
+  })
+
+  // Load data from localStorage on component mount (client-side only)
+  useEffect(() => {
+    const storedData = loadFinancialData()
+    if (storedData) {
+      setCheckingData(storedData.checkingData)
+      setCreditData(storedData.creditData)
+      setRawCheckingCSV(storedData.rawCheckingCSV)
+      setRawCreditCSV(storedData.rawCreditCSV)
+      setUploadStatus(`Data loaded from storage (${storedData.lastUpdated ? new Date(storedData.lastUpdated).toLocaleString() : 'Unknown'})`)
+      setStorageInfo(getStorageInfo())
+    }
+  }, [])
+
+  // Save data to localStorage whenever it changes
+  useEffect(() => {
+    if (checkingData || creditData) {
+      saveFinancialData({
+        checkingData,
+        creditData,
+        rawCheckingCSV,
+        rawCreditCSV
+      })
+      setStorageInfo(getStorageInfo())
+    }
+  }, [checkingData, creditData, rawCheckingCSV, rawCreditCSV])
 
   const handleFileUpload = (file: File, content: string, filename: string) => {
     setUploadStatus(`Processing ${filename}...`)
@@ -47,6 +80,8 @@ export default function HomePage() {
     setRawCheckingCSV('')
     setRawCreditCSV('')
     setUploadStatus('')
+    clearFinancialData()
+    setStorageInfo(getStorageInfo())
   }
 
   return (
@@ -55,6 +90,7 @@ export default function HomePage() {
       <Navigation
         activeTab={activeTab}
         onTabChange={setActiveTab}
+        storageInfo={storageInfo}
       />
 
       {/* Tab Content */}
@@ -65,6 +101,8 @@ export default function HomePage() {
           uploadStatus={uploadStatus}
           onFileUpload={handleFileUpload}
           onResetData={resetData}
+          rawCheckingCSV={rawCheckingCSV}
+          rawCreditCSV={rawCreditCSV}
         />
       ) : (
         <div className="p-6">

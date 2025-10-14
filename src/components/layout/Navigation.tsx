@@ -5,9 +5,15 @@ import { useState } from 'react'
 interface NavigationProps {
   activeTab: 'operating' | 'currencies'
   onTabChange: (tab: 'operating' | 'currencies') => void
+  storageInfo?: {
+    hasData: boolean
+    dataAge: number
+    isStale: boolean
+    lastUpdated: string
+  }
 }
 
-export default function Navigation({ activeTab, onTabChange }: NavigationProps) {
+export default function Navigation({ activeTab, onTabChange, storageInfo }: NavigationProps) {
   return (
     <div className="bg-white border-b border-gray-200">
       <div className="max-w-full px-6">
@@ -45,6 +51,16 @@ export default function Navigation({ activeTab, onTabChange }: NavigationProps) 
 
           {/* Additional Actions */}
           <div className="flex items-center space-x-4">
+            {storageInfo?.hasData && (
+              <div className="flex items-center space-x-2">
+                <div className={`w-2 h-2 rounded-full ${
+                  storageInfo.isStale ? 'bg-yellow-500' : 'bg-green-500'
+                }`}></div>
+                <div className="text-xs text-gray-500">
+                  {storageInfo.isStale ? 'Data stale' : 'Data saved'}
+                </div>
+              </div>
+            )}
             <div className="text-sm text-gray-500">
               {new Date().toLocaleDateString('en-US', {
                 month: 'short',
