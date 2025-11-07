@@ -1,0 +1,41 @@
+{
+  "consultantName": "Swan",
+  "projects": [
+    "Laurel AG Data Platform",
+    "Metropolitan Partners Analytics Dashboard",
+    "Financial Reporting System",
+    "Data Integration Services"
+  ],
+  "deliverables": [
+    "Full-stack web application development",
+    "API development and integration",
+    "Database design and optimization",
+    "Frontend UI/UX implementation",
+    "Backend infrastructure setup"
+  ],
+  "timeline": [
+    {
+      "date": "Nov 18, 2024",
+      "subject": "Initial engagement - Development team onboarding"
+    },
+    {
+      "date": "Jan 15, 2025",
+      "subject": "Project milestone delivery - Phase 1"
+    },
+    {
+      "date": "Apr 23, 2025",
+      "subject": "Invoice US-338 - Jan/Feb services delivered"
+    },
+    {
+      "date": "Apr 23, 2025",
+      "subject": "Ongoing development work"
+    },
+    {
+      "date": "Jul 18, 2025",
+      "subject": "Final project delivery and handoff"
+    }
+  ],
+  "emailCount": 0,
+  "lastUpdated": "2025-11-04T15:00:00.000Z",
+  "notes": "Manual entry - Swan communications handled through project management channels"
+}

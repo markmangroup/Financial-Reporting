@@ -1,0 +1,158 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Project Schema",
+  "description": "Defines the structure for project metadata files",
+  "type": "object",
+  "required": ["id", "name", "client", "type", "status", "financial", "team"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique project identifier (kebab-case)"
+    },
+    "name": {
+      "type": "string",
+      "description": "Full project name"
+    },
+    "client": {
+      "type": "string",
+      "description": "Client name"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "application-development",
+        "process-discovery",
+        "data-engineering",
+        "reporting-analytics",
+        "process-automation"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "completed", "on-hold", "cancelled"]
+    },
+    "timeline": {
+      "type": "object",
+      "properties": {
+        "startDate": { "type": "string", "format": "date" },
+        "endDate": { "type": "string", "format": "date" },
+        "lastActivityDate": { "type": "string", "format": "date" }
+      }
+    },
+    "financial": {
+      "type": "object",
+      "required": ["revenue", "costs"],
+      "properties": {
+        "revenue": {
+          "type": "number",
+          "description": "Total revenue from client"
+        },
+        "revenueDetails": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "date": { "type": "string" },
+              "amount": { "type": "number" },
+              "invoice": { "type": "string" },
+              "description": { "type": "string" }
+            }
+          }
+        },
+        "costs": {
+          "type": "object",
+          "properties": {
+            "consultants": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": { "type": "string" },
+                  "totalCost": { "type": "number" },
+                  "allocationPercent": { "type": "number" },
+                  "allocatedCost": { "type": "number" },
+                  "sourceEvidence": {
+                    "type": "string",
+                    "enum": ["sharepoint-activity", "timesheet", "contract", "manual"]
+                  }
+                }
+              }
+            },
+            "totalConsultantCosts": { "type": "number" },
+            "overheadAllocated": { "type": "number" }
+          }
+        },
+        "profitability": {
+          "type": "object",
+          "properties": {
+            "grossProfit": { "type": "number" },
+            "grossMargin": { "type": "number" }
+          }
+        }
+      }
+    },
+    "team": {
+      "type": "object",
+      "properties": {
+        "consultants": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "primaryContact": { "type": "string" }
+      }
+    },
+    "sharepoint": {
+      "type": "object",
+      "properties": {
+        "path": { "type": "string" },
+        "url": { "type": "string" },
+        "lastSyncedAt": { "type": "string", "format": "date-time" }
+      }
+    },
+    "github": {
+      "type": "object",
+      "properties": {
+        "repos": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "documents": {
+      "type": "object",
+      "properties": {
+        "contracts": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/document" }
+        },
+        "proposals": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/document" }
+        },
+        "deliverables": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/document" }
+        },
+        "documentation": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/document" }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "document": {
+      "type": "object",
+      "properties": {
+        "filename": { "type": "string" },
+        "localPath": { "type": "string" },
+        "sharepointUrl": { "type": "string" },
+        "downloadedAt": { "type": "string", "format": "date-time" },
+        "fileHash": { "type": "string", "description": "SHA256 hash" },
+        "fileSize": { "type": "number" },
+        "modifiedBy": { "type": "string" },
+        "modifiedDate": { "type": "string", "format": "date-time" }
+      }
+    }
+  }
+}

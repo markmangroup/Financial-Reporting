@@ -1,0 +1,62 @@
+{
+  "id": "dittmar-ap-automation",
+  "name": "Dittmar AP Automation",
+  "client": "Dittmar Company",
+  "type": "process-automation",
+  "status": "completed",
+  "description": "Accounts Payable automation assessment and process improvement recommendations",
+  "timeline": {
+    "startDate": "2024-06-01",
+    "endDate": "2024-08-31",
+    "lastActivityDate": "2024-08-31"
+  },
+  "financial": {
+    "revenue": 0,
+    "revenueDetails": [],
+    "costs": {
+      "consultants": [
+        {
+          "name": "Carmen",
+          "allocatedCost": 797,
+          "allocationPercent": 5.6,
+          "sourceEvidence": "SharePoint activity: 19 file modifications in Dittmar folder",
+          "notes": "Primary consultant on Dittmar AP automation assessment"
+        }
+      ],
+      "totalConsultantCosts": 797,
+      "overheadAllocated": 797
+    },
+    "profitability": {
+      "grossProfit": -797,
+      "grossMargin": 0
+    }
+  },
+  "team": {
+    "consultants": [
+      "Carmen"
+    ],
+    "primaryContact": "Carmen"
+  },
+  "sharepoint": {
+    "path": "/Shared Documents/General/Projects/Dittmar - AP Automation",
+    "url": "https://markmanassociates.sharepoint.com/Shared%20Documents/General/Projects/Dittmar%20-%20AP%20Automation",
+    "lastSyncedAt": "2025-11-07T00:00:00.000Z"
+  },
+  "documents": {
+    "contracts": [],
+    "proposals": [],
+    "deliverables": [],
+    "documentation": []
+  },
+  "migrationStatus": {
+    "inventoryComplete": true,
+    "documentsDownloaded": false,
+    "validated": false,
+    "lastUpdated": "2025-11-07T00:00:00.000Z"
+  },
+  "notes": [
+    "Non-revenue project - internal overhead allocation",
+    "Carmen was primary contributor based on SharePoint activity",
+    "No client revenue generated - assessment/discovery work"
+  ]
+}

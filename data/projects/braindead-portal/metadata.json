@@ -1,0 +1,95 @@
+{
+  "id": "braindead-portal",
+  "name": "BrainDead Portal",
+  "client": "BrainDead (Internal R&D)",
+  "type": "application-development",
+  "status": "active",
+  "description": "Internal portal application for data management and reporting - R&D project",
+  "timeline": {
+    "startDate": "2024-01-01",
+    "lastActivityDate": "2025-11-07"
+  },
+  "financial": {
+    "revenue": 0,
+    "revenueDetails": [],
+    "costs": {
+      "consultants": [
+        {
+          "name": "Ivana",
+          "allocatedCost": 11104,
+          "allocationPercent": 74.2,
+          "sourceEvidence": "No SharePoint activity - allocated to internal R&D",
+          "notes": "Primary developer on BrainDead portal application"
+        },
+        {
+          "name": "Nikola",
+          "allocatedCost": 3870,
+          "allocationPercent": 25.8,
+          "sourceEvidence": "No SharePoint activity - allocated to internal R&D",
+          "notes": "Supporting developer on BrainDead portal"
+        }
+      ],
+      "totalConsultantCosts": 14974,
+      "overheadAllocated": 14974
+    },
+    "profitability": {
+      "grossProfit": -14974,
+      "grossMargin": 0
+    }
+  },
+  "team": {
+    "consultants": [
+      "Ivana",
+      "Nikola"
+    ],
+    "primaryContact": "Ivana"
+  },
+  "sharepoint": {
+    "path": "/Shared Documents/General/Projects/BrainDead - Data & Reporting",
+    "url": "https://markmanassociates.sharepoint.com/Shared%20Documents/General/Projects/BrainDead%20-%20Data%20&%20Reporting",
+    "lastSyncedAt": "2025-11-07T00:00:00.000Z"
+  },
+  "github": {
+    "repos": [
+      "https://github.com/markmangroup/braindead.git"
+    ]
+  },
+  "documents": {
+    "contracts": [],
+    "proposals": [],
+    "deliverables": [],
+    "documentation": []
+  },
+  "migrationStatus": {
+    "inventoryComplete": true,
+    "documentsDownloaded": false,
+    "validated": false,
+    "lastUpdated": "2025-11-07T00:00:00.000Z"
+  },
+  "notes": [
+    "Internal R&D project - no client revenue",
+    "GitHub repository cloned to /tmp/braindead-portal",
+    "Ivana and Nikola had no SharePoint activity, allocated here as primary developers",
+    "Active development project for internal use"
+  ],
+  "codebase": {
+    "repos": [
+      {
+        "name": "braindead",
+        "url": "https://github.com/markmangroup/braindead.git",
+        "path": "data/github-repos/braindead",
+        "files": 276,
+        "size": 172912,
+        "lastCommit": "2025-05-19 23:07:13 -0400",
+        "primaryLanguage": "React/Next.js",
+        "description": null
+      }
+    ],
+    "totalFiles": 276,
+    "totalSizeKB": 172912,
+    "technologies": [
+      "React/Next.js"
+    ],
+    "analyzedAt": "2025-11-07T17:39:33.436Z"
+  }
+}

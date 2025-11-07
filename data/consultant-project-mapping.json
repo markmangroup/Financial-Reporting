@@ -1,0 +1,228 @@
+{
+  "consultantProjects": {
+    "Niki": {
+      "Laurel AG - Proposal and Rental Tools": 0,
+      "Laurel AG - BID Calculator": 0,
+      "Metropolitan - Current State Assessment": 0,
+      "Metropolitan - Co-investor Dashboard": 0,
+      "Metropolitan - Deal Cloud Quick Wins": 0,
+      "Dittmar - AP Automation": 0,
+      "BrainDead - Data & Reporting": 0,
+      "Markman Group - Reporting Package": 0,
+      "Markman Group - Strategic & Operational Review": 0
+    },
+    "Nikoleta": {
+      "Laurel AG - Proposal and Rental Tools": 1040,
+      "Laurel AG - BID Calculator": 0,
+      "Metropolitan - Current State Assessment": 262,
+      "Metropolitan - Co-investor Dashboard": 0,
+      "Metropolitan - Deal Cloud Quick Wins": 0,
+      "Dittmar - AP Automation": 0,
+      "BrainDead - Data & Reporting": 0,
+      "Markman Group - Reporting Package": 2,
+      "Markman Group - Strategic & Operational Review": 0
+    },
+    "Carmen": {
+      "Laurel AG - Proposal and Rental Tools": 89,
+      "Laurel AG - BID Calculator": 0,
+      "Metropolitan - Current State Assessment": 147,
+      "Metropolitan - Co-investor Dashboard": 0,
+      "Metropolitan - Deal Cloud Quick Wins": 0,
+      "Dittmar - AP Automation": 19,
+      "BrainDead - Data & Reporting": 0,
+      "Markman Group - Reporting Package": 2,
+      "Markman Group - Strategic & Operational Review": 4
+    },
+    "Ivana": {
+      "Laurel AG - Proposal and Rental Tools": 0,
+      "Laurel AG - BID Calculator": 0,
+      "Metropolitan - Current State Assessment": 0,
+      "Metropolitan - Co-investor Dashboard": 0,
+      "Metropolitan - Deal Cloud Quick Wins": 0,
+      "Dittmar - AP Automation": 0,
+      "BrainDead - Data & Reporting": 0,
+      "Markman Group - Reporting Package": 0,
+      "Markman Group - Strategic & Operational Review": 0
+    },
+    "Abri": {
+      "Laurel AG - Proposal and Rental Tools": 0,
+      "Laurel AG - BID Calculator": 0,
+      "Metropolitan - Current State Assessment": 5,
+      "Metropolitan - Co-investor Dashboard": 0,
+      "Metropolitan - Deal Cloud Quick Wins": 0,
+      "Dittmar - AP Automation": 0,
+      "BrainDead - Data & Reporting": 0,
+      "Markman Group - Reporting Package": 0,
+      "Markman Group - Strategic & Operational Review": 0
+    },
+    "Petrana": {
+      "Laurel AG - Proposal and Rental Tools": 2,
+      "Laurel AG - BID Calculator": 0,
+      "Metropolitan - Current State Assessment": 40,
+      "Metropolitan - Co-investor Dashboard": 0,
+      "Metropolitan - Deal Cloud Quick Wins": 0,
+      "Dittmar - AP Automation": 0,
+      "BrainDead - Data & Reporting": 0,
+      "Markman Group - Reporting Package": 0,
+      "Markman Group - Strategic & Operational Review": 3
+    },
+    "Beata": {
+      "Laurel AG - Proposal and Rental Tools": 0,
+      "Laurel AG - BID Calculator": 0,
+      "Metropolitan - Current State Assessment": 36,
+      "Metropolitan - Co-investor Dashboard": 0,
+      "Metropolitan - Deal Cloud Quick Wins": 0,
+      "Dittmar - AP Automation": 0,
+      "BrainDead - Data & Reporting": 0,
+      "Markman Group - Reporting Package": 0,
+      "Markman Group - Strategic & Operational Review": 0
+    },
+    "Jan": {
+      "Laurel AG - Proposal and Rental Tools": 0,
+      "Laurel AG - BID Calculator": 0,
+      "Metropolitan - Current State Assessment": 37,
+      "Metropolitan - Co-investor Dashboard": 0,
+      "Metropolitan - Deal Cloud Quick Wins": 0,
+      "Dittmar - AP Automation": 0,
+      "BrainDead - Data & Reporting": 0,
+      "Markman Group - Reporting Package": 0,
+      "Markman Group - Strategic & Operational Review": 0
+    },
+    "Marianna": {
+      "Laurel AG - Proposal and Rental Tools": 8,
+      "Laurel AG - BID Calculator": 0,
+      "Metropolitan - Current State Assessment": 0,
+      "Metropolitan - Co-investor Dashboard": 0,
+      "Metropolitan - Deal Cloud Quick Wins": 0,
+      "Dittmar - AP Automation": 0,
+      "BrainDead - Data & Reporting": 0,
+      "Markman Group - Reporting Package": 0,
+      "Markman Group - Strategic & Operational Review": 0
+    },
+    "Nikola": {
+      "Laurel AG - Proposal and Rental Tools": 0,
+      "Laurel AG - BID Calculator": 0,
+      "Metropolitan - Current State Assessment": 0,
+      "Metropolitan - Co-investor Dashboard": 0,
+      "Metropolitan - Deal Cloud Quick Wins": 0,
+      "Dittmar - AP Automation": 0,
+      "BrainDead - Data & Reporting": 0,
+      "Markman Group - Reporting Package": 0,
+      "Markman Group - Strategic & Operational Review": 0
+    },
+    "Pepi": {
+      "Laurel AG - Proposal and Rental Tools": 0,
+      "Laurel AG - BID Calculator": 0,
+      "Metropolitan - Current State Assessment": 0,
+      "Metropolitan - Co-investor Dashboard": 0,
+      "Metropolitan - Deal Cloud Quick Wins": 0,
+      "Dittmar - AP Automation": 0,
+      "BrainDead - Data & Reporting": 0,
+      "Markman Group - Reporting Package": 0,
+      "Markman Group - Strategic & Operational Review": 0
+    }
+  },
+  "summary": [
+    {
+      "project": "Laurel AG - Proposal and Rental Tools",
+      "contributors": [
+        {
+          "consultant": "Nikoleta",
+          "fileCount": 1040
+        },
+        {
+          "consultant": "Carmen",
+          "fileCount": 89
+        },
+        {
+          "consultant": "Marianna",
+          "fileCount": 8
+        },
+        {
+          "consultant": "Petrana",
+          "fileCount": 2
+        }
+      ]
+    },
+    {
+      "project": "Laurel AG - BID Calculator",
+      "contributors": []
+    },
+    {
+      "project": "Metropolitan - Current State Assessment",
+      "contributors": [
+        {
+          "consultant": "Nikoleta",
+          "fileCount": 262
+        },
+        {
+          "consultant": "Carmen",
+          "fileCount": 147
+        },
+        {
+          "consultant": "Petrana",
+          "fileCount": 40
+        },
+        {
+          "consultant": "Jan",
+          "fileCount": 37
+        },
+        {
+          "consultant": "Beata",
+          "fileCount": 36
+        },
+        {
+          "consultant": "Abri",
+          "fileCount": 5
+        }
+      ]
+    },
+    {
+      "project": "Metropolitan - Co-investor Dashboard",
+      "contributors": []
+    },
+    {
+      "project": "Metropolitan - Deal Cloud Quick Wins",
+      "contributors": []
+    },
+    {
+      "project": "Dittmar - AP Automation",
+      "contributors": [
+        {
+          "consultant": "Carmen",
+          "fileCount": 19
+        }
+      ]
+    },
+    {
+      "project": "BrainDead - Data & Reporting",
+      "contributors": []
+    },
+    {
+      "project": "Markman Group - Reporting Package",
+      "contributors": [
+        {
+          "consultant": "Nikoleta",
+          "fileCount": 2
+        },
+        {
+          "consultant": "Carmen",
+          "fileCount": 2
+        }
+      ]
+    },
+    {
+      "project": "Markman Group - Strategic & Operational Review",
+      "contributors": [
+        {
+          "consultant": "Carmen",
+          "fileCount": 4
+        },
+        {
+          "consultant": "Petrana",
+          "fileCount": 3
+        }
+      ]
+    }
+  ]
+}

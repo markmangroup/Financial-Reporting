@@ -1,0 +1,78 @@
+{
+  "id": "mdl-pitch",
+  "name": "Modern Day Lending (MDL)",
+  "client": "Modern Day Lending (Pitch - Not Pursued)",
+  "type": "application-development",
+  "status": "cancelled",
+  "description": "Pitch for Modern Day Lending platform - proposal phase only, project not pursued",
+  "timeline": {
+    "startDate": "2024-01-01",
+    "endDate": "2024-03-31",
+    "lastActivityDate": "2024-03-31"
+  },
+  "financial": {
+    "revenue": 0,
+    "revenueDetails": [],
+    "costs": {
+      "consultants": [],
+      "totalConsultantCosts": 0,
+      "overheadAllocated": 0
+    },
+    "profitability": {
+      "grossProfit": 0,
+      "grossMargin": 0
+    }
+  },
+  "team": {
+    "consultants": [],
+    "primaryContact": "Swan"
+  },
+  "sharepoint": {
+    "path": "/Shared Documents/General/Pitches/Modern Day Lending",
+    "url": "https://markmanassociates.sharepoint.com/Shared%20Documents/General/Pitches/Modern%20Day%20Lending",
+    "lastSyncedAt": "2025-11-07T00:00:00.000Z"
+  },
+  "github": {
+    "repos": [
+      "https://github.com/markmangroup/mdl.git"
+    ]
+  },
+  "documents": {
+    "contracts": [],
+    "proposals": [],
+    "deliverables": [],
+    "documentation": []
+  },
+  "migrationStatus": {
+    "inventoryComplete": true,
+    "documentsDownloaded": false,
+    "validated": false,
+    "lastUpdated": "2025-11-07T00:00:00.000Z"
+  },
+  "notes": [
+    "Pitch phase only - project not pursued",
+    "No revenue or costs - proposal/demo work",
+    "GitHub repository cloned for reference",
+    "Cancelled before engagement"
+  ],
+  "codebase": {
+    "repos": [
+      {
+        "name": "mdl",
+        "url": "https://github.com/markmangroup/mdl.git",
+        "path": "data/github-repos/mdl",
+        "files": 70,
+        "size": 10892,
+        "lastCommit": "2024-08-08 14:44:29 -0400",
+        "primaryLanguage": "React/Next.js",
+        "description": null
+      }
+    ],
+    "totalFiles": 70,
+    "totalSizeKB": 10892,
+    "technologies": [
+      "React/Next.js"
+    ],
+    "analyzedAt": "2025-11-07T17:39:33.436Z"
+  }
+}

@@ -1,0 +1,13 @@
+﻿Invoice no.,Uploads,Notes,Vendor,Description,PO no.,Chart of account,Bill type,Created date,Invoice date,Due date,Currency,Invoice amount ,Balance due,Type,Payment status,Approval status
+20250003,,,Ivana Kmecová,Testing for Rental application,,,Manual,09/05/2025,06/30/2025,07/14/2025,USD,2677.5,0,Local transfer,Paid,Approved
+7,,,Jan Dzubak,"Consulting Services for June, July and August",,,Manual,10/03/2025,08/31/2025,08/31/2025,USD,682,0,Wire,Paid,Approved
+810,,,Trusted Ltd,Consulting services for month of August,,,Manual,09/15/2025,02/09/2025,02/09/2025,USD,510,0,Wire,Paid,Approved
+826,,,Trusted Ltd,Consulting services for month of August,,,Manual,10/01/2025,01/10/2025,01/10/2025,USD,450,0,Wire,Paid,Approved
+841,,,Trusted Ltd,Consulting services for month of August,,,Manual,10/19/2025,10/18/2025,10/18/2025,USD,350,350,Wire,Unpaid,Approving
+110 - 2025,,,"Inversiones Teiz, S.L",,,,Manual,10/02/2025,10/02/2025,10/02/2025,USD,1010.5,0,Wire,Paid,Approved
+01-2025,,,Nikola Draganov,Consulting services for month of July,,,Manual,09/18/2025,07/31/2025,07/31/2025,USD,1500,0,Wire,Paid,Approved
+02-2025,,,Nikola Draganov,Consulting services for month of August,,,Manual,09/15/2025,08/29/2025,08/29/2025,USD,480,0,Wire,Paid,Approved
+03-2025,,,Nikola Draganov,Consulting services for month of September,,,Manual,10/03/2025,09/30/2025,09/30/2025,USD,990,990,Wire,Unpaid,Approving
+04-2025,,,Nikola Draganov,Consulting services for month of October,,,Manual,10/19/2025,10/31/2025,10/31/2025,USD,900,900,Wire,Unpaid,Approving
+20250002,,,Nikoleta Nôtová - NikyN,"Business Consulting Services for months of Jan, Mar, Apr, May, Jun, Jul and Aug",,,Manual,09/22/2025,01/02/2025,09/30/2025,USD,12300,12300,Wire,Unpaid,Approved
+20250011,,,Nikoleta Nôtová - NikyN,,,,Manual,09/09/2025,01/05/2025,08/31/2025,USD,1540,1540,Wire,Unpaid,Denied

@@ -1,0 +1,15 @@
+{
+  "our_numbers": {
+    "total_revenue": 181320.01,
+    "total_expenses": 312800.27,
+    "net_loss": -131480.26,
+    "current_cash": 48941.01,
+    "consultant_spend": 125081.72,
+    "credit_card_expenses": 152374.31,
+    "auto_loan_expenses": 34034.24,
+    "bank_fees": 1310.0
+  },
+  "powerpoint_numbers": {},
+  "variances": {},
+  "notes": "Numbers to be filled in after PowerPoint analysis"
+}

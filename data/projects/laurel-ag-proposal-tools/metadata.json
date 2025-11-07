@@ -1,0 +1,697 @@
+{
+  "id": "laurel-ag-proposal-tools",
+  "name": "Laurel AG - Proposal and Rental Tools",
+  "client": "Laurel AG",
+  "type": "application-development",
+  "status": "completed",
+  "description": "Custom web applications for proposal generation and rental equipment management, including Excel macro conversion, AutoCAD integration, and NetSuite connectivity.",
+  "timeline": {
+    "startDate": "2024-05-01",
+    "endDate": "2025-10-01",
+    "lastActivityDate": "2025-10-26"
+  },
+  "financial": {
+    "revenue": 134000,
+    "revenueDetails": [
+      {
+        "date": "2024-07-05",
+        "amount": 15000,
+        "invoice": "0101",
+        "description": "Initial Design"
+      },
+      {
+        "date": "2024-08-27",
+        "amount": 13000,
+        "invoice": "0116",
+        "description": "Initial Design"
+      },
+      {
+        "date": "2024-09-03",
+        "amount": 15000,
+        "invoice": "0118",
+        "description": "Design and Development"
+      },
+      {
+        "date": "2025-01-10",
+        "amount": 13000,
+        "invoice": "0126",
+        "description": "Design and Development"
+      },
+      {
+        "date": "2025-02-24",
+        "amount": 22500,
+        "invoice": "0129",
+        "description": "Design and Development"
+      },
+      {
+        "date": "2025-04-10",
+        "amount": 22500,
+        "invoice": "0131",
+        "description": "Design and Development"
+      },
+      {
+        "date": "2025-09-02",
+        "amount": 16500,
+        "invoice": "0132",
+        "description": "Post-Development"
+      },
+      {
+        "date": "2025-09-02",
+        "amount": 16500,
+        "invoice": "0132-TBD",
+        "description": "Final Payment"
+      }
+    ],
+    "costs": {
+      "consultants": [
+        {
+          "name": "Swan Softweb Solutions",
+          "totalCost": 47230,
+          "allocationPercent": 100,
+          "allocatedCost": 47230,
+          "sourceEvidence": "manual",
+          "notes": "Primary development contractor, confirmed 100% Laurel AG allocation"
+        },
+        {
+          "name": "Nikoleta (Niki)",
+          "totalCost": 15000,
+          "allocationPercent": 79.8,
+          "allocatedCost": 11970,
+          "sourceEvidence": "sharepoint-activity",
+          "notes": "1,040 files modified in Laurel AG SharePoint folder"
+        },
+        {
+          "name": "Carmen",
+          "totalCost": 14342,
+          "allocationPercent": 34.1,
+          "allocatedCost": 4891,
+          "sourceEvidence": "sharepoint-activity",
+          "notes": "89 files modified in Laurel AG SharePoint folder"
+        },
+        {
+          "name": "Marianna",
+          "totalCost": 5360,
+          "allocationPercent": 100,
+          "allocatedCost": 5360,
+          "sourceEvidence": "sharepoint-activity",
+          "notes": "8 files modified in Laurel AG SharePoint folder"
+        },
+        {
+          "name": "Petrana",
+          "totalCost": 12450,
+          "allocationPercent": 4.4,
+          "allocatedCost": 548,
+          "sourceEvidence": "sharepoint-activity",
+          "notes": "2 files modified in Laurel AG SharePoint folder, minimal involvement"
+        }
+      ],
+      "totalConsultantCosts": 69998,
+      "overheadAllocated": 0
+    },
+    "profitability": {
+      "grossProfit": 64002,
+      "grossMargin": 47.8
+    }
+  },
+  "team": {
+    "consultants": [
+      "Swan",
+      "Nikoleta",
+      "Carmen",
+      "Marianna",
+      "Petrana"
+    ],
+    "primaryContact": "Nikoleta"
+  },
+  "sharepoint": {
+    "path": "/General/Offerings & Projects/1. Tailored Application Development/Laurel_AG - Proposal and Rental Tools",
+    "url": "https://markmanassociates.sharepoint.com/sites/MarkmanAssociates/Shared%20Documents/General/Offerings%20%26%20Projects/1.%20Tailored%20Application%20Development/Laurel_AG%20-%20Proposal%20and%20Rental%20Tools",
+    "lastSyncedAt": "2025-11-07T13:30:00Z"
+  },
+  "github": {
+    "repos": []
+  },
+  "documents": {
+    "contracts": [
+      {
+        "filename": "SOW Swan - Hourly Services Agreement.docx",
+        "localPath": "data/projects/laurel-ag-proposal-tools/contracts/SOW Swan - Hourly Services Agreement.docx",
+        "sharepointUrl": "https://markmanassociates.sharepoint.com/sites/MarkmanAssociates/_layouts/15/Doc.aspx?sourcedoc=%7B76A9A763-9056-41F0-A5E2-ABC355E15F1A%7D&file=SOW%20Swan%20-%20Hourly%20Services%20Agreement.docx&action=default&mobileredirect=true",
+        "sharepointPath": "/General/Offerings & Projects/1. Tailored Application Development/Laurel_AG - Proposal and Rental Tools/Working Files/SOW/Swan/SOW Swan - Hourly Services Agreement.docx",
+        "downloadedAt": "2025-11-07T13:32:45.730Z",
+        "fileHash": "888afee3b7ccb2f823f040c390a19f60b355f6b6738f64e3140cba1f8e01c23e",
+        "fileSize": 26155,
+        "modifiedBy": "Carmen",
+        "modifiedDate": "2025-03-26T18:16:43Z",
+        "projectId": "laurel-ag-proposal-tools",
+        "category": "contracts",
+        "extractedText": "STATEMENT OF WORK (SOW)\nHourly Services Agreement\n\nThis SOW (“Agreement”) made and effective as of November, 2024 (the “Effective Date”) by and between Swan Softweb Solutions, LLC (“Developer ”),, and Markman Group LLC (“Client”), sets forth the agreement whereby Developer agrees to provide services to Markman Group LLC pursuant to the terms and conditions herein. \n1. SERVICES\nThis Statement of Work (\"SOW\") outlines the terms and conditions under which the Developer agrees to provide Client with hourly services as described in this Agreement. The specific nature and scope of the Services will be determined and agreed upon by both parties on a project-by-project basis, and may include, but are not limited to: software development, web development, technical support, etc..\n2. HOURLY RATE\nThe hourly rate for the Services provided under this Agreement shall be $30.00 USD.\n3. INVOICING AND PAYMENT\n3.1 Developer shall invoice Client for Services rendered on a project-by-project basis, as agreed upon by both parties. Each invoice shall include a detailed breakdown of the services provided, the date(s) of service, the number of hours worked, and the total amount due.\n3.2 Client shall pay each invoice within 15 days of receipt.  \n3.3. Any disputed invoice amounts must be communicated to Developer in writing within 15 days of receipt. Failure to dispute an invoice within this timeframe shall constitute acceptance of the invoice.\n3.4 Developer shall submit a weekly report to Client detailing the tasks performed, the number of hours spent on each task, and the status of each task. Client shall review and approve or reject the submitted hours within 7 business days. Only approved hours shall be included in the subsequent invoice.\n3.5 In the event that the Client identifies errors, defects, or other issues directly attributable to the Developer´s work, the Developer shall rectify such issues at no additional cost to the Client. Hours spent by the Developer to resolve these issues shall not be included in the invoiced hours.\n\n\n4. TERM AND TERMINATION\n4.1. This Agreement shall commence on November, 2024 and shall continue until terminated by either party in accordance with this Section 4.\n4.2. Either party may terminate this Agreement upon 30 days written notice to the other party.\n4.3. Developer may terminate this Agreement immediately upon written notice to Client in the event of Client's failure to pay any invoice within 30 days of its due date.\n5. INDEPENDENT CONTRACTOR \nDeveloper is an independent contractor and is not an employee, agent, or partner of Client. Developer shall be solely responsible for all taxes, insurance, and other expenses related to the provision of the Services.\n6. CONFIDENTIALITY \nBoth parties agree to maintain the confidentiality of any proprietary or confidential information disclosed during this Agreement.\n7. INTELLECTUAL PROPERTY\nUnless otherwise agreed in writing, any intellectual property created by the Developer in the performance of the Services shall be owned by Client.\n8. LIMITATION OF LIABILITY \nDeveloper´s liability to the client is limited to the amount of the last invoice paid. Under no circumstance is the developer responsible for any indirect, consequential or punitive damage.\n9. GOVERNING LAW\nThis Agreement shall be governed under the laws of the Client. \n10. ENTIRE AGREEMENT \nThis Agreement constitutes the entire agreement between the parties with respect to the subject matter hereof and supersedes all prior agreements and understandings, whether written or oral.\nThis Agreement may be amended only by a written instrument signed by both parties.\n10. SIGNATURES\nThis Statement of Work is agreed to and accepted by:\nClient:\nName: _______________________\nSignature: ___________________\nDate: _______________________\nDeveloper:\nName: _______________________\nSignature: ___________________\nDate: _______________________",
+        "extractedTextLength": 3908,
+        "textExtractedAt": "2025-11-07T16:32:17.079Z"
+      },
+      {
+        "filename": "SOW Swan - Proposal Application.docx",
+        "localPath": "data/projects/laurel-ag-proposal-tools/contracts/SOW Swan - Proposal Application.docx",
+        "sharepointUrl": "https://markmanassociates.sharepoint.com/sites/MarkmanAssociates/_layouts/15/Doc.aspx?sourcedoc=%7B5B22FC78-54F6-4319-9243-495E30222517%7D&file=SOW%20Swan%20-%20Proposal%20Application.docx&action=default&mobileredirect=true",
+        "sharepointPath": "/General/Offerings & Projects/1. Tailored Application Development/Laurel_AG - Proposal and Rental Tools/Working Files/SOW/Swan/SOW Swan - Proposal Application.docx",
+        "downloadedAt": "2025-11-07T13:32:46.789Z",
+        "fileHash": "60122489c6086168c42da9b29fdc6f18ca603ec9887fc4b66249924dbde885e3",
+        "fileSize": 25667,
+        "modifiedBy": "Carmen",
+        "modifiedDate": "2025-03-26T18:01:30Z",
+        "projectId": "laurel-ag-proposal-tools",
+        "category": "contracts",
+        "extractedText": "STATEMENT OF WORK (SOW)\nProposal App Development\nThis SOW (“Agreement”) made and effective as of August 5th , 2024 (the “Effective Date”) by and between Swan Softweb Solutions , LLC (“Developer ”),, and Markman Group LLC (“Client”), sets forth the agreement whereby Developer agrees to provide services to Markman Group LLC pursuant to the terms and conditions herein. \n1. INTRODUCTION\nThis Statement of Work (\"SOW\") outlines the terms and conditions under which the Developer will provide software development services to the Client for the development of a Proposal App as described herein.\n2. PROJECT OVERVIEW\nThe Developer will design, develop, and deliver a fully functional Proposal App according to the specifications detailed in the feature document and prototype previously agreed upon. The application will facilitate the creation of proposals through a streamlined process that includes authorization management, CAD file processing, task mapping, estimate generation, and proposal creation.\n3. TIMELINE AND DELIVERABLES\n3.1 Project Timeline\nThe project duration will be 9 weeks, commencing on August 5, 2025, with a final delivery date during the week of October 1, 2025.\n3.2 Milestones and Deliverables\nThe project will be divided into the following milestones:\nMilestone\nDescription\nEstimated Completion\n1\nAuthorizations and master data load\nWeek 2\n2\nCAD file upload and material list automatic generation\nWeek 4\n3\nTask mapping and estimate generation\nWeek 6\n4\nProposal creation, proposal preview\nWeek 8\n5\nFinal documents\nWeek 9\n\n\n\n3.3 Acceptance Criteria\nEach milestone will be considered complete when the Developer delivers the associated functionality according to the specifications in the feature document and prototype, and the Client approves the delivery through testing.\n4. PAYMENT TERMS\n4.1 Total Contract Value\nThe total payment for the development services will be $15,600.\n4.2 Payment Schedule\nPayments will be made at the completion of the project, 7 working days after the invoice delivery.\n5. QUALITY ASSURANCE\n5.1 Quality Requirements\nAll features described in the feature document and prototype must be included in the final deliverable. The Developer will conduct thorough testing before delivering each milestone to ensure compliance with the specifications.\n5.2 Discrepancy Resolution\nAny discrepancies between the delivered product and the specifications in the feature document and prototype must be resolved within 5 working days of identification by the Client.\n5.3 Testing Period\nThe Client will have a two-months testing period following the final delivery to ensure all requirements specified in the feature document are met. The final payment is contingent upon successful completion of this testing period.\n6. CHANGE MANAGEMENT\n6.1 Change Request Process\nAny changes to the project scope, timeline, or deliverables must be documented in a written Change Request and approved by both parties.\n6.2 Impact Assessment\nAll Change Requests will include an assessment of the impact on the project timeline, deliverables, and cost.\n\n7. COMMUNICATION\n7.1 Regular Updates\nThe Developer will provide weekly progress updates to the Client, including:\n\t•\tCompleted tasks\n\t•\tIn-progress tasks\n\t•\tUpcoming tasks\n\t•\tAny issues or risks identified\n7.2 Point of Contact\nEach party will designate a primary point of contact for all project-related communications.\n8. INTELLECTUAL PROPERTY\nAll intellectual property rights to the developed software will transfer to the Client, including source code, documentation, and any other materials created for this project.\n9. CONFIDENTIALITY AND NON-DISCLOSURE\n9.1 Definition of Confidential Information\n\"Confidential Information\" means all non-public information disclosed by either party (\"Disclosing Party\") to the other party (\"Receiving Party\"), whether orally, in writing, or by any other means, that is designated as confidential or that reasonably should be understood to be confidential given the nature of the information and the circumstances of disclosure. Confidential Information includes, but is not limited to:\n\t•\tBusiness plans, strategies, forecasts, and analyses\n\t•\tFinancial information and projections\n\t•\tCustomer and supplier information\n\t•\tTechnical specifications, designs, drawings, and blueprints\n\t•\tSoftware code, algorithms, and development methodologies\n\t•\tProduct plans, prototypes, and development roadmaps\n\t•\tMarketing strategies and campaigns\n\t•\tEmployee and contractor information\n\t•\tTrade secrets and proprietary technologies\n\t•\tThe terms and conditions of this SOW\n9.2 Obligations of Receiving Party\nThe Receiving Party agrees to:\na) Use the Confidential Information solely for the purpose of performing its obligations under this SOW;\nb) Protect the Confidential Information with the same degree of care it uses to protect its own confidential information, but in no event less than reasonable care;\nc) Limit access to Confidential Information to its employees, contractors, and agents who have ",
+        "extractedTextLength": 7526,
+        "textExtractedAt": "2025-11-07T16:32:17.115Z"
+      },
+      {
+        "filename": "SOW Swan - Rental Application.docx",
+        "localPath": "data/projects/laurel-ag-proposal-tools/contracts/SOW Swan - Rental Application.docx",
+        "sharepointUrl": "https://markmanassociates.sharepoint.com/sites/MarkmanAssociates/_layouts/15/Doc.aspx?sourcedoc=%7B9EF7E2DD-D3EA-4A0C-8198-394F23635068%7D&file=SOW%20Swan%20-%20Rental%20Application.docx&action=default&mobileredirect=true",
+        "sharepointPath": "/General/Offerings & Projects/1. Tailored Application Development/Laurel_AG - Proposal and Rental Tools/Working Files/SOW/Swan/SOW Swan - Rental Application.docx",
+        "downloadedAt": "2025-11-07T13:32:48.012Z",
+        "fileHash": "fd6fdb8d158c581ba84ea8da33b021d08bbff4a00c7d72c9e3d1936f80d9627a",
+        "fileSize": 32518,
+        "modifiedBy": "Carmen",
+        "modifiedDate": "2025-03-27T10:26:04Z",
+        "projectId": "laurel-ag-proposal-tools",
+        "category": "contracts",
+        "extractedText": "STATEMENT OF WORK (SOW)\nRental App Development\nThis SOW (“Agreement”) made and effective as of January 6th, 2025 (the “Effective Date”) by and between Swan Softweb Solutions, LLC (“Developer ”),, and Markman Group LLC (“Client”), sets forth the agreement whereby Developer agrees to provide services to Markman Group LLC pursuant to the terms and conditions herein. \n1. INTRODUCTION\nThis Statement of Work (\"SOW\") outlines the terms and conditions under which the Developer will provide software development services to the Client for the development of a Rental Application as described herein.\n2. PROJECT OVERVIEW\nThe Developer will design, develop, and deliver a fully functional Rental Application according to the specifications detailed in the feature document and prototype previously agreed upon. The application will facilitate full rental lifecycle, covering everything from order creation to return processing at the warehouse, enabling tracking of all essential checkpoints, stock management, and real-time reporting for operational control. Rental Application consists on three modules: \n\t•\tRental Process Management: Covers the entire rental process from order creation to return processing. It allows manual adjustments when needed, ensuring flexibility and accuracy in handling rentals\n\t•\tWarehouse Management: Tracks and manages the availability and usage of inventory in real-time. This module ensures accurate stock levels, preventing discrepancies, and supports manual adjustments when required.\n\t•\tReporting Module: The Reporting module provides high-level reports to track key rental operations and performance. These reports include essential data such as Revenue, Stock, Stock Movement, In Transit, Planned Removal, Planned Deliveries and Equipment Utilization)\n3. TIMELINE AND DELIVERABLES\n3.1 Project Timeline\nThe project duration will be 16 weeks, commencing on January 6, 2025, with a final delivery date during the week of April 21st, 2025 \n3.2 Milestones and Deliverables\nThe project will be divided into the following milestones/sprints:\nMilestone/\nSprint\nDescription\nEstimated Completion\n\n1\nAuthorisation, User Permission, User List(Authorization, Workflow and Master Data (Products/Warehouse)\nWeek 2 (2025.01.20)\n\n2\nMaster Data (Account Managers, Customers), Stock Adjustment, Rent Process\nWeek 4 (2025.02.03)\n\n3\nRent Process (Order and Recurring Order)\nWeek 6 (2025.02.17)\n\n4\nRent Process (Return Order, Order Detail Stages: Create Delivery, Pickup Ticket and Check out)\nWeek 8 (2025.03.03)\n\n5\nRent Process (Order Detail Stages: Delivered to Customer, Create Return Deliveries, Pickup Ticket for Return Delivery, Check In, Inspection Completed)\nWeek 10 (2025.03.15)\n\n6\nGlobal Search and Home – Map (Search, Zoom Controls, Full-Screen Mode, Street View integration, Location Pins& Home, Responsiveness and Error Handling)\nWeek 12 (2025.03.31)\n\n7\nReports (Revenue Report, Stock Report, Stock Movement, In Transit)\nWeek 14\n(2025.04.10)\n\n8\nReports (Planned Removal, Planned Deliveries, Equipment Utilization Report) and Inbox (Request, Accept and Decline)\nWeek 16\n(2025.04.21)\n\nUpon final project completion, in addition to the delivery of all milestones, all related code documentation shall be provided.\n3.3 Acceptance Criteria\nEach milestone will be considered complete when the Developer delivers the associated functionality according to the specifications in the feature document and prototype, and the Client approves the delivery through testing.\n4. PAYMENT TERMS\n4.1 Total Contract Value\nThe total payment for the development services will be $15,720\n4.2 Payment Schedule\nThe project's payment structure consists of two payments: 50% upon reaching the midpoint of all milestones, and the remaining 50% upon final project delivery.\n5. QUALITY ASSURANCE\n5.1 Quality Requirements\nAll features described in the feature document and prototype must be included in the final deliverable. The Developer will conduct thorough testing before delivering each milestone to ensure compliance with the specifications.\n5.2 Discrepancy Resolution\nAny discrepancies between the delivered product and the specifications in the feature document and prototype must be resolved within 5 working days of identification by the Client.\n5.3 Testing Period\nThe Client will have a two-months testing period following the final delivery to ensure all requirements specified in the feature document are met. The final payment is contingent upon successful completion of this testing period.\n6. CHANGE MANAGEMENT\n6.1 Change Request Process\nAny changes to the project scope, timeline, or deliverables must be documented in a written Change Request and approved by both parties.\n6.2 Impact Assessment\nAll Change Requests will include an assessment of the impact on the project timeline, deliverables, and cost.\n7. COMMUNICATION\n7.1 Regular Updates\nThe Developer will provide weekly progress updates to the Client, including:\n\t•\tCompleted tasks\n\t•\tIn-progress tasks\n\t•\tUpcoming tasks\n\t•\tAny iss",
+        "extractedTextLength": 9274,
+        "textExtractedAt": "2025-11-07T16:32:17.169Z"
+      },
+      {
+        "filename": "Licensing and Maintenance SOW Laurel AG v2.docx",
+        "localPath": "data/projects/laurel-ag-proposal-tools/contracts/Licensing and Maintenance SOW Laurel AG v2.docx",
+        "sharepointUrl": "https://markmanassociates.sharepoint.com/sites/MarkmanAssociates/_layouts/15/Doc.aspx?sourcedoc=%7BFD1FAD70-1022-47C3-B5CC-CF4CB7B510E5%7D&file=Licensing%20and%20Maintenance%20SOW%20Laurel%20AG%20v2.docx&action=default&mobileredirect=true",
+        "sharepointPath": "/General/Offerings & Projects/1. Tailored Application Development/Laurel_AG - Proposal and Rental Tools/Working Files/SOW/Licensing and Maintenance/Licensing and Maintenance SOW Laurel AG v2.docx",
+        "downloadedAt": "2025-11-07T13:32:49.136Z",
+        "fileHash": "c73aeda8366507040dec11ed201621380a4496f6aa35b58fb0dc1ce2eeece029",
+        "fileSize": 54672,
+        "modifiedBy": "Carmen",
+        "modifiedDate": "2025-04-23T17:58:27Z",
+        "projectId": "laurel-ag-proposal-tools",
+        "category": "contracts",
+        "extractedText": "LICENSING AND MAINTENANCE AGREEMENT\n\n\nThis Licensing and Maintenance Agreement is entered into between the Markman Group LLC, and LAUREL AG & WATER, LLC. This Agreement outlines the terms and conditions for the licensing, maintenance and support of the Laurel AG Web Application Platform. This document defines the scope of services, responsibilities, and associated costs.\n\n\t•\tScope of Services\nThis SOW covers the following services related to the Laurel AG Web Application Platform: \n\t•\tLicensing: Provisioning and management of the platform license and applications built on it.\n\t•\tMaintenance: Routine maintenance, including server upkeep, security patches, bug fixes, and performance optimization.\n\t•\tSupport: Technical support for platform-related issues, including troubleshooting, issue resolution, and general platform guidance.\nNote: Any change requests for new features, modifications to existing functionality, or custom development are explicitly out of scope for this SOW and will require a separate agreement.\n\n\t•\tPlatform and Applications Licensing \n\n\t•\tLAUREL AG & WATER, LLC will be granted a license to utilize the Laurel AG Web Application Platform.\n\t•\tThe base license covers the core platform functionality and infrastructure.\n\t•\tThe base platform licensing and maintenance will cost $5,000 USD per month.\n\n\t•\tApplication Licensing and Deployment\n\n\t•\tThe first application developed and deployed on the Laurel AG Web Application Platform is included at no additional cost.\n\t•\tEach subsequent application deployed on the Laurel AG Web Application Platform will incur a monthly licensing and maintenance fee of $1,000 USD.\n\n\t•\tMaintenance Services\n\nIn accordance with the terms of this Licensing and Maintenance Agreement, the Markman Group LLC will furnish the support and/or error-correction services identified for the cloud infrastructure hosting the Laurel AG Web Application Platform\n\n\t•\tMaintenance Services:\n\t•\tRegular server maintenance and monitoring.\n\t•\tSecurity patch application and updates.\n\t•\tBug fixes and platform updates.\n\t•\tPerformance optimization and monitoring.\n\t•\tDatabase maintenance and backups.\n\t•\tPlatform uptime monitoring.\n\n\t•\tMaintenance Window: Routine maintenance is typically performed during off-peak hours to minimize service disruption. Advanced notice will be provided for any scheduled maintenance that may impact service availability.\n\n\t•\tSupport Services \n\n\t•\tSupport Services:\n\t•\tTechnical support via email and a designated support portal: support@markmanassociates.com \n\t•\tIssue diagnosis and troubleshooting.\n\t•\tResolution of platform-related issues.\n\n\t•\tTimeliness of Incident Resolution\nThe Markman Group LLC shall use reasonable effort to provide modifications or additions to correct errors in the Laurel AG Web Application Platform reported by LAUREL AG & WATER, LLC. \n\nUpon receipt of notice of an error, the Markman Group LLC will assign a priority level as determined by LAUREL AG & WATER, LLC to the error according to the following criteria:\n\n\t•\tPriority A – An error that results in the Laurel AG Web Application Platform being substantially or completely nonfunctional or inoperative.\n\t•\tPriority B – An error that results in the Laurel AG Web Application Platform operating or performing other than as represented in the Documentation, but which does not have a material adverse impact on the performance of the software.\n\nThe Markman Group LLC will make reasonable efforts to correct the error or provide a work-around solution for each priority level and, if a work-around is the immediate solution, will make reasonable efforts to provide a final resolution to the error.  Reasonable effort will be made to respond to the incident within the following time frames after receiving notice and sufficient information and support from LAUREL AG & WATER, LLC:\n\nPriority Level\nCorrection or Work-Around \nIf Work-Around, Final Resolution\nA\n2 business days\n7 business days\nB\n5 business days\n10 business days\n\n\t•\tClient (LAUREL AG & WATER, LLC) Cooperation: \nThe level of support that the Markman Group LLC can provide is dependent upon the cooperation of LAUREL AG & WATER and the quantity of information that LAUREL AG & WATER can provide. \n\nLAUREL AG & WATER can report errors to the following mailbox: support@markmanassociates.com \n\nIf the Markman Group LLC cannot reproduce a problem or if LAUREL AG & WATER, LLC cannot successfully gather adequate troubleshooting information, the Markman Group LLC may need temporary login access on the LAUREL AG & WATER, LLC system to identify and address the problem.\n\n\n\t•\tLocation Where Services will be rendered\n\nServices will be rendered remotely \n\n\t•\tResponsibilities\n\n\t•\tClient (LAUREL AG & WATER, LLC) Responsibilities: \n\t•\tProviding accurate and timely information for issue resolution.\n\t•\tAdhering to platform usage guidelines.\n\t•\tPaying all invoiced fees in a timely fashion.\n\t•\tProviding proper access to application-related logs and environments when needed for support.\n\t•",
+        "extractedTextLength": 7356,
+        "textExtractedAt": "2025-11-07T16:32:17.204Z"
+      },
+      {
+        "filename": "Licensing and Maintenance SOW Laurel AG v3.docx",
+        "localPath": "data/projects/laurel-ag-proposal-tools/contracts/Licensing and Maintenance SOW Laurel AG v3.docx",
+        "sharepointUrl": "https://markmanassociates.sharepoint.com/sites/MarkmanAssociates/_layouts/15/Doc.aspx?sourcedoc=%7BCAF98A6D-FDB9-41B6-A790-6BA737704A77%7D&file=Licensing%20and%20Maintenance%20SOW%20Laurel%20AG%20v3.docx&action=default&mobileredirect=true",
+        "sharepointPath": "/General/Offerings & Projects/1. Tailored Application Development/Laurel_AG - Proposal and Rental Tools/Working Files/SOW/Licensing and Maintenance/Licensing and Maintenance SOW Laurel AG v3.docx",
+        "downloadedAt": "2025-11-07T13:32:50.028Z",
+        "fileHash": "9eabd5487ca1d5efd44f2e9e2b7e49553e9542df2f8d212d8ca6ee98b2c4bc19",
+        "fileSize": 49971,
+        "modifiedBy": "Carmen",
+        "modifiedDate": "2025-09-26T07:28:11Z",
+        "projectId": "laurel-ag-proposal-tools",
+        "category": "contracts",
+        "extractedText": "LICENSING AND MAINTENANCE AGREEMENT\n\n\nThis Licensing and Maintenance Agreement is entered into between the Markman Group LLC, and LAUREL AG & WATER, LLC. This Agreement outlines the terms and conditions for the licensing, maintenance and support of the Laurel AG Web Application Platform. This document defines the scope of services, responsibilities, and associated costs.\n\n\t•\tScope of Services\nThis SOW covers the following services related to the Laurel AG Web Application Platform: \n\t•\tLicensing: Provisioning and management of the platform license and applications built on it.\n\t•\tMaintenance: Routine maintenance, including server upkeep, security patches, bug fixes, and performance optimization.\n\t•\tSupport: Technical support for platform-related issues, including troubleshooting, issue resolution, and general platform guidance.\nNote: Any change requests for new features, modifications to existing functionality, or custom development are explicitly out of scope for this SOW and will require a separate agreement.\n\n\t•\tPlatform and Applications Licensing \n\n\t•\tLAUREL AG & WATER, LLC will be granted a license to utilize the Laurel AG Web Application Platform.\n\t•\tThe base license covers the core platform functionality and infrastructure.\n\t•\tThe base platform licensing and maintenance will cost $5,000 USD per month.\n\n\t•\tApplication Licensing and Deployment\n\n\t•\tThe first application developed and deployed on the Laurel AG Web Application Platform is included at no additional cost.\n\t•\tEach subsequent application deployed on the Laurel AG Web Application Platform will incur a monthly licensing and maintenance fee of $1,000 USD.\n\n\t•\tMaintenance Services\n\nIn accordance with the terms of this Licensing and Maintenance Agreement, the Markman Group LLC will furnish the support and/or error-correction services identified for the cloud infrastructure hosting the Laurel AG Web Application Platform\n\n\t•\tMaintenance Services:\n\t•\tRegular server maintenance and monitoring.\n\t•\tSecurity patch application and updates.\n\t•\tBug fixes and platform updates.\n\t•\tPerformance optimization and monitoring.\n\t•\tDatabase maintenance and backups.\n\t•\tPlatform uptime monitoring.\n\n\t•\tMaintenance Window: Routine maintenance is typically performed during off-peak hours to minimize service disruption. Advanced notice will be provided for any scheduled maintenance that may impact service availability.\n\n\t•\tSupport Services \n\n\t•\tSupport Services:\n\t•\tTechnical support via email and a designated support portal: support@markmanassociates.com \n\t•\tIssue diagnosis and troubleshooting.\n\t•\tResolution of platform-related issues.\n\n\t•\tTimeliness of Incident Resolution\nThe Markman Group LLC shall use reasonable effort to provide modifications or additions to correct errors in the Laurel AG Web Application Platform reported by LAUREL AG & WATER, LLC. \n\nUpon receipt of notice of an error, the Markman Group LLC will assign a priority level as determined by LAUREL AG & WATER, LLC to the error according to the following criteria:\n\n\t•\tPriority A – An error that results in the Laurel AG Web Application Platform being substantially or completely nonfunctional or inoperative.\n\t•\tPriority B – An error that results in the Laurel AG Web Application Platform operating or performing other than as represented in the Documentation, but which does not have a material adverse impact on the performance of the software.\n\nThe Markman Group LLC will make reasonable efforts to correct the error or provide a work-around solution for each priority level and, if a work-around is the immediate solution, will make reasonable efforts to provide a final resolution to the error.  Reasonable effort will be made to respond to the incident within the following time frames after receiving notice and sufficient information and support from LAUREL AG & WATER, LLC:\n\nPriority Level\nCorrection or Work-Around \nIf Work-Around, Final Resolution\nA\n2 business days\n7 business days\nB\n5 business days\n10 business days\n\n\t•\tClient (LAUREL AG & WATER, LLC) Cooperation: \nThe level of support that the Markman Group LLC can provide is dependent upon the cooperation of LAUREL AG & WATER and the quantity of information that LAUREL AG & WATER can provide. \n\nLAUREL AG & WATER can report errors to the following mailbox: support@markmanassociates.com \n\nIf the Markman Group LLC cannot reproduce a problem or if LAUREL AG & WATER, LLC cannot successfully gather adequate troubleshooting information, the Markman Group LLC may need temporary login access on the LAUREL AG & WATER, LLC system to identify and address the problem.\n\n\n\t•\tLocation Where Services will be rendered\n\nServices will be rendered remotely \n\n\t•\tResponsibilities\n\n\t•\tClient (LAUREL AG & WATER, LLC) Responsibilities: \n\t•\tProviding accurate and timely information for issue resolution.\n\t•\tAdhering to platform usage guidelines.\n\t•\tPaying all invoiced fees in a timely fashion.\n\t•\tProviding proper access to application-related logs and environments when needed for support.\n\t•",
+        "extractedTextLength": 7088,
+        "textExtractedAt": "2025-11-07T16:32:17.239Z"
+      },
+      {
+        "filename": "Licensing and Maintenance SOW Laurel AG.docx",
+        "localPath": "data/projects/laurel-ag-proposal-tools/contracts/Licensing and Maintenance SOW Laurel AG.docx",
+        "sharepointUrl": "https://markmanassociates.sharepoint.com/sites/MarkmanAssociates/_layouts/15/Doc.aspx?sourcedoc=%7BB4562FC4-D4D1-4B2B-BA0E-8892537E9853%7D&file=Licensing%20and%20Maintenance%20SOW%20Laurel%20AG.docx&action=default&mobileredirect=true",
+        "sharepointPath": "/General/Offerings & Projects/1. Tailored Application Development/Laurel_AG - Proposal and Rental Tools/Working Files/SOW/Licensing and Maintenance/Licensing and Maintenance SOW Laurel AG.docx",
+        "downloadedAt": "2025-11-07T13:32:51.269Z",
+        "fileHash": "5894aa9ff09232893cb26b8ad8bf0031e37f0be54620cf131289f2640e0a2747",
+        "fileSize": 58185,
+        "modifiedBy": "Carmen",
+        "modifiedDate": "2025-03-19T15:38:42Z",
+        "projectId": "laurel-ag-proposal-tools",
+        "category": "contracts",
+        "extractedText": "LICENSING AND MAINTENANCE AGREEMENT\n\nThis Licensing and Maintenance Agreement is entered into between the Markman Group LLC, and LAUREL AG & WATER, LLC, hereinafter referred to as \"the RECIPIENT.\"  \nThe RECIPIENT wishes to engage the Markman Group LLC to perform various maintenance services in connection with the cloud infrastructure hosting the Rental & Proposal application.\n\n\t•\tLicense to Client\n\nMarkman Group LLC grants to Laurel AG a non-exclusive, perpetual, worldwide license to use the Application, subject to the terms and conditions outlined in this agreement. This license is effective upon delivery of the Application to Laurel AG.\n\n\t•\tMaintenance Services\n\nIn accordance with the terms of this Licensing and Maintenance Agreement, the Markman Group LLC will furnish the support and/or error-correction services identified for the cloud infrastructure hosting the Rental & Proposal applications.\n\n2.  Maintenance Fee and Expenses\n\n\tThe RECIPIENT will pay the Markman Group LLC the agreed monthly fee of $3,000 within thirty (30) days of the Commencement Date agreed by both parties. If payment for the full 12-month term is paid within 30 days from receiving the invoice, a 15% discount will apply, with a yearly cost of $30,600. The RECIPIENT shall pay the Markman Group LLC for services outside the scope of this Maintenance Agreement on a time and material basis at Markman Group LLC then-prevailing rates, and only with RECIPIENT’s prior written approval. \n\n     Should the requirement originate for any additional services or resources to be hosted and maintained on the Markman Group LLC Azure Cloud infrastructure, the request will be reviewed, and an additional maintenance cost will be agreed on.\n\nUpon termination of this Licensing and Maintenance Agreement, the Markman Group LLC will be reimbursed for all reasonable costs and non-cancelable commitments incurred in the performance of the scope of work and for which the RECIPIENT has not yet paid. \n3.  Term and Termination\n\n\t•\tTerm.  This Licensing and Maintenance Agreement shall commence on the Commencement Date stated in Supplement A and continue for an initial period defined in Supplement A (“Initial Term”).  This Licensing and Maintenance Agreement shall thereafter auto renew every 12 months unless terminated by either party upon written notice, thirty (30) days prior to planned termination date.  \n\n (b)  Termination.  This Licensing and Maintenance Agreement shall terminate within thirty (30) days upon receipt of an advance written notice provided by the RECIPIENT to Markman Group LLC.\n\n\n4.  Recipient Support\n\nThe level of support that the Markman Group LLC can provided is dependent upon the cooperation of RECIPIENT and the quantity of information that RECIPIENT can provide.  RECIPIENT can report errors to the following mailbox: support@markmangroup.freshdesk.com\n\nIf the Markman Group LLC cannot reproduce a problem or if the RECIPIENT cannot successfully gather adequate troubleshooting information, the Markman Group LLC may need temporary login access on the RECIPIENT’s system to identify and address the problem.\n\n\n5.\tRight to Work Product  All error corrections, enhancements, new releases, and any other work product created by the Markman Group LLC in connection with the support services provided under this Licensing and Maintenance Agreement are and shall remain the exclusive property of the Markman Group LLC.\n\f\n\nSupplement A\n\n\nCoverage of Maintenance Agreement\n\nThe Azure services covered by this Licensing and Maintenance Agreement is as follows:\n\t•\tAzure App Service for hosting and scaling web applications and APIs, ensuring high availability and performance. \n\t•\tInfrastructure as a Service is cloud hosting services that include compute, storage and networking resources in demand.\n\t•\tAzure Database for PostgreSQL is a managed database service to handle transactional workloads with high availability, scalability, and security. \n\t•\tAzure Application Insights for application performance management, enabling monitoring, diagnostics, and analytics to optimize performance and user experience. \n\t•\tAzure Key Vault for managing secrets, encryption keys, and certificates, enhancing the security posture and compliance. \n\nHere is a detailed explanation of how the system will handle requests and manage data flow:\n\nRequest Handling:\n\nApplication Hosting:\n\t•\tAzure App Services: Validated requests are then routed to Azure App Services, which hosts web applications. Azure App Services provides a scalable and managed platform for deploying web applications.\n\nDatabase Interaction:\n\t•\tAzure Database for PostgreSQL: When a request needs to interact with the database, it is securely passed through a private network. This is facilitated by VNet integration in Azure App Services and the creation of a Private Endpoint for the database, ensuring secure and private communication. \n\nSecure Data Access:\n\t•\tAzure Key Vault and Storage Account: If the application requires access to sec",
+        "extractedTextLength": 11883,
+        "textExtractedAt": "2025-11-07T16:32:17.296Z"
+      }
+    ],
+    "proposals": [
+      {
+        "filename": "Laurel Proposal Features.pdf",
+        "localPath": "data/projects/laurel-ag-proposal-tools/proposals/Laurel Proposal Features.pdf",
+        "sharepointUrl": "https://markmanassociates.sharepoint.com/sites/MarkmanAssociates/Shared%20Documents/General/Offerings%20%26%20Projects/1.%20Tailored%20Application%20Development/Laurel_AG%20-%20Proposal%20and%20Rental%20Tools/Working%20Files/Documentation/Laurel%20Proposal%20Features.pdf",
+        "sharepointPath": "/General/Offerings & Projects/1. Tailored Application Development/Laurel_AG - Proposal and Rental Tools/Working Files/Documentation/Laurel Proposal Features.pdf",
+        "downloadedAt": "2025-11-07T16:07:02.501Z",
+        "fileHash": "2cc5c453e509d645a62a5b188a1a1ebbeee6ec13ee3f6c0830a032c302ac5acb",
+        "fileSize": 8033953,
+        "modifiedBy": "Marianna",
+        "modifiedDate": "2024-08-08T05:47:13Z",
+        "projectId": "laurel-ag-proposal-tools",
+        "category": "proposals"
+      },
+      {
+        "filename": "Laurel Proposal Features.docx",
+        "localPath": "data/projects/laurel-ag-proposal-tools/proposals/Laurel Proposal Features.docx",
+        "sharepointUrl": "https://markmanassociates.sharepoint.com/sites/MarkmanAssociates/_layouts/15/Doc.aspx?sourcedoc=%7B5DD76832-26AE-4E07-9EE3-44DB9FD3B50D%7D&file=Laurel%20Proposal%20Features.docx&action=default&mobileredirect=true",
+        "sharepointPath": "/General/Offerings & Projects/1. Tailored Application Development/Laurel_AG - Proposal and Rental Tools/Working Files/LaurelAG-ClientPortal/Proposal Application/Feature Documentation/Laurel Proposal Features.docx",
+        "downloadedAt": "2025-11-07T16:07:04.544Z",
+        "fileHash": "26745d232987d398bd4962db2395ef2ad467b22197b9ab0106e3c6168814b9d8",
+        "fileSize": 7321431,
+        "modifiedBy": "Nikoleta Notova",
+        "modifiedDate": "2024-10-17T08:19:00Z",
+        "projectId": "laurel-ag-proposal-tools",
+        "category": "proposals",
+        "extractedText": "Laurel Features\nAuthorization\nLogin\n\t•\tWe will add authorization screen where admin can manage users like adding user, update users and enable or disabled user account. Adin will be able also to assign additional admin users.\n\t•\tUsers can login via Microsoft account.\n\n\n\n\n\n\n\n\nView\nFull Screen View\n\t•\tUsers can switch to full screen mode by clicking on the maximize screen icon located at the top.\n\n\t•\tUsers can exit full screen mode by clicking on the minimize screen icon located at the top.\n\n\nSide Panel View\n\t•\tUsers can collapse the sidebar by clicking on the right pointed arrow.\n\t•\tThis feature is present in all the screens.\n\nDefault View\n\t•\tThe default view is visible at the start of the page.\n\t•\tUsers can see the full sidebar by moving mouse cursor on the sidebar panel.\n\t•\tThis feature is present in all the screens.\n\nGlobal Search\n\t•\tUsers can globally search for opportunities based on Document Number as user types, based on the matched keywords data will float at bottom.\n\t•\tAfter clicking on that data, the user will get redirected to appropriate opportunity details.\n\n\n\n\nProduct List\nImport Product\n\t•\tUsers can import product data from the CSV Master Data sheet.\n\t•\tWe'll build a search function like in excel.\n\t•\tWhen users import master data for a product, we verify the data and will display a notice such as \"Please enter valid file\" if the data does not match the requirements of file.\n\nList View\n\t•\tUsers can see the list of all imported products with sorting & searching capabilities.\n\nLabor Cost List\nImport Labor \n\t•\tUsers can import labor data from the CSV Master Data sheet.\n\t•\tWe'll build a search function like in excel.\n\t•\tWhen users import master data for a labor, we verify the data and will display a notice such as \"Please enter valid file\" if the data does not match the requirements of file.\n\nList View\n\t•\tUsers can see the list of all imported labors with sorting & searching capabilities.\n\nCustomer List\nImport Customer \n\t•\tUsers can import customer data from the CSV Master Data sheet.\n\t•\tWe'll build a search function like in excel.\n\t•\tWhen users import master data for a Customer, we verify the data and will display a notice such as \"Please enter valid file\" if the data does not match the requirements of file.\n\nList View\n\t•\tUsers can see the list of all imported customers with sorting & searching capabilities.\n\nTask List\nImport Task \n\t•\tUsers can import task data from the CSV Master Data sheet.\n\t•\tWe'll build a search function like in excel.\n\t•\tWhen users import master data for a Taks, we verify the data and will display a notice such as \"Please enter valid file\" if the data does not match the requirements of file.\n\nList View\n\t•\tUsers can see the list of all imported tasks with sorting & searching capabilities.\n\n\nVendor List\nImport Vendor \n\t•\tUsers can import vendor data from the CSV Master Data sheet.\n\t•\tWe'll build a search function like in excel.\n\t•\tWhen users import master data for a Vendor, we verify the data and will display a notice such as \"Please enter valid file\" if the data does not match the requirements of file.\n\nList View\n\t•\tUsers can see the list of all imported vendors with sorting & searching capabilities.\n\n\nOpportunity List\nImport Opportunity \n\t•\tUsers can import opportunity data from the CSV Master Data sheet.\n\t•\tWe'll build a search function like in excel.\n\t•\tWhen users import master data for the Opportunity, we verify the data and will display a notice such as \"Please enter valid file\" if the data does not match the requirements of file.\n\t•\tWe will have option to search/filter by all fields (dropdown, auto populate from master)\n\t•\tMaster data fields for opportunity list will be document number, designer, estimator, pump & electrical designer, design/estimation notes and we will include also fields generated by app such as next stage of the estimation process and last update date. In case the opportunity was only imported from Netsuite and estimate process did not start yet, the last update will be date when import has taken place.\n\t•\tOpportunities which were previously loaded and are included in the current load, will have only last update date modified with date of latest load.\n\nList View\n\t•\tUsers can see the list of all imported opportunities with sorting & searching capabilities.\n\t•\tUsers can open many opportunities on different tab or window by right click on opportunity number or click + cmd.\n\n \nView Documents  \n\t•\tUsers can view the list of all uploaded documents across all 8 stages.\n\t•\tIf opportunity reach to 7 stage, we display icon to view four documents of stage 8 (Print Proposal, New Material Master data,Costs Variances, Netsuite Extracts) \n\n\n\nEstimation process\n\n\t•\tTo move on to the next stage the user will have to complete the current stage.\n\t•\tUsers can move to any tab any time if stage that stage completed.\n\nSelect Task Code\n\t•\tUsers can add task based on imported Task\n\n\t•\tUsers can search task by task name and description while add task.\n\n\n\n\n\t•\tUsers can see all ",
+        "extractedTextLength": 13859,
+        "textExtractedAt": "2025-11-07T16:32:17.520Z"
+      },
+      {
+        "filename": "Laurel CRM SF integration to Proposal Application - proposal V01.docx",
+        "localPath": "data/projects/laurel-ag-proposal-tools/proposals/Laurel CRM SF integration to Proposal Application - proposal V01.docx",
+        "sharepointUrl": "https://markmanassociates.sharepoint.com/sites/MarkmanAssociates/_layouts/15/Doc.aspx?sourcedoc=%7B062C1BBA-D200-4EA9-8BCD-9BC424D024DB%7D&file=Laurel%20CRM%20SF%20integration%20to%20Proposal%20Application%20-%20proposal%20V01.docx&action=default&mobileredirect=true",
+        "sharepointPath": "/General/Proposals/Laurel HSFD/Laurel CRM SF integration to Proposal Application - proposal V01.docx",
+        "downloadedAt": "2025-11-07T16:07:05.456Z",
+        "fileHash": "4d663505c2ec7811c37c8532fad551597e65b9f9e8d696595484fa28aa26ea6a",
+        "fileSize": 50220,
+        "modifiedBy": "Nikoleta Notova",
+        "modifiedDate": "2025-10-21T14:53:59Z",
+        "projectId": "laurel-ag-proposal-tools",
+        "category": "proposals",
+        "extractedText": "1. Project Overview and Strategic Objectives\nProject Overview\nThe objective of this project is to integrate an Azure-based Proposal Application with Salesforce, enabling seamless automation of proposal creation and management. The integration aims to remove manual data entry by establishing automated data synchronization between the two systems, with both automatic and manual options available.\nThis project includes three modules:\n\t•\tModule 1: Adjustments to the Proposal Application to automatically create proposals when opportunities in Salesforce reach the Proposal Prep phase. This is the foundational module upon which the rest of the system relies.\n\t•\tModule 2: Salesforce customization to receive and display data pushed from the Proposal Application once proposals are created or updated in the Proposal Application.\n\t•\tModule 3: A manual data upload option for the Proposal Application, allowing Salesforce to receive data via CSV/TXT file uploads if automatic syncing is not preferred.\nThe client will need to choose between Module 2 and Module 3 depending on their preference for automated or manual data synchronization.\nStrategic Objectives\nThe following six objectives focus primarily on Module 1 and Module 2, as these are foundational for automating the workflow and integrating data across platforms:\n\t•\tStreamline Proposal Management: Automate the synchronization of proposal data between the Proposal Application and Salesforce when opportunities reach specific stages, reducing manual entry.\n\t•\tOptimize Workflow Efficiency: By automating the creation and management of proposals in Salesforce, the process will become faster and more reliable, minimizing the chances of errors.\n\t•\tEnhance Data Integrity: Automatically synchronized data will be validated and standardized across both platforms, ensuring accuracy in reporting and decision-making.\n\t•\tUser-Friendly Interfaces: Ensure that all proposal data, including fields like Material Cost, Labor Cost, and Total Sale, is accessible and editable within Salesforce, improving user interaction and experience.\n\t•\tSeamless Integration: Implement an API-driven connection between Salesforce and the Proposal Application, enabling real-time, bidirectional data flow.\n\t•\tData Security and Compliance: Ensure that all data exchanged between the Proposal Application and Salesforce is secure, using OAuth 2.0 for authentication and protecting sensitive financial data.\n\n\f\n2. Project Methodology\nThis project will be executed following an agile methodology, ensuring flexibility, transparency, and consistent feedback from stakeholders at all stages. This approach will allow us to respond to changing requirements or preferences quickly.\nPhases:\n\t•\tCurrent State Assessment: We will perform an initial analysis of existing systems and workflows, identify pain points, and document all data fields and processes that need to be integrated between the Proposal Application and Salesforce.\n\t•\tKey Activities:\n\t•\tDiscovery sessions with stakeholders.\n\t•\tMapping of current Salesforce Opportunity data fields.\n\t•\tAnalyzing existing Proposal Application workflows and APIs.\n\t•\tOutcome: A detailed As-Is Discovery Report that outlines integration gaps, current workflows, and data flows, along with recommendations for improvements.\n\t•\tSolution Design: This phase will focus on architecting a solution that bridges the Proposal Application and Salesforce seamlessly. This will involve defining data mappings, setting up APIs, and designing the Salesforce UI.\n\t•\tKey Activities:\n\t•\tDesigning APIs for Proposal Application adjustments (Module 1).\n\t•\tCreating new Salesforce data models and UI components (Module 2).\n\t•\tDrafting a detailed technical blueprint for integration.\n\t•\tOutcome: A comprehensive Solution Design Document that details the technical architecture, API connections, UI design for Salesforce, and data flow processes.\n\t•\tDevelopment and Implementation: During this phase, our development team will build and implement the designed solution. The Proposal Application will be adjusted, Salesforce will be customized, and both systems will be integrated. Full testing will be conducted to ensure the solution functions as intended.\n\t•\tKey Activities:\n\t•\tImplementing API connections between the Proposal Application and Salesforce.\n\t•\tCustomizing Salesforce with new fields, triggers, and data flows.\n\t•\tDeveloping the manual data upload functionality (Module 3).\n\t•\tFull system testing, including UAT (User Acceptance Testing).\n\t•\tOutcome: A fully functional, integrated solution with verified functionality and minimal defects.\n\t•\tPhased Rollout: The solution will be deployed in a phased manner, starting with a pilot phase for a small group of users. Based on the feedback from the pilot phase, we will iterate and refine the solution before rolling it out to the entire organization.\n\t•\tKey Activities:\n\t•\tRunning a pilot with a selected group of users.\n\t•\tGathering user feedback and making necessary adjustments.\n\t",
+        "extractedTextLength": 30893,
+        "textExtractedAt": "2025-11-07T16:32:17.563Z"
+      }
+    ],
+    "deliverables": [
+      {
+        "filename": "Proposal Application_Phase II Design.xlsx",
+        "localPath": "data/projects/laurel-ag-proposal-tools/deliverables/Proposal Application_Phase II Design.xlsx",
+        "sharepointUrl": "https://markmanassociates.sharepoint.com/sites/MarkmanAssociates/_layouts/15/Doc.aspx?sourcedoc=%7B89B5DA47-B1A5-4793-80D6-2F670553143E%7D&file=Proposal%20Application_Phase%20II%20Design.xlsx&action=default&mobileredirect=true",
+        "sharepointPath": "/General/Offerings & Projects/1. Tailored Application Development/Laurel_AG - Proposal and Rental Tools/Working Files/LaurelAG-ClientPortal/Proposal Application/Feature Documentation/Proposal Application_Phase II Design.xlsx",
+        "downloadedAt": "2025-11-07T16:07:06.702Z",
+        "fileHash": "dfaa4fcd8a22cebf6443284d4c7f60ff21dbabd9e00ca45238b99175538c516d",
+        "fileSize": 20630,
+        "modifiedBy": "Nikoleta Notova",
+        "modifiedDate": "2025-04-10T17:42:43Z",
+        "projectId": "laurel-ag-proposal-tools",
+        "category": "deliverables",
+        "extractedText": "[Excel file: Proposal Application_Phase II Design.xlsx]",
+        "extractedTextLength": 55,
+        "textExtractedAt": "2025-11-07T16:32:17.563Z"
+      },
+      {
+        "filename": "Feedback - Proposal Application.xlsx",
+        "localPath": "data/projects/laurel-ag-proposal-tools/deliverables/Feedback - Proposal Application.xlsx",
+        "sharepointUrl": "https://markmanassociates.sharepoint.com/sites/MarkmanAssociates/_layouts/15/Doc.aspx?sourcedoc=%7B11C06073-4F60-43DC-A1EF-46A5D08905DE%7D&file=Feedback%20-%20Proposal%20Application.xlsx&action=default&mobileredirect=true",
+        "sharepointPath": "/General/Offerings & Projects/1. Tailored Application Development/Laurel_AG - Proposal and Rental Tools/Working Files/LaurelAG-ClientPortal/Proposal Application/Testing/Feedback - Proposal Application.xlsx",
+        "downloadedAt": "2025-11-07T16:07:08.492Z",
+        "fileHash": "2a122f7b61cbb84b3d2cb551e164517f5d5ed92345ca3aad590fe3f1d4a684a2",
+        "fileSize": 2696517,
+        "modifiedBy": "Nikoleta Notova",
+        "modifiedDate": "2025-04-25T07:40:43Z",
+        "projectId": "laurel-ag-proposal-tools",
+        "category": "deliverables",
+        "extractedText": "[Excel file: Feedback - Proposal Application.xlsx]",
+        "extractedTextLength": 50,
+        "textExtractedAt": "2025-11-07T16:32:17.563Z"
+      },
+      {
+        "filename": "User Acceptance Testing - Proposal Application.xlsx",
+        "localPath": "data/projects/laurel-ag-proposal-tools/deliverables/User Acceptance Testing - Proposal Application.xlsx",
+        "sharepointUrl": "https://markmanassociates.sharepoint.com/sites/MarkmanAssociates/_layouts/15/Doc.aspx?sourcedoc=%7B25388E8A-82D4-4467-9FBE-463C61475F57%7D&file=User%20Acceptance%20Testing%20-%20Proposal%20Application.xlsx&action=default&mobileredirect=true",
+        "sharepointPath": "/General/Offerings & Projects/1. Tailored Application Development/Laurel_AG - Proposal and Rental Tools/Working Files/LaurelAG-ClientPortal/Proposal Application/Testing/User Acceptance Testing - Proposal Application.xlsx",
+        "downloadedAt": "2025-11-07T16:07:09.691Z",
+        "fileHash": "86527ea226f78baf268285569c6f295dcb8dfec6d492437e0b3f9266073d1717",
+        "fileSize": 31431,
+        "modifiedBy": "Nikoleta Notova",
+        "modifiedDate": "2025-03-24T20:56:23Z",
+        "projectId": "laurel-ag-proposal-tools",
+        "category": "deliverables",
+        "extractedText": "[Excel file: User Acceptance Testing - Proposal Application.xlsx]",
+        "extractedTextLength": 65,
+        "textExtractedAt": "2025-11-07T16:32:17.563Z"
+      },
+      {
+        "filename": "Proposal Application - Critical for Implementation.xlsx",
+        "localPath": "data/projects/laurel-ag-proposal-tools/deliverables/Proposal Application - Critical for Implementation.xlsx",
+        "sharepointUrl": "https://markmanassociates.sharepoint.com/sites/MarkmanAssociates/_layouts/15/Doc.aspx?sourcedoc=%7B8444C06B-40AE-4B9C-98DF-A712113999C9%7D&file=Proposal%20Application%20-%20Critical%20for%20Implementation.xlsx&action=default&mobileredirect=true",
+        "sharepointPath": "/General/Offerings & Projects/1. Tailored Application Development/Laurel_AG - Proposal and Rental Tools/Working Files/Working Folder_Nikoleta/Laurel_Proposal Application_Testing/Proposal Application - Critical for Implementation.xlsx",
+        "downloadedAt": "2025-11-07T16:07:10.765Z",
+        "fileHash": "1b4cbfff66ff9fab859fb5bdbb8af9b397c38aa25426094019c71000a9e9de03",
+        "fileSize": 27383,
+        "modifiedBy": "Nikoleta Notova",
+        "modifiedDate": "2025-10-21T14:43:51Z",
+        "projectId": "laurel-ag-proposal-tools",
+        "category": "deliverables",
+        "extractedText": "[Excel file: Proposal Application - Critical for Implementation.xlsx]",
+        "extractedTextLength": 69,
+        "textExtractedAt": "2025-11-07T16:32:17.563Z"
+      },
+      {
+        "filename": "Proposal Application.xlsx",
+        "localPath": "data/projects/laurel-ag-proposal-tools/deliverables/Proposal Application.xlsx",
+        "sharepointUrl": "https://markmanassociates.sharepoint.com/sites/MarkmanAssociates/_layouts/15/Doc.aspx?sourcedoc=%7BC41DA451-00AB-483A-9F11-1ECE045FE2E4%7D&file=Proposal%20Application.xlsx&action=default&mobileredirect=true",
+        "sharepointPath": "/General/Offerings & Projects/1. Tailored Application Development/Laurel_AG - Proposal and Rental Tools/Working Files/Working Folder_Nikoleta/Laurel_Proposal Application_Testing/Proposal Application.xlsx",
+        "downloadedAt": "2025-11-07T16:07:11.853Z",
+        "fileHash": "a6ea1e4bb9c855b76e3123eda3915e5986bc8883a2ab3c85fbf3a1d8251aace5",
+        "fileSize": 18347,
+        "modifiedBy": "Nikoleta Notova",
+        "modifiedDate": "2025-10-21T14:43:53Z",
+        "projectId": "laurel-ag-proposal-tools",
+        "category": "deliverables",
+        "extractedText": "[Excel file: Proposal Application.xlsx]",
+        "extractedTextLength": 39,
+        "textExtractedAt": "2025-11-07T16:32:17.563Z"
+      },
+      {
+        "filename": "User Acceptance Testing - Proposal Application (1).xlsx",
+        "localPath": "data/projects/laurel-ag-proposal-tools/deliverables/User Acceptance Testing - Proposal Application (1).xlsx",
+        "sharepointUrl": "https://markmanassociates.sharepoint.com/sites/MarkmanAssociates/_layouts/15/Doc.aspx?sourcedoc=%7B546CBF4B-BF0C-4C5D-B978-7C717FD06717%7D&file=User%20Acceptance%20Testing%20-%20Proposal%20Application%20(1).xlsx&action=default&mobileredirect=true",
+        "sharepointPath": "/General/Offerings & Projects/1. Tailored Application Development/Laurel_AG - Proposal and Rental Tools/Working Files/Working Folder_Nikoleta/Laurel_Proposal Application_Testing/User Acceptance Testing - Proposal Application (1).xlsx",
+        "downloadedAt": "2025-11-07T16:07:12.741Z",
+        "fileHash": "c3e9d2d495c422f1d2f1528098213f3a380bc72bc5bfd06335d61fb4a4920830",
+        "fileSize": 26629,
+        "modifiedBy": "Nikoleta Notova",
+        "modifiedDate": "2025-10-21T14:43:54Z",
+        "projectId": "laurel-ag-proposal-tools",
+        "category": "deliverables",
+        "extractedText": "[Excel file: User Acceptance Testing - Proposal Application (1).xlsx]",
+        "extractedTextLength": 69,
+        "textExtractedAt": "2025-11-07T16:32:17.563Z"
+      },
+      {
+        "filename": "User Acceptance Testing - Proposal Application (2).xlsx",
+        "localPath": "data/projects/laurel-ag-proposal-tools/deliverables/User Acceptance Testing - Proposal Application (2).xlsx",
+        "sharepointUrl": "https://markmanassociates.sharepoint.com/sites/MarkmanAssociates/_layouts/15/Doc.aspx?sourcedoc=%7B722C7CD6-DE34-44C3-A2DA-7F11C506BDCE%7D&file=User%20Acceptance%20Testing%20-%20Proposal%20Application%20(2).xlsx&action=default&mobileredirect=true",
+        "sharepointPath": "/General/Offerings & Projects/1. Tailored Application Development/Laurel_AG - Proposal and Rental Tools/Working Files/Working Folder_Nikoleta/Laurel_Proposal Application_Testing/User Acceptance Testing - Proposal Application (2).xlsx",
+        "downloadedAt": "2025-11-07T16:07:13.787Z",
+        "fileHash": "bc5b4c3189905dc3c987cd493584f20c65471154910ed5dda7095d77ee7057c1",
+        "fileSize": 26148,
+        "modifiedBy": "Nikoleta Notova",
+        "modifiedDate": "2025-10-21T14:43:54Z",
+        "projectId": "laurel-ag-proposal-tools",
+        "category": "deliverables",
+        "extractedText": "[Excel file: User Acceptance Testing - Proposal Application (2).xlsx]",
+        "extractedTextLength": 69,
+        "textExtractedAt": "2025-11-07T16:32:17.563Z"
+      },
+      {
+        "filename": "User Acceptance Testing - Proposal Application (3).xlsx",
+        "localPath": "data/projects/laurel-ag-proposal-tools/deliverables/User Acceptance Testing - Proposal Application (3).xlsx",
+        "sharepointUrl": "https://markmanassociates.sharepoint.com/sites/MarkmanAssociates/_layouts/15/Doc.aspx?sourcedoc=%7B8CB5050A-DE42-4181-8547-11F85F4B236B%7D&file=User%20Acceptance%20Testing%20-%20Proposal%20Application%20(3).xlsx&action=default&mobileredirect=true",
+        "sharepointPath": "/General/Offerings & Projects/1. Tailored Application Development/Laurel_AG - Proposal and Rental Tools/Working Files/Working Folder_Nikoleta/Laurel_Proposal Application_Testing/User Acceptance Testing - Proposal Application (3).xlsx",
+        "downloadedAt": "2025-11-07T16:07:14.852Z",
+        "fileHash": "f7bc4a8578368f17513959f016e2a3f6b1a38448906af3114b639f5c42477b7a",
+        "fileSize": 2501355,
+        "modifiedBy": "Nikoleta Notova",
+        "modifiedDate": "2025-10-21T14:43:54Z",
+        "projectId": "laurel-ag-proposal-tools",
+        "category": "deliverables",
+        "extractedText": "[Excel file: User Acceptance Testing - Proposal Application (3).xlsx]",
+        "extractedTextLength": 69,
+        "textExtractedAt": "2025-11-07T16:32:17.563Z"
+      },
+      {
+        "filename": "Expansion - Proposal Application.xlsx",
+        "localPath": "data/projects/laurel-ag-proposal-tools/deliverables/Expansion - Proposal Application.xlsx",
+        "sharepointUrl": "https://markmanassociates.sharepoint.com/sites/MarkmanAssociates/_layouts/15/Doc.aspx?sourcedoc=%7B93E17239-28F4-4714-B354-85928D92F3F2%7D&file=Expansion%20-%20Proposal%20Application.xlsx&action=default&mobileredirect=true",
+        "sharepointPath": "/General/Offerings & Projects/1. Tailored Application Development/Laurel_AG - Proposal and Rental Tools/Working Files/Working Folder_Nikoleta/Expansion - Proposal Application.xlsx",
+        "downloadedAt": "2025-11-07T16:07:16.008Z",
+        "fileHash": "09a1f40a3f2b862c7c68d872d368af314ed8eae19d7c1cc99f0c6d4a3f18b89e",
+        "fileSize": 2830493,
+        "modifiedBy": "Nikoleta Notova",
+        "modifiedDate": "2025-10-21T14:43:45Z",
+        "projectId": "laurel-ag-proposal-tools",
+        "category": "deliverables",
+        "extractedText": "[Excel file: Expansion - Proposal Application.xlsx]",
+        "extractedTextLength": 51,
+        "textExtractedAt": "2025-11-07T16:32:17.563Z"
+      },
+      {
+        "filename": "Laurel Rental App DB Schema.xlsx",
+        "localPath": "data/projects/laurel-ag-proposal-tools/deliverables/Laurel Rental App DB Schema.xlsx",
+        "sharepointUrl": "https://markmanassociates.sharepoint.com/sites/MarkmanAssociates/_layouts/15/Doc.aspx?sourcedoc=%7B4C0D038A-EEA9-4813-8F85-550DE5FFD799%7D&file=Laurel%20Rental%20App%20DB%20Schema.xlsx&action=default&mobileredirect=true",
+        "sharepointPath": "/General/Offerings & Projects/1. Tailored Application Development/Laurel_AG - Proposal and Rental Tools/Working Files/LaurelAG-ClientPortal/Rental Application/Prototype Technical Documentation/Laurel Rental App DB Schema.xlsx",
+        "downloadedAt": "2025-11-07T16:07:17.288Z",
+        "fileHash": "04ef391b7542bcfcd31e93e0bfe1633d8e27d361809c6179ae5f6775c70576d7",
+        "fileSize": 81678,
+        "modifiedBy": "Dharmesh",
+        "modifiedDate": "2024-09-03T06:07:42Z",
+        "projectId": "laurel-ag-proposal-tools",
+        "category": "deliverables",
+        "extractedText": "[Excel file: Laurel Rental App DB Schema.xlsx]",
+        "extractedTextLength": 46,
+        "textExtractedAt": "2025-11-07T16:32:17.563Z"
+      },
+      {
+        "filename": "User Acceptance Testing - Rental Application.xlsx",
+        "localPath": "data/projects/laurel-ag-proposal-tools/deliverables/User Acceptance Testing - Rental Application.xlsx",
+        "sharepointUrl": "https://markmanassociates.sharepoint.com/sites/MarkmanAssociates/_layouts/15/Doc.aspx?sourcedoc=%7BB1AEA160-7A66-4264-96D2-DF17B27EE8D4%7D&file=User%20Acceptance%20Testing%20-%20Rental%20Application.xlsx&action=default&mobileredirect=true",
+        "sharepointPath": "/General/Offerings & Projects/1. Tailored Application Development/Laurel_AG - Proposal and Rental Tools/Working Files/LaurelAG-ClientPortal/Rental Application/UAT Testing Documents/User Acceptance Testing - Rental Application.xlsx",
+        "downloadedAt": "2025-11-07T16:07:18.169Z",
+        "fileHash": "fd5269bbd515004078ce7685cb075efbbdbd93e0e9b05414db77a73e8142f8ce",
+        "fileSize": 25491,
+        "modifiedBy": "Carmen",
+        "modifiedDate": "2025-10-26T19:40:12Z",
+        "projectId": "laurel-ag-proposal-tools",
+        "category": "deliverables",
+        "extractedText": "[Excel file: User Acceptance Testing - Rental Application.xlsx]",
+        "extractedTextLength": 63,
+        "textExtractedAt": "2025-11-07T16:32:17.563Z"
+      },
+      {
+        "filename": "Rental Master Data 1.xlsx",
+        "localPath": "data/projects/laurel-ag-proposal-tools/deliverables/Rental Master Data 1.xlsx",
+        "sharepointUrl": "https://markmanassociates.sharepoint.com/sites/MarkmanAssociates/_layouts/15/Doc.aspx?sourcedoc=%7BB73E67AA-2E46-4291-A2EB-7A8E49B04DC8%7D&file=Rental%20Master%20Data%201.xlsx&action=default&mobileredirect=true",
+        "sharepointPath": "/General/Offerings & Projects/1. Tailored Application Development/Laurel_AG - Proposal and Rental Tools/Working Files/Warehouse/Master Data/Rental Master Data 1.xlsx",
+        "downloadedAt": "2025-11-07T16:07:19.414Z",
+        "fileHash": "3b9fe3a6a937050427846de5fd2a61355e065d5407f1be23ea4e1e8f12898cfd",
+        "fileSize": 426444,
+        "modifiedBy": "Chetan",
+        "modifiedDate": "2024-07-23T09:18:18Z",
+        "projectId": "laurel-ag-proposal-tools",
+        "category": "deliverables",
+        "extractedText": "[Excel file: Rental Master Data 1.xlsx]",
+        "extractedTextLength": 39,
+        "textExtractedAt": "2025-11-07T16:32:17.563Z"
+      },
+      {
+        "filename": "Laurel_Rental_Application_Questions.xlsx",
+        "localPath": "data/projects/laurel-ag-proposal-tools/deliverables/Laurel_Rental_Application_Questions.xlsx",
+        "sharepointUrl": "https://markmanassociates.sharepoint.com/sites/MarkmanAssociates/_layouts/15/Doc.aspx?sourcedoc=%7B196FBD9F-32CE-45E8-BE40-8CA22B025B58%7D&file=Laurel_Rental_Application_Questions.xlsx&action=default&mobileredirect=true",
+        "sharepointPath": "/General/Offerings & Projects/1. Tailored Application Development/Laurel_AG - Proposal and Rental Tools/Working Files/Working Folder_Nikoleta/Laurel_Rental Application_Development/Laurel_Rental_Application_Questions.xlsx",
+        "downloadedAt": "2025-11-07T16:07:20.300Z",
+        "fileHash": "98ad992fa79dc1359d24a352535baf76584d602360001461c56dc20781680d97",
+        "fileSize": 71494,
+        "modifiedBy": "Nikoleta Notova",
+        "modifiedDate": "2025-10-21T14:48:02Z",
+        "projectId": "laurel-ag-proposal-tools",
+        "category": "deliverables",
+        "extractedText": "[Excel file: Laurel_Rental_Application_Questions.xlsx]",
+        "extractedTextLength": 54,
+        "textExtractedAt": "2025-11-07T16:32:17.563Z"
+      },
+      {
+        "filename": "Rental Reporting List.xlsx",
+        "localPath": "data/projects/laurel-ag-proposal-tools/deliverables/Rental Reporting List.xlsx",
+        "sharepointUrl": "https://markmanassociates.sharepoint.com/sites/MarkmanAssociates/_layouts/15/Doc.aspx?sourcedoc=%7BF071C527-E19A-4A80-820D-6958E8ED5781%7D&file=Rental%20Reporting%20List.xlsx&action=default&mobileredirect=true",
+        "sharepointPath": "/General/Offerings & Projects/1. Tailored Application Development/Laurel_AG - Proposal and Rental Tools/Working Files/Working Folder_Nikoleta/Laurel_Rental Application_Prototype Development/Laurel_Rental Application_Reporting Tab/Rental Reporting List.xlsx",
+        "downloadedAt": "2025-11-07T16:07:21.223Z",
+        "fileHash": "67c1f89ef0c4273177b279e2fd73896d930c856c0dab71525f08500daca2bf3b",
+        "fileSize": 30770,
+        "modifiedBy": "Nikoleta Notova",
+        "modifiedDate": "2025-10-21T14:48:36Z",
+        "projectId": "laurel-ag-proposal-tools",
+        "category": "deliverables",
+        "extractedText": "[Excel file: Rental Reporting List.xlsx]",
+        "extractedTextLength": 40,
+        "textExtractedAt": "2025-11-07T16:32:17.563Z"
+      },
+      {
+        "filename": "1. NetSuit & SKUs Rental Info.xlsx",
+        "localPath": "data/projects/laurel-ag-proposal-tools/deliverables/1. NetSuit & SKUs Rental Info.xlsx",
+        "sharepointUrl": "https://markmanassociates.sharepoint.com/sites/MarkmanAssociates/_layouts/15/Doc.aspx?sourcedoc=%7BF9EA9C24-0FF7-410B-AD60-F8B063220C29%7D&file=1.%20NetSuit%20%26%20SKUs%20Rental%20Info.xlsx&action=default&mobileredirect=true",
+        "sharepointPath": "/General/Offerings & Projects/1. Tailored Application Development/Laurel_AG - Proposal and Rental Tools/Working Files/Working Folder_Nikoleta/Laurel_Rental Application_Prototype Development/Laurel_Rental_Application_Master Data Validation/Master Data & Other/1. NetSuit & SKUs Rental Info.xlsx",
+        "downloadedAt": "2025-11-07T16:07:22.381Z",
+        "fileHash": "148e21354d4a7341e4a7f33115c28a3494b854a58bbf8f2deaf545780afc0bbf",
+        "fileSize": 337421,
+        "modifiedBy": "Nikoleta Notova",
+        "modifiedDate": "2025-10-21T14:48:39Z",
+        "projectId": "laurel-ag-proposal-tools",
+        "category": "deliverables",
+        "extractedText": "[Excel file: 1. NetSuit & SKUs Rental Info.xlsx]",
+        "extractedTextLength": 48,
+        "textExtractedAt": "2025-11-07T16:32:17.563Z"
+      },
+      {
+        "filename": "4. RENTAL SHEET BAKERSFIELD.xlsx",
+        "localPath": "data/projects/laurel-ag-proposal-tools/deliverables/4. RENTAL SHEET BAKERSFIELD.xlsx",
+        "sharepointUrl": "https://markmanassociates.sharepoint.com/sites/MarkmanAssociates/_layouts/15/Doc.aspx?sourcedoc=%7BE69B232C-EF77-4EA0-A818-553E8F04809B%7D&file=4.%20RENTAL%20SHEET%20BAKERSFIELD.xlsx&action=default&mobileredirect=true",
+        "sharepointPath": "/General/Offerings & Projects/1. Tailored Application Development/Laurel_AG - Proposal and Rental Tools/Working Files/Working Folder_Nikoleta/Laurel_Rental Application_Prototype Development/Laurel_Rental_Application_Master Data Validation/Master Data & Other/4. RENTAL SHEET BAKERSFIELD.xlsx",
+        "downloadedAt": "2025-11-07T16:07:23.588Z",
+        "fileHash": "5d936b7b793b016b124127ce84f9ec286dce1d933d234af4057f215d0a410a3c",
+        "fileSize": 344681,
+        "modifiedBy": "Nikoleta Notova",
+        "modifiedDate": "2025-10-21T14:48:40Z",
+        "projectId": "laurel-ag-proposal-tools",
+        "category": "deliverables",
+        "extractedText": "[Excel file: 4. RENTAL SHEET BAKERSFIELD.xlsx]",
+        "extractedTextLength": 46,
+        "textExtractedAt": "2025-11-07T16:32:17.564Z"
+      },
+      {
+        "filename": "Rental Master Data Validation.xlsx",
+        "localPath": "data/projects/laurel-ag-proposal-tools/deliverables/Rental Master Data Validation.xlsx",
+        "sharepointUrl": "https://markmanassociates.sharepoint.com/sites/MarkmanAssociates/_layouts/15/Doc.aspx?sourcedoc=%7B1EA10806-0C10-482A-8B61-5992621AC1D0%7D&file=Rental%20Master%20Data%20Validation.xlsx&action=default&mobileredirect=true",
+        "sharepointPath": "/General/Offerings & Projects/1. Tailored Application Development/Laurel_AG - Proposal and Rental Tools/Working Files/Working Folder_Nikoleta/Laurel_Rental Application_Prototype Development/Laurel_Rental_Application_Master Data Validation/Rental Master Data Validation.xlsx",
+        "downloadedAt": "2025-11-07T16:07:24.628Z",
+        "fileHash": "a31655abec078d76f43b9f51c320dafc1df3e2e4f0bcb007b5a57b441259094b",
+        "fileSize": 2542890,
+        "modifiedBy": "Nikoleta Notova",
+        "modifiedDate": "2025-10-21T14:48:18Z",
+        "projectId": "laurel-ag-proposal-tools",
+        "category": "deliverables",
+        "extractedText": "[Excel file: Rental Master Data Validation.xlsx]",
+        "extractedTextLength": 48,
+        "textExtractedAt": "2025-11-07T16:32:17.564Z"
+      },
+      {
+        "filename": "Laurel HSFD_Rental Tool Validation Testing V1.xlsx",
+        "localPath": "data/projects/laurel-ag-proposal-tools/deliverables/Laurel HSFD_Rental Tool Validation Testing V1.xlsx",
+        "sharepointUrl": "https://markmanassociates.sharepoint.com/sites/MarkmanAssociates/_layouts/15/Doc.aspx?sourcedoc=%7B6C7104F4-BD3E-41DE-9E5C-217EB85AE129%7D&file=Laurel%20HSFD_Rental%20Tool%20Validation%20Testing%20V1.xlsx&action=default&mobileredirect=true",
+        "sharepointPath": "/General/Offerings & Projects/1. Tailored Application Development/Laurel_AG - Proposal and Rental Tools/Working Files/Working Folder_Nikoleta/Laurel_Rental Application_Prototype Development/Laurel_Rental_Application_WorkAssignements/Laurel HSFD_Rental Tool Validation Testing V1.xlsx",
+        "downloadedAt": "2025-11-07T16:07:25.841Z",
+        "fileHash": "0893ebe96e785ab680d85f62d053c2d5223de4d5cc1a2cccaf440117e21b4bda",
+        "fileSize": 1858258,
+        "modifiedBy": "Nikoleta Notova",
+        "modifiedDate": "2025-10-21T14:48:22Z",
+        "projectId": "laurel-ag-proposal-tools",
+        "category": "deliverables",
+        "extractedText": "[Excel file: Laurel HSFD_Rental Tool Validation Testing V1.xlsx]",
+        "extractedTextLength": 64,
+        "textExtractedAt": "2025-11-07T16:32:17.564Z"
+      },
+      {
+        "filename": "Laurel HSFD_Rental Tool Validation Testing.xlsx",
+        "localPath": "data/projects/laurel-ag-proposal-tools/deliverables/Laurel HSFD_Rental Tool Validation Testing.xlsx",
+        "sharepointUrl": "https://markmanassociates.sharepoint.com/sites/MarkmanAssociates/_layouts/15/Doc.aspx?sourcedoc=%7B781694E6-2099-491D-9AF3-7D031942A6F6%7D&file=Laurel%20HSFD_Rental%20Tool%20Validation%20Testing.xlsx&action=default&mobileredirect=true",
+        "sharepointPath": "/General/Offerings & Projects/1. Tailored Application Development/Laurel_AG - Proposal and Rental Tools/Working Files/Working Folder_Nikoleta/Laurel_Rental Application_Prototype Development/Laurel_Rental_Application_WorkAssignements/Laurel HSFD_Rental Tool Validation Testing.xlsx",
+        "downloadedAt": "2025-11-07T16:07:26.888Z",
+        "fileHash": "c27e4998bba0cef44589e9cabe9aa8ef6b79612134a28225ffe63baf962e180b",
+        "fileSize": 2270664,
+        "modifiedBy": "Nikoleta Notova",
+        "modifiedDate": "2025-10-21T14:48:22Z",
+        "projectId": "laurel-ag-proposal-tools",
+        "category": "deliverables",
+        "extractedText": "[Excel file: Laurel HSFD_Rental Tool Validation Testing.xlsx]",
+        "extractedTextLength": 61,
+        "textExtractedAt": "2025-11-07T16:32:17.564Z"
+      }
+    ],
+    "documentation": [
+      {
+        "filename": "Technical Specification for Rental Process Application_V03.docx",
+        "localPath": "data/projects/laurel-ag-proposal-tools/documentation/Technical Specification for Rental Process Application_V03.docx",
+        "sharepointUrl": "https://markmanassociates.sharepoint.com/sites/MarkmanAssociates/_layouts/15/Doc.aspx?sourcedoc=%7B25033E44-5ADB-4DE4-9497-40C222229B92%7D&file=Technical%20Specification%20for%20Rental%20Process%20Application_V03.docx&action=default&mobileredirect=true",
+        "sharepointPath": "/General/Offerings & Projects/1. Tailored Application Development/Laurel_AG - Proposal and Rental Tools/Key Deliverables/Rental Application/Technical Specification for Rental Process Application_V03.docx",
+        "downloadedAt": "2025-11-07T13:32:55.897Z",
+        "fileHash": "267412067f4efc9f7abeb056a2da34860c9d36adab9dedc67358780aadee294f",
+        "fileSize": 2802733,
+        "modifiedBy": "Carmen",
+        "modifiedDate": "2025-10-26T19:54:08Z",
+        "projectId": "laurel-ag-proposal-tools",
+        "category": "documentation",
+        "extractedText": "Technical Specification for Rental Process Application\n\nDatabase Structure: laurel_rental_application\nThe database structure outlined below serves as the foundational framework for the Rental Process Application. This structure is designed to efficiently manage all aspects of the rental process, including inventory management, customer data, order processing, and user roles. While the following tables are critical to the application's functionality, additional tables can be added as per development needs.\n\t•\tTable: warehouse_product_list\n\nDescription:\nThis table stores information about the equipment available in the warehouse, including their identification, material grouping, and subtypes for accounting or classification purposes.\nColumns:\n\t•\tequipment_id - INT - PRIMARY KEY, AUTO_INCREMENT\n\t•\tA unique identifier for each piece of equipment.\n\t•\tequipment_material_group - VARCHAR(255)\n\t•\tA text-based category representing the material group to which the equipment belongs\n\t•\tequipment_name - VARCHAR(255)\n\t•\tThe name or description of the equipment (e.g., \"TV,\" \"Laser Cutter\").\n\t•\tsubtype - VARCHAR(255)\n\t•\tThe subtype of the equipment, which categorizes it further for purposes such as accounting or inventory management.\n\t•\tlast_updated_by – VARCHAR(255) - NOT NULL\n\t•\tThe user_id of the user who last updated this record.\n\n\nTable Structure Example:\nCREATE TABLE warehouse_product_list (\nequipment_id INT PRIMARY KEY AUTO_INCREMENT, equipment_material_group VARCHAR(255) NOT NULL, equipment_name VARCHAR(255) NOT NULL,\nsubtype VARCHAR(255) NOT NULL,\nlast_updated_by VARCHAR(255) NOT NULL,\nFOREIGN KEY (last_updated_by) REFERENCES user_list(user_id)\n);\n\nNotes:\n\nThe equipment_material_group column now stores descriptive text labels that categorize the equipment.\nThe subtype column remains for additional classification purposes, useful for accounting or organizational needs.\n\n\t•\tTable: warehouse_list\nDescription:\nThis table stores information about the various warehouse locations, including their names and addresses.\nColumns:\n\t•\tlocation_id - INT - PRIMARY KEY, AUTO_INCREMENT\n\t•\tA unique identifier for each warehouse location.\n\t•\tlocation_name - VARCHAR(255)\n\t•\tThe name or designation of the warehouse location (e.g., \"Bakersfield,\" \"Brawley\").\n\t•\taddress - VARCHAR(255)\n\t•\tThe full address of the warehouse, including street address, city, state, and ZIP code.\n\t•\tlatitude: Latitude of the warehouse location.\n\t•\tlongitude: Longitude of the warehouse location.\n\t•\tlast_updated_by – VARCHAR(255) - NOT NULL\n\t•\tThe user_id of the user who last updated this record.\n\nTable Structure Example:\nCREATE TABLE warehouse_list (\nlocation_id INT PRIMARY KEY AUTO_INCREMENT, location_name VARCHAR(255) NOT NULL, address VARCHAR(255) NOT NULL\nlast_updated_by VARCHAR(255) NOT NULL,\nFOREIGN KEY (last_updated_by) REFERENCES user_list(user_id)\n);\n\nNotes:\n\t•\tThe location_id column is a unique, auto-incremented identifier for each warehouse, ensuring that each location can be uniquely referenced.\n\t•\tThe location_name column stores the name or designation of the warehouse, which may reflect\nits geographic location or other identifying features.\n\t•\tThe address column is a text field that stores the complete address of each warehouse, making it easy to locate or reference specific warehouses.\n\n\t•\tTable: account_managers\n\nDescription:\nThis table stores information about account managers, including their names and email addresses. Columns:\n\t•\tmanager_id - INT - PRIMARY KEY, AUTO_INCREMENT\n\t•\tA unique identifier for each account manager.\n\t•\tmanager_name - VARCHAR(255)\n\t•\tThe full name of the account manager (e.g., \"Brawley Smith,\" \"Brooke Marchy\").\n\t•\temail_address - VARCHAR(255) - UNIQUE\n\t•\tThe email address of the account manager.\n\t•\tlast_updated_by – VARCHAR(255) - NOT NULL\n\t•\tThe user_id of the user who last updated this record.\n\nTable Structure Example:\nCREATE TABLE account_managers (\nmanager_id INT PRIMARY KEY AUTO_INCREMENT,\nmanager_name VARCHAR(255) NOT NULL, email_address VARCHAR(255) UNIQUE NOT NULL last_updated_by VARCHAR(255) NOT NULL,\nFOREIGN KEY (last_updated_by) REFERENCES user_list(user_id)\n);\n\nNotes:\n\t•\tThe manager_id column is a unique, auto-incremented identifier for each account manager.\n\t•\tThe manager_name column stores the full name of the account manager.\n\t•\tThe email_address column is designed to be unique to prevent duplicate email entries and ensure that each manager's email is distinct.\n\n\t•\tTable: customer_list\nDescription:\nThis table stores information about customers, including their internal ID, customer ID, name . Columns:\n\t•\tinternal_id - INT - PRIMARY KEY, AUTO_INCREMENT\n\t•\tA unique internal identifier for each customer.\n\t•\tcustomer_id - VARCHAR(50) - UNIQUE\n\t•\tA unique customer identifier used within the system (e.g., \"C006383\").\n\t•\tlast_updated_by – VARCHAR(255) - NOT NULL\n\n\t•\tThe user_id of the user who last updated this record.\n\nTable Structure Example:\nCREATE TABLE customer_list (\ninternal_id INT PRIMARY KEY AUTO_INC",
+        "extractedTextLength": 208949,
+        "textExtractedAt": "2025-11-07T16:32:17.814Z"
+      },
+      {
+        "filename": "Technical Specification for Rental Process Application_V01.docx",
+        "localPath": "data/projects/laurel-ag-proposal-tools/documentation/Technical Specification for Rental Process Application_V01.docx",
+        "sharepointUrl": "https://markmanassociates.sharepoint.com/sites/MarkmanAssociates/_layouts/15/Doc.aspx?sourcedoc=%7BE77C50F7-C382-466B-B157-AF184E96D22D%7D&file=Technical%20Specification%20for%20Rental%20Process%20Application_V01.docx&action=default&mobileredirect=true",
+        "sharepointPath": "/General/Offerings & Projects/1. Tailored Application Development/Laurel_AG - Proposal and Rental Tools/Working Files/LaurelAG-ClientPortal/Rental Application/Prototype Technical Documentation/Technical Specification for Rental Process Application_V01.docx",
+        "downloadedAt": "2025-11-07T13:32:57.907Z",
+        "fileHash": "58d752ec1210be67e2ee0b86e55da64d8330fa011ee5015413d10ad6459a0ecf",
+        "fileSize": 3239237,
+        "modifiedBy": "Petrana",
+        "modifiedDate": "2025-06-03T16:05:16Z",
+        "projectId": "laurel-ag-proposal-tools",
+        "category": "documentation",
+        "extractedText": "Technical Specification for Rental Process Application\n\nDatabase Structure: laurel_rental_application\nThe database structure outlined below serves as the foundational framework for the Rental Process Application. This structure is designed to efficiently manage all aspects of the rental process, including inventory management, customer data, order processing, and user roles. While the following tables are critical to the application's functionality, additional tables can be added as per development needs.\n\t•\tTable: warehouse_product_list\nDescription: This table stores information about the equipment available in the warehouse, including their identification, material grouping, and subtypes for accounting or classification purposes.\nColumns:\n\t•\tequipment_id - INT - PRIMARY KEY, AUTO_INCREMENT\n\t•\tA unique identifier for each piece of equipment.\n\t•\tequipment_material_group - VARCHAR(255)\n\t•\tA text-based category representing the material group to which the equipment belongs\n\t•\tequipment_name - VARCHAR(255)\n\t•\tThe name or description of the equipment (e.g., \"TV,\" \"Laser Cutter\").\n\t•\tsubtype - VARCHAR(255)\n\t•\tThe subtype of the equipment, which categorizes it further for purposes such as accounting or inventory management.\n\t•\tlast_updated_by – VARCHAR(255) - NOT NULL\n\t•\tThe user_id of the user who last updated this record.\n\nTable Structure Example:\nCREATE TABLE warehouse_product_list (\n    equipment_id INT PRIMARY KEY AUTO_INCREMENT,\n    equipment_material_group VARCHAR(255) NOT NULL,\n    equipment_name VARCHAR(255) NOT NULL,\n    subtype VARCHAR(255) NOT NULL,\n   last_updated_by VARCHAR(255) NOT NULL, \n   FOREIGN KEY (last_updated_by) REFERENCES user_list(user_id)\n);\nNotes:\nThe equipment_material_group column now stores descriptive text labels that categorize the equipment.\nThe subtype column remains for additional classification purposes, useful for accounting or organizational needs.\n\n\t•\tTable: warehouse_list\nDescription: This table stores information about the various warehouse locations, including their names and addresses.\nColumns:\n\t•\tlocation_id - INT - PRIMARY KEY, AUTO_INCREMENT\n\t•\tA unique identifier for each warehouse location.\n\t•\tlocation_name - VARCHAR(255)\n\t•\tThe name or designation of the warehouse location (e.g., \"Bakersfield,\" \"Brawley\").\n\t•\taddress - VARCHAR(255)\n\t•\tThe full address of the warehouse, including street address, city, state, and ZIP code.\n\t•\tlatitude: Latitude of the warehouse location.\n\t•\tlongitude: Longitude of the warehouse location.\n\t•\tlast_updated_by – VARCHAR(255) - NOT NULL\n\t•\tThe user_id of the user who last updated this record.\nTable Structure Example:\nCREATE TABLE warehouse_list (\n    location_id INT PRIMARY KEY AUTO_INCREMENT,\n    location_name VARCHAR(255) NOT NULL,\n    address VARCHAR(255) NOT NULL\n   last_updated_by VARCHAR(255) NOT NULL, \n  FOREIGN KEY (last_updated_by) REFERENCES user_list(user_id) \n);\nNotes:\n\t•\tThe location_id column is a unique, auto-incremented identifier for each warehouse, ensuring that each location can be uniquely referenced.\n\t•\tThe location_name column stores the name or designation of the warehouse, which may reflect its geographic location or other identifying features.\n\t•\tThe address column is a text field that stores the complete address of each warehouse, making it easy to locate or reference specific warehouses.\n\n\t•\tTable: account_managers\nDescription: This table stores information about account managers, including their names and email addresses.\nColumns:\n\t•\tmanager_id - INT - PRIMARY KEY, AUTO_INCREMENT\n\t•\tA unique identifier for each account manager.\n\t•\tmanager_name - VARCHAR(255)\n\t•\tThe full name of the account manager (e.g., \"Brawley Smith,\" \"Brooke Marchy\").\n\t•\temail_address - VARCHAR(255) - UNIQUE\n\t•\tThe email address of the account manager.\n\t•\tlast_updated_by – VARCHAR(255) - NOT NULL\n\t•\tThe user_id of the user who last updated this record.\nTable Structure Example:\nCREATE TABLE account_managers (\n    manager_id INT PRIMARY KEY AUTO_INCREMENT,\n    manager_name VARCHAR(255) NOT NULL,\n    email_address VARCHAR(255) UNIQUE NOT NULL\n   last_updated_by VARCHAR(255) NOT NULL, \n   FOREIGN KEY (last_updated_by) REFERENCES user_list(user_id)\n);\nNotes:\n\t•\tThe manager_id column is a unique, auto-incremented identifier for each account manager.\n\t•\tThe manager_name column stores the full name of the account manager.\n\t•\tThe email_address column is designed to be unique to prevent duplicate email entries and ensure that each manager's email is distinct.\n\n\t•\tTable: customer_list\nDescription: This table stores information about customers, including their internal ID, customer ID, name.\nColumns:\n\t•\tinternal_id - INT - PRIMARY KEY, AUTO_INCREMENT\n\t•\tA unique internal identifier for each customer.\n\t•\tcustomer_id - VARCHAR(50) - UNIQUE\n\t•\tA unique customer identifier used within the system (e.g., \"C006383\").\n\t•\tlast_updated_by – VARCHAR(255) - NOT NULL\n\t•\tThe user_id of the user who last updated this record.\nTable Structure Example:\nCREATE TABLE cus",
+        "extractedTextLength": 201497,
+        "textExtractedAt": "2025-11-07T16:32:17.963Z"
+      },
+      {
+        "filename": "Rental Application_Technical Specification for CRs Pending Inspection, Multiple Locations & Stock Report.docx",
+        "localPath": "data/projects/laurel-ag-proposal-tools/documentation/Rental Application_Technical Specification for CRs Pending Inspection, Multiple Locations & Stock Report.docx",
+        "sharepointUrl": "https://markmanassociates.sharepoint.com/sites/MarkmanAssociates/_layouts/15/Doc.aspx?sourcedoc=%7B117FA1C5-E11F-4B7C-84BB-F3ABBD815627%7D&file=Rental%20Application_Technical%20Specification%20for%20CRs%20Pending%20Inspection,%20Multiple%20Locations%20%26%20Stock%20Report.docx&action=default&mobileredirect=true",
+        "sharepointPath": "/General/Offerings & Projects/1. Tailored Application Development/Laurel_AG - Proposal and Rental Tools/Working Files/Working Folder_Nikoleta/Laurel_Rental Application_Documenation/Rental Application_Technical Specification for CRs Pending Inspection, Multiple Locations & Stock Report.docx",
+        "downloadedAt": "2025-11-07T13:32:58.836Z",
+        "fileHash": "b590253b3cd441c5a5245cb65e97668c026c689e3d034139f8c8689b620c0c15",
+        "fileSize": 208256,
+        "modifiedBy": "Nikoleta Notova",
+        "modifiedDate": "2025-10-21T14:48:08Z",
+        "projectId": "laurel-ag-proposal-tools",
+        "category": "documentation",
+        "extractedText": "Inspection Pending, Multiple Delivery Locations Features & Stock Report\n\n\t•\tInspection Pending (Out of Stock)\nOverview: \nIn the context of out of stock items, the Pending Inspection Report will be more granular, allowing different teams (based on their warehouse) to view, track, and take action on inspections pending for out-of-stock materials.\nInspection Completion Stage:\nIn the inspection stage, users will have the option to complete the inspection for each material individually or in bulk.\n\t•\tIndividual Completion: Users can select a single item or multiple items and mark it as inspected. This option allows for more detailed tracking and manual verification for each material.\n\t•\tBulk Completion: As is currently available, users will be able complete the inspection for all materials at once. This option is ideal for handling large volumes of items at once, improving efficiency.\nReport for Warehouse-Based Visibility:\n\t•\tWarehouse-Specific Pending Inspection Report:\n\t•\tThe report will be filtered and organized by warehouse, providing clear visibility to the team members responsible for each location.\n\t•\tEach warehouse will have its own set of out-of-stock materials pending inspection, allowing teams to focus on their specific area and increase operational efficiency.\n\t•\tReport Filters:\n\t•\tUsers will be able to filter the report by warehouse, ensuring that they only see the relevant pending items for inspection that pertain to their specific location.\n\t•\tTracking by Days Pending:\n\t•\tMaterials will be tracked based on how many days they have been pending for inspection.\n\t•\tRed Flagging by Warehouse: If an item has been pending for more than 2 days, it will be flagged in red to draw attention for immediate action.\n\t•\tWarehouse-Specific Responsibilities:\n\t•\tWarehouse teams will be able to directly manage the items in their warehouse by checking their report, ensuring that pending inspections are handled in a timely manner.\n\n\t•\tDashboard Integration:\n\t•\tA dashboard view will provide quick access to performance data regarding pending inspections across multiple warehouses.\n\t•\tDashboard Header to include:\n\t•\tWarehouse Name\n\t•\tNumber of pending inspections by warehouse\n\t•\tNumber of items overdue (red-flagged) by warehouse\n\t•\tAverage days pending per warehouse\n\t•\tDetailed Reports could include:\n\t•\tOrder Number\n\t•\tReturn Delivery Number (hyperlinked to inspection within the rental process)\n\t•\tItem ID\n\t•\tItem Name\n\t•\tContract End Date\n\t•\tCheck In Date\n\t•\tDays Overdue (flagged red if overdue)\n\t•\tNotes\n\t•\tAction Button (complete inspection or do stock adjustment)\nUser Interface (UI) Updates for Warehouse Visibility:\n\t•\tReport Page for Pending Inspections:\n\t•\tUsers can select a warehouse from a dropdown or filter bar at the top of the report page.\n\t•\tOnce a warehouse is selected, the data will be filtered to show only the relevant pending inspection items.\n\t•\tColor Coding and Alerts by Location:\n\t•\tThe red flagging of overdue inspections will be visually represented with different color highlights by location, making it easy to identify which warehouse has the most pressing issues.\n\t•\tLocation-Specific Notifications:\n\t•\tReminder notifications for pending inspections will be sent daily, ensuring the right teams are notified about pending inspections in their area. These reminders will be triggered based on the location’s due dates.\n\f\nReport Access:\n\t•\tUser Feedback:\n\t•\tUsers will be able to add comments or notes related to pending inspections, which can be reviewed by warehouse managers. This ensures that any additional context (e.g., inspection delays) is captured and tracked, improving communication and transparency.\n\t•\tWarehouse Base Access:\n\t•\tNew role for warehouse pending inspection report to be created.\n\n\f\n\t•\tMultiple Delivery Locations\nOverview:\nThe Multiple Delivery Locations feature will allow the user to specify multiple delivery locations for both delivery and return processes. This will streamline logistics and improve the delivery experience for customers with multiple locations.\n\nKey Components:\n\t•\tMultiple Deliveries for Different Locations:\n\t•\tOption 1 – Multiple Deliveries: The user can create multiple deliveries, each with a different delivery address, within the selected range or customer location.\n\t•\tOption 2 – Single Delivery with Multiple Locations: As an alternative, the user can select multiple locations during the creation of a single delivery. This option simplifies the process by avoiding multiple entries and allowing all locations to be grouped under one delivery record.\n\t•\tReturn Delivery Integration:\n\t•\tThe selected multiple locations during the delivery creation process will also be reflected in the return delivery process. This ensures consistency and accurate tracking throughout the entire rental period.\n\t•\tFree Text Notes for Each Location:\n\t•\tCustomizable Notes: For each location added, the user will have the option to add free text notes. These notes will allow for detailed instruction",
+        "extractedTextLength": 8928,
+        "textExtractedAt": "2025-11-07T16:32:17.996Z"
+      },
+      {
+        "filename": "Technical Specification for Rental Process Application_V02.docx",
+        "localPath": "data/projects/laurel-ag-proposal-tools/documentation/Technical Specification for Rental Process Application_V02.docx",
+        "sharepointUrl": "https://markmanassociates.sharepoint.com/sites/MarkmanAssociates/_layouts/15/Doc.aspx?sourcedoc=%7B2D825ABF-B8CB-4C59-872B-D9A5B1E36FF2%7D&file=Technical%20Specification%20for%20Rental%20Process%20Application_V02.docx&action=default&mobileredirect=true",
+        "sharepointPath": "/General/Offerings & Projects/1. Tailored Application Development/Laurel_AG - Proposal and Rental Tools/Working Files/Working Folder_Nikoleta/Laurel_Rental Application_Documenation/Technical Specification for Rental Process Application_V02.docx",
+        "downloadedAt": "2025-11-07T13:33:00.273Z",
+        "fileHash": "1207d5f0f92df914615ebaab03f7cb4161a9fb41fe8805bf765fb0e02a79469b",
+        "fileSize": 2802524,
+        "modifiedBy": "Nikoleta Notova",
+        "modifiedDate": "2025-10-21T14:48:11Z",
+        "projectId": "laurel-ag-proposal-tools",
+        "category": "documentation",
+        "extractedText": "Technical Specification for Rental Process Application\n\nDatabase Structure: laurel_rental_application\nThe database structure outlined below serves as the foundational framework for the Rental Process Application. This structure is designed to efficiently manage all aspects of the rental process, including inventory management, customer data, order processing, and user roles. While the following tables are critical to the application's functionality, additional tables can be added as per development needs.\n\t•\tTable: warehouse_product_list\n\nDescription:\nThis table stores information about the equipment available in the warehouse, including their identification, material grouping, and subtypes for accounting or classification purposes.\nColumns:\n\t•\tequipment_id - INT - PRIMARY KEY, AUTO_INCREMENT\n\t•\tA unique identifier for each piece of equipment.\n\t•\tequipment_material_group - VARCHAR(255)\n\t•\tA text-based category representing the material group to which the equipment belongs\n\t•\tequipment_name - VARCHAR(255)\n\t•\tThe name or description of the equipment (e.g., \"TV,\" \"Laser Cutter\").\n\t•\tsubtype - VARCHAR(255)\n\t•\tThe subtype of the equipment, which categorizes it further for purposes such as accounting or inventory management.\n\t•\tlast_updated_by – VARCHAR(255) - NOT NULL\n\t•\tThe user_id of the user who last updated this record.\n\n\nTable Structure Example:\nCREATE TABLE warehouse_product_list (\nequipment_id INT PRIMARY KEY AUTO_INCREMENT, equipment_material_group VARCHAR(255) NOT NULL, equipment_name VARCHAR(255) NOT NULL,\nsubtype VARCHAR(255) NOT NULL,\nlast_updated_by VARCHAR(255) NOT NULL,\nFOREIGN KEY (last_updated_by) REFERENCES user_list(user_id)\n);\n\nNotes:\n\nThe equipment_material_group column now stores descriptive text labels that categorize the equipment.\nThe subtype column remains for additional classification purposes, useful for accounting or organizational needs.\n\n\t•\tTable: warehouse_list\nDescription:\nThis table stores information about the various warehouse locations, including their names and addresses.\nColumns:\n\t•\tlocation_id - INT - PRIMARY KEY, AUTO_INCREMENT\n\t•\tA unique identifier for each warehouse location.\n\t•\tlocation_name - VARCHAR(255)\n\t•\tThe name or designation of the warehouse location (e.g., \"Bakersfield,\" \"Brawley\").\n\t•\taddress - VARCHAR(255)\n\t•\tThe full address of the warehouse, including street address, city, state, and ZIP code.\n\t•\tlatitude: Latitude of the warehouse location.\n\t•\tlongitude: Longitude of the warehouse location.\n\t•\tlast_updated_by – VARCHAR(255) - NOT NULL\n\t•\tThe user_id of the user who last updated this record.\n\nTable Structure Example:\nCREATE TABLE warehouse_list (\nlocation_id INT PRIMARY KEY AUTO_INCREMENT, location_name VARCHAR(255) NOT NULL, address VARCHAR(255) NOT NULL\nlast_updated_by VARCHAR(255) NOT NULL,\nFOREIGN KEY (last_updated_by) REFERENCES user_list(user_id)\n);\n\nNotes:\n\t•\tThe location_id column is a unique, auto-incremented identifier for each warehouse, ensuring that each location can be uniquely referenced.\n\t•\tThe location_name column stores the name or designation of the warehouse, which may reflect\nits geographic location or other identifying features.\n\t•\tThe address column is a text field that stores the complete address of each warehouse, making it easy to locate or reference specific warehouses.\n\n\t•\tTable: account_managers\n\nDescription:\nThis table stores information about account managers, including their names and email addresses. Columns:\n\t•\tmanager_id - INT - PRIMARY KEY, AUTO_INCREMENT\n\t•\tA unique identifier for each account manager.\n\t•\tmanager_name - VARCHAR(255)\n\t•\tThe full name of the account manager (e.g., \"Brawley Smith,\" \"Brooke Marchy\").\n\t•\temail_address - VARCHAR(255) - UNIQUE\n\t•\tThe email address of the account manager.\n\t•\tlast_updated_by – VARCHAR(255) - NOT NULL\n\t•\tThe user_id of the user who last updated this record.\n\nTable Structure Example:\nCREATE TABLE account_managers (\nmanager_id INT PRIMARY KEY AUTO_INCREMENT,\nmanager_name VARCHAR(255) NOT NULL, email_address VARCHAR(255) UNIQUE NOT NULL last_updated_by VARCHAR(255) NOT NULL,\nFOREIGN KEY (last_updated_by) REFERENCES user_list(user_id)\n);\n\nNotes:\n\t•\tThe manager_id column is a unique, auto-incremented identifier for each account manager.\n\t•\tThe manager_name column stores the full name of the account manager.\n\t•\tThe email_address column is designed to be unique to prevent duplicate email entries and ensure that each manager's email is distinct.\n\n\t•\tTable: customer_list\nDescription:\nThis table stores information about customers, including their internal ID, customer ID, name . Columns:\n\t•\tinternal_id - INT - PRIMARY KEY, AUTO_INCREMENT\n\t•\tA unique internal identifier for each customer.\n\t•\tcustomer_id - VARCHAR(50) - UNIQUE\n\t•\tA unique customer identifier used within the system (e.g., \"C006383\").\n\t•\tlast_updated_by – VARCHAR(255) - NOT NULL\n\n\t•\tThe user_id of the user who last updated this record.\n\nTable Structure Example:\nCREATE TABLE customer_list (\ninternal_id INT PRIMARY KEY AUTO_INC",
+        "extractedTextLength": 208802,
+        "textExtractedAt": "2025-11-07T16:32:18.253Z"
+      }
+    ]
+  },
+  "migrationStatus": {
+    "inventoryComplete": true,
+    "documentsDownloaded": false,
+    "validated": false,
+    "lastUpdated": "2025-11-07T16:07:26.888Z"
+  },
+  "codebase": {
+    "repos": [
+      {
+        "name": "Estimation-Platform",
+        "url": "https://github.com/markmangroup/Estimation-Platform.git",
+        "path": "data/github-repos/Estimation-Platform",
+        "files": 830,
+        "size": 83248,
+        "lastCommit": "2025-10-16 08:58:37 -0400",
+        "primaryLanguage": null,
+        "description": null
+      },
+      {
+        "name": "LaurelAG-app",
+        "url": "https://github.com/markmangroup/LaurelAG-app.git",
+        "path": "data/github-repos/LaurelAG-app",
+        "files": 930,
+        "size": 74096,
+        "lastCommit": "2025-06-13 10:45:18 -0400",
+        "primaryLanguage": null,
+        "description": null
+      },
+      {
+        "name": "Rental-Platform",
+        "url": "https://github.com/markmangroup/Rental-Platform.git",
+        "path": "data/github-repos/Rental-Platform",
+        "files": 820,
+        "size": 47728,
+        "lastCommit": "2025-10-01 11:26:22 -0400",
+        "primaryLanguage": null,
+        "description": null
+      }
+    ],
+    "totalFiles": 2580,
+    "totalSizeKB": 205072,
+    "technologies": [],
+    "analyzedAt": "2025-11-07T17:39:33.435Z"
+  }
+}

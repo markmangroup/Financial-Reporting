@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Transformation Flow Diagram</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .diagram-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Data Transformation Flow: From Raw CSV to Financial Statements</h1>
+        <div class="diagram-container">
+            <div class="mermaid">
+flowchart TD
+    A[📄 Raw Chase CSV Files] --> B[🔍 CSV Parser Engine]
+    B --> C[🏷️ Transaction Categorization]
+    C --> D[📊 Data Validation & Cleaning]
+    D --> E[💰 Financial Calculations Engine]
+    E --> F[📈 Financial Statements Generator]
+    F --> G[🎨 Frontend Display]
+    
+    %% Raw Data Sources
+    A1[Chase Checking Account<br/>5939_Activity_20250929.CSV] --> A
+    A2[Chase Credit Card<br/>8008_Activity20230929.CSV] --> A
+    
+    %% Parser Details
+    B --> B1[Parse CSV Structure<br/>• Extract columns<br/>• Handle quotes/commas<br/>• Filter empty rows]
+    
+    %% Categorization Process
+    C --> C1[Client Payments<br/>• Laurel Management<br/>• Metropolitan Partners]
+    C --> C2[Consultant Expenses<br/>• International wires<br/>• Bill.com payments<br/>• Swan services]
+    C --> C3[Operating Expenses<br/>• Credit card autopay<br/>• Auto loan payments<br/>• Bank fees]
+    C --> C4[Owner Equity<br/>• Account transfers<br/>• Wire reversals<br/>• Other credits]
+    
+    %% Validation Layer
+    D --> D1[✅ Transaction Count Check<br/>• Verify all rows processed<br/>• Check for missing data]
+    D --> D2[✅ Amount Validation<br/>• Sum debits and credits<br/>• Verify balance calculations]
+    D --> D3[✅ Category Coverage<br/>• Ensure 100% mapping<br/>• Flag uncategorized items]
+    
+    %% Financial Engine
+    E --> E1[📊 Golden Record Calculator<br/>• Single source of truth<br/>• Consistent calculations]
+    E1 --> E2[Revenue Calculations<br/>• Business revenue only<br/>• Client payment totals]
+    E1 --> E3[Expense Calculations<br/>• Consultant costs<br/>• Operating expenses<br/>• Total business costs]
+    E1 --> E4[Equity Calculations<br/>• Owner contributions<br/>• Retained earnings<br/>• Other credits]
+    
+    %% Statement Generation
+    F --> F1[📋 Income Statement<br/>• Revenue vs Expenses<br/>• Net Income calculation]
+    F --> F2[⚖️ Balance Sheet<br/>• Assets = Liabilities + Equity<br/>• Point-in-time snapshot]
+    F --> F3[💸 Cash Flow Statement<br/>• Operating activities<br/>• Financing activities<br/>• Cash reconciliation]
+    
+    %% Frontend Display
+    G --> G1[🎯 Interactive Dashboard<br/>• Hover tooltips<br/>• Transaction details<br/>• Validation indicators]
+    G --> G2[📊 Visual Charts<br/>• Financial metrics<br/>• Trend analysis<br/>• Key ratios]
+    G --> G3[✅ Audit Trail<br/>• Calculation verification<br/>• Error highlighting<br/>• Reconciliation checks]
+    
+    %% Styling
+    classDef rawData fill:#ffebee,stroke:#f44336,stroke-width:2px
+    classDef processing fill:#e3f2fd,stroke:#2196f3,stroke-width:2px
+    classDef validation fill:#fff3e0,stroke:#ff9800,stroke-width:2px
+    classDef calculation fill:#e8f5e8,stroke:#4caf50,stroke-width:2px
+    classDef output fill:#f3e5f5,stroke:#9c27b0,stroke-width:2px
+    classDef frontend fill:#e0f2f1,stroke:#009688,stroke-width:2px
+    
+    class A,A1,A2 rawData
+    class B,B1,C,C1,C2,C3,C4 processing
+    class D,D1,D2,D3 validation
+    class E,E1,E2,E3,E4 calculation
+    class F,F1,F2,F3 output
+    class G,G1,G2,G3 frontend
+            </div>
+        </div>
+        
+        <div style="margin-top: 30px; padding: 20px; background-color: #f8f9fa; border-radius: 5px;">
+            <h3>How to Use This Diagram:</h3>
+            <ul>
+                <li><strong>Follow the arrows</strong> to see the data flow from raw CSV to final statements</li>
+                <li><strong>Color coding:</strong> Each stage has a different color to show the transformation process</li>
+                <li><strong>Hover over boxes</strong> to see more details about each step</li>
+                <li><strong>Stage 3 (Categorization)</strong> is where the "magic" happens - raw data becomes meaningful categories</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: 'default',
+            flowchart: {
+                useMaxWidth: true,
+                htmlLabels: true
+            }
+        });
+    </script>
+</body>
+</html>

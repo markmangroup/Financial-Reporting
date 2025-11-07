@@ -1,0 +1,101 @@
+{
+  "id": "markman-internal",
+  "name": "Markman Internal Operations",
+  "client": "Markman Associates (Internal)",
+  "type": "reporting-analytics",
+  "status": "active",
+  "description": "Internal operations including reporting dashboards, strategic reviews, and operational oversight",
+  "timeline": {
+    "startDate": "2024-01-01",
+    "lastActivityDate": "2025-11-07"
+  },
+  "financial": {
+    "revenue": 0,
+    "revenueDetails": [],
+    "costs": {
+      "consultants": [
+        {
+          "name": "Carmen",
+          "allocatedCost": 465,
+          "allocationPercent": 35.8,
+          "sourceEvidence": "SharePoint activity: 6 modifications (2 Reporting Package + 4 Strategic Review)",
+          "notes": "Strategic & Operational Review contributor"
+        },
+        {
+          "name": "Petrana",
+          "allocatedCost": 834,
+          "allocationPercent": 64.2,
+          "sourceEvidence": "SharePoint activity: 3 modifications in Strategic & Operational Review",
+          "notes": "Strategic & Operational Review contributor"
+        }
+      ],
+      "totalConsultantCosts": 1299,
+      "overheadAllocated": 1299
+    },
+    "profitability": {
+      "grossProfit": -1299,
+      "grossMargin": 0
+    }
+  },
+  "team": {
+    "consultants": [
+      "Carmen",
+      "Petrana",
+      "Nikoleta"
+    ],
+    "primaryContact": "Carmen"
+  },
+  "sharepoint": {
+    "path": "/Shared Documents/General/Markman Group",
+    "url": "https://markmanassociates.sharepoint.com/Shared%20Documents/General/Markman%20Group",
+    "lastSyncedAt": "2025-11-07T00:00:00.000Z"
+  },
+  "documents": {
+    "contracts": [],
+    "proposals": [],
+    "deliverables": [],
+    "documentation": []
+  },
+  "migrationStatus": {
+    "inventoryComplete": true,
+    "documentsDownloaded": false,
+    "validated": false,
+    "lastUpdated": "2025-11-07T00:00:00.000Z"
+  },
+  "notes": [
+    "Internal operations - no client revenue",
+    "Includes Strategic & Operational Overview PowerBI dashboard",
+    "Internal reporting package and governance documents",
+    "Carmen and Petrana overhead allocation based on SharePoint activity"
+  ],
+  "codebase": {
+    "repos": [
+      {
+        "name": "pe-command",
+        "url": "https://github.com/markmangroup/pe-command.git",
+        "path": "data/github-repos/pe-command",
+        "files": 230,
+        "size": 15860,
+        "lastCommit": "2025-05-26 20:03:30 -0400",
+        "primaryLanguage": "React/Next.js",
+        "description": null
+      },
+      {
+        "name": "retail-command",
+        "url": "https://github.com/markmangroup/retail-command.git",
+        "path": "data/github-repos/retail-command",
+        "files": 29,
+        "size": 452,
+        "lastCommit": "2025-05-24 17:14:17 -0400",
+        "primaryLanguage": "React/Next.js",
+        "description": null
+      }
+    ],
+    "totalFiles": 259,
+    "totalSizeKB": 16312,
+    "technologies": [
+      "React/Next.js"
+    ],
+    "analyzedAt": "2025-11-07T17:39:33.438Z"
+  }
+}

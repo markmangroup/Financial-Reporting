@@ -1,0 +1,141 @@
+{
+  "generatedAt": "2025-11-07T13:31:09.121Z",
+  "revenue": {
+    "Laurel AG": 134000,
+    "Metropolitan": 47320
+  },
+  "consultants": [
+    {
+      "name": "Swan",
+      "totalCost": 47230,
+      "allocations": {
+        "Laurel AG": 47230,
+        "Metropolitan": 0,
+        "Overhead": 0
+      },
+      "allocationSource": "manual"
+    },
+    {
+      "name": "Nikoleta",
+      "totalCost": 15000,
+      "allocations": {
+        "Laurel AG": 11970,
+        "Metropolitan": 3015,
+        "Overhead": 0
+      },
+      "allocationSource": "sharepoint-activity"
+    },
+    {
+      "name": "Carmen",
+      "totalCost": 14342,
+      "allocations": {
+        "Laurel AG": 4890.622,
+        "Metropolitan": 8074.545999999999,
+        "Overhead": 1262.096
+      },
+      "allocationSource": "sharepoint-activity"
+    },
+    {
+      "name": "Ivana",
+      "totalCost": 11104,
+      "allocations": {
+        "Laurel AG": 0,
+        "Metropolitan": 0,
+        "Overhead": 11104
+      },
+      "allocationSource": "pending"
+    },
+    {
+      "name": "Abri",
+      "totalCost": 10638,
+      "allocations": {
+        "Laurel AG": 0,
+        "Metropolitan": 10638,
+        "Overhead": 0
+      },
+      "allocationSource": "sharepoint-activity"
+    },
+    {
+      "name": "Petrana",
+      "totalCost": 12450,
+      "allocations": {
+        "Laurel AG": 547.8000000000001,
+        "Metropolitan": 11068.05,
+        "Overhead": 834.15
+      },
+      "allocationSource": "sharepoint-activity"
+    },
+    {
+      "name": "Beata",
+      "totalCost": 7640,
+      "allocations": {
+        "Laurel AG": 0,
+        "Metropolitan": 7640,
+        "Overhead": 0
+      },
+      "allocationSource": "sharepoint-activity"
+    },
+    {
+      "name": "Jan",
+      "totalCost": 6630,
+      "allocations": {
+        "Laurel AG": 0,
+        "Metropolitan": 6630,
+        "Overhead": 0
+      },
+      "allocationSource": "sharepoint-activity"
+    },
+    {
+      "name": "Marianna",
+      "totalCost": 5360,
+      "allocations": {
+        "Laurel AG": 5360,
+        "Metropolitan": 0,
+        "Overhead": 0
+      },
+      "allocationSource": "sharepoint-activity"
+    },
+    {
+      "name": "Nikola",
+      "totalCost": 3870,
+      "allocations": {
+        "Laurel AG": 0,
+        "Metropolitan": 0,
+        "Overhead": 3870
+      },
+      "allocationSource": "pending"
+    }
+  ],
+  "projectCosts": {
+    "Laurel AG": 69998.422,
+    "Metropolitan": 47065.596,
+    "Overhead": 17070.246
+  },
+  "profitability": {
+    "Laurel AG": {
+      "revenue": 134000,
+      "costs": 69998.422,
+      "profit": 64001.577999999994,
+      "margin": 47.76237164179104
+    },
+    "Metropolitan": {
+      "revenue": 47320,
+      "costs": 47065.596,
+      "profit": 254.40400000000227,
+      "margin": 0.5376246830093032
+    },
+    "Combined": {
+      "revenue": 181320,
+      "costs": 117064.01800000001,
+      "profit": 64255.98199999999,
+      "margin": 35.43788991837635
+    }
+  },
+  "notes": [
+    "Petrana cost includes merged Pepi ($2,460) + Petrana ($9,990) = $12,450",
+    "Swan allocated 100% to Laurel AG per user direction",
+    "Upwork ($40K) excluded - internal R&D projects",
+    "Ivana and Nikola have no SharePoint activity - allocated to overhead pending clarification",
+    "Carmen, Petrana overhead includes Dittmar and Markman internal work (non-revenue projects)"
+  ]
+}

@@ -1,0 +1,23 @@
+ConsultantID,Name,Country,Role,Specialization,HourlyRate,ContractType,PaymentMethod,StartDate,EndDate,Status,Email,TaxID,Notes,TotalPaid
+CONS-001,Carmen,Spain,Business Consultant,Business Consulting,47,Hourly,Wire Transfer,2024-10-01,,Active,carmen@example.com,ES-TAX-123,Validated rate from SharePoint; 7 payments Oct 2024-Aug 2025,8942.00
+CONS-002,Petrana Georgieva Petrova,Bulgaria,Business Consultant,Project Planning,40,Hourly,Wire Transfer,2024-12-01,,Active,petrana@example.com,BG-TAX-456,Validated rate from SharePoint; 5 payments Dec 2024-Apr 2025,9990.00
+CONS-003,Ivana Kmecová,Slovakia,QA Tester,Testing Services,0,Project-Based,Bill.com,2025-06-30,2025-07-14,Ended,ivana@example.com,SK-TAX-789,Testing for Rental application; Bill.com paid,2677.50
+CONS-004,Nikoleta Nôtová (Niki),Slovakia,Business Consultant,Business Consulting,40,Hourly,Wire Transfer + Bill.com,2024-09-01,,Active,nikoleta@example.com,SK-TAX-012,Validated rate from SharePoint; OUTSTANDING INVOICE: $13840 in Bill.com (unpaid),15000.00
+CONS-005,Swan Softweb Solutions LLC,United States,Full-Stack Team,Multiple Technologies,0,Project-Based,Wire Transfer + Upwork,2024-01-01,,Active,contact@swansoftweb.com,US-EIN-384231385,Separate vendor - paid via multiple channels throughout year,0
+CONS-006,Abri Wessels,South Africa,IT Support Specialist,IT Support,36,Hourly,ACH,2024-09-01,,Active,abri@example.com,ZA-TAX-345,Validated rate from SharePoint; 6 ACH payments Sep 2024-Mar 2025; RECONCILED,10638.00
+CONS-007,Jan Dzubak,United Kingdom,Business Consultant,Business Consulting,44,Hourly,Wire Transfer + Bill.com,2024-09-01,,Active,jan@example.com,UK-TAX-678,Validated rate from SharePoint; Chase + Bill.com payments,5720.00
+CONS-008,Beata Troppova,United Kingdom,Business Consultant,Business Consulting,40,Hourly,Wire Transfer,2025-02-01,2025-03-31,Ended,beata@example.com,UK-TAX-234,Validated rate from SharePoint; 2 wire transfers Feb-Mar 2025; RECONCILED,7640.00
+CONS-009,Trusted Ltd,Unknown,Consulting Services,Consulting,0,Project-Based,Bill.com,2024-08-01,,Active,contact@trusted.com,,Monthly consulting services via Bill.com,960.00
+CONS-010,Nikola Draganov,Unknown,Business Consultant,Consulting Services,0,Hourly,Bill.com,2025-07-01,,Active,nikola@example.com,,Consulting services Jul-Oct 2025; $1890 unpaid in Bill.com,1980.00
+CONS-011,Abhishek Kumar,India,Architect/Developer,Azure Specialist,56,Hourly,Upwork,2024-05-06,2025-08-19,Ended,abhishek_jerry@upwork.com,,Upwork contractor; 30hr/week; Infrastructure projects,0
+CONS-012,Maulik Patel,India,Full-Stack Developer,Laurel App Development,30,Hourly,Upwork,2024-05-06,2024-10-24,Ended,maulik263@upwork.com,,Upwork contractor; 30hr/week,0
+CONS-013,Chris Ervin Ramos,Philippines,Web Developer,Web Page Design,25,Hourly,Upwork,2024-05-10,2025-06-22,Ended,bc0cfa3c@upwork.com,,Upwork contractor; 40hr/week,0
+CONS-014,Dhruvil Hirpara,India,Full-Stack Developer,Stone-Goff Prototype App,20,Hourly,Upwork,2024-05-11,2024-11-12,Ended,ed02ac6a@upwork.com,,Upwork contractor; 40hr/week,0
+CONS-015,Jay Patel,Canada,Full-Stack Developer,Set Data and Analytics,31.50,Hourly,Upwork,2024-05-12,2024-11-12,Ended,jayy27@upwork.com,,Upwork contractor; 30hr/week,0
+CONS-016,Davon Howell,New Zealand,Full-Stack Developer,General Development,28,Hourly,Upwork,2024-05-12,2024-05-13,Ended,4176e204@upwork.com,,Upwork contractor; 5hr/week; 1 week contract,0
+CONS-017,Paras Sarna,India,Mobile App Developer,Sports Club Prototype,20,Hourly,Upwork,2024-05-18,2024-05-29,Ended,paras_sarna@upwork.com,,Upwork contractor; Snakescript Solutions LLP; 10hr/week,0
+CONS-018,Julianna Melnyk,Spain,UI/UX Designer,Sports Club Management,35,Hourly,Upwork,2024-05-18,2024-08-21,Ended,363af565@upwork.com,,Upwork contractor; UXRS agency; 40hr/week,0
+CONS-019,Muhammad Qasim,Pakistan,UI/UX Designer,Sports Club Management,30,Hourly,Upwork,2024-05-20,2024-06-04,Ended,mohdkasimnazeer@upwork.com,,Upwork contractor; 5hr/week,0
+CONS-020,Babubhai Vaghasiya,India,Full-Stack Developer,PE Aggregator,30,Hourly,Upwork,2024-06-17,2024-11-12,Ended,eac295e6@upwork.com,,Upwork contractor; 10hr/week,0
+CONS-021,Muhammad Mahad Naeem,Pakistan,Full-Stack Developer,Profiling App Prototype,30,Hourly,Upwork,2024-05-12,2024-05-29,Ended,710b137c@upwork.com,,Upwork contractor; 5hr/week,0
+CONS-022,Adriaan Ferreira,South Africa,IT Support Specialist,IT Support,25,Hourly,Upwork,2024-10-08,,Active,747740e2@upwork.com,,Upwork contractor; 20hr/week; CURRENTLY ACTIVE,0

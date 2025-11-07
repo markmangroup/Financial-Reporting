@@ -37,3 +37,11 @@ next-env.d.ts
 # data files
 /data/*.csv
 /uploads/*.csv
+
+# audit reports (generated files)
+/audit-pdfs/
+
+# cloned GitHub repos (reference only - too large for git)
+/data/github-repos/*/
+!/data/github-repos/inventory.json
+!/data/github-repos/analysis-report.json

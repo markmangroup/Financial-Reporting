@@ -1,0 +1,93 @@
+{
+  "totalComponents": 13,
+  "totalFiles": 15,
+  "categories": {
+    "dataSystems": {
+      "count": 1,
+      "components": [
+        {
+          "name": "data-vault",
+          "path": "data/github-repos/mike-os/src/app/siguler-guff/data-vault",
+          "description": "Centralized data repository for funds, employees, news, and company data"
+        }
+      ]
+    },
+    "presentations": {
+      "count": 6,
+      "components": [
+        {
+          "name": "presentation",
+          "path": "data/github-repos/mike-os/src/app/siguler-guff/presentation",
+          "description": "Main presentation orchestrator with scenes and transitions"
+        },
+        {
+          "name": "vision-demo",
+          "path": "data/github-repos/mike-os/src/app/siguler-guff/vision-demo",
+          "description": "Vision presentation demo"
+        },
+        {
+          "name": "presentation-v2",
+          "path": "data/github-repos/mike-os/src/app/siguler-guff/presentation-v2",
+          "description": "Updated presentation system (version 2)"
+        },
+        {
+          "name": "sbof-presentation",
+          "path": "data/github-repos/mike-os/src/app/siguler-guff/sbof-presentation",
+          "description": "SBOF-specific presentation module"
+        },
+        {
+          "name": "vision-viewer",
+          "path": "data/github-repos/mike-os/src/app/siguler-guff/vision-viewer",
+          "description": "Interactive vision presentation viewer"
+        },
+        {
+          "name": "vision-viewer-v2",
+          "path": "data/github-repos/mike-os/src/app/siguler-guff/vision-viewer-v2",
+          "description": "Updated vision viewer (version 2)"
+        }
+      ]
+    },
+    "dashboards": {
+      "count": 2,
+      "components": [
+        {
+          "name": "news",
+          "path": "data/github-repos/mike-os/src/app/siguler-guff/news",
+          "description": "Company news and updates feed"
+        },
+        {
+          "name": "team-roster",
+          "path": "data/github-repos/mike-os/src/app/siguler-guff/team-roster",
+          "description": "Team member profiles and organizational structure"
+        }
+      ]
+    },
+    "tools": {
+      "count": 4,
+      "components": [
+        {
+          "name": "drew",
+          "path": "data/github-repos/mike-os/src/app/siguler-guff/drew",
+          "description": "Drew-specific dashboard or profile"
+        },
+        {
+          "name": "ken",
+          "path": "data/github-repos/mike-os/src/app/siguler-guff/ken",
+          "description": "Ken-specific dashboard or profile"
+        },
+        {
+          "name": "ken-countdown",
+          "path": "data/github-repos/mike-os/src/app/siguler-guff/ken-countdown",
+          "description": "Countdown timer for Ken-related event"
+        },
+        {
+          "name": "operator",
+          "path": "data/github-repos/mike-os/src/app/siguler-guff/operator",
+          "description": "Demo operation controls and coordinator"
+        }
+      ]
+    }
+  },
+  "mainEntryPoint": "data/github-repos/mike-os/src/app/siguler-guff/page.tsx",
+  "extractedAt": "2025-11-07T17:18:56.784Z"
+}

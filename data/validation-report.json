@@ -1,0 +1,33 @@
+{
+  "timestamp": "2025-11-07T16:44:49.391Z",
+  "summary": {
+    "totalChecks": 8,
+    "passed": 7,
+    "warnings": 1,
+    "failed": 0,
+    "passRate": 87.5
+  },
+  "passed": [
+    "laurel-ag-proposal-tools metadata valid",
+    "metropolitan-current-state metadata valid",
+    "dittmar-ap-automation metadata valid",
+    "braindead-portal metadata valid",
+    "markman-internal metadata valid",
+    "GitHub analysis complete",
+    "SharePoint inventory complete"
+  ],
+  "warnings": [
+    "2 unallocated consultants"
+  ],
+  "failed": [],
+  "info": [
+    "36 total documents",
+    "36 documents exist",
+    "97.2% text extraction rate",
+    "Total revenue: $181K",
+    "Total costs: $134K",
+    "13 repos cloned",
+    "5340 files",
+    "2149 SharePoint items cataloged"
+  ]
+}

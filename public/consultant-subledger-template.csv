@@ -1,0 +1,12 @@
+ConsultantID,Name,Country,Role,Specialization,HourlyRate,ContractType,PaymentMethod,StartDate,EndDate,Status,Email,TaxID,CompanyName,Notes
+CONS-001,Carmen,Spain,Advisory & Project Management,Project Management,47,Hourly,Wire Transfer + Bill.com,2024-01-15,,Active,ctejada@teiz.es,,Inversiones Teiz S.L.,Operates through Spanish company - Viana based. Invoice 110-2025 shows $47/hour rate
+CONS-002,Pepi,Bulgaria,Backend Developer,Node.js/Python,65,Hourly,Wire Transfer,2024-02-01,,Active,pepi@example.com,,,UniCredit Bulbank Sofia - Direct wire transfers
+CONS-003,Ivana,Slovakia,Software Developer,Testing/Development,70,Project-Based,Wire Transfer + Bill.com,2024-01-20,,Active,i.kmecova1@gmail.com,,,"Slovakia based (Hatalov), Bill.com invoice 20250003 for $2,677.50"
+CONS-004,Nikoleta,Slovakia,Business Analyst,Business Consulting,60,Project-Based,Wire Transfer,2024-03-01,,Active,niky.notova@gmail.com,,Nikoleta Nôtová - NikyN,"Slovakia based (Trebeľovce), operates as business entity, $13,840 balance outstanding"
+CONS-005,Swan,United States,Full-Stack Development Team,Software Development,0,Project-Based,Wire Transfer,2024-01-01,,Active,contact@swansoftweb.com,US-EIN-384231385,Swan Softweb Solutions LLC,New York based company - Bank of America account - Largest consultant expense
+CONS-006,Abri,South Africa,DevOps Engineer,AWS/Docker/Infrastructure,55,Hourly,ACH,2024-02-15,,Active,abri@example.com,,,Direct ACH payments to US account
+CONS-007,Jan,Slovakia,Software Developer,Consulting Services,60,Hourly,Wire Transfer + Bill.com,2024-04-01,,Active,jan@markmanassociates.com,,,Slovakia based (Bratislava) - JPMorgan Chase London routing - Now also using Bill.com
+CONS-008,Petrana,Bulgaria,QA Engineer,Test Automation/Consulting,50,Hourly,Wire Transfer + Bill.com,2024-04-01,,Active,petrana@markmanassociates.com,,Trusted Ltd,"Operates through Bulgarian company (Sofia), $350 balance outstanding in Bill.com"
+CONS-009,Beata,United Kingdom,Technical Writer,Documentation,55,Project-Based,Wire Transfer,2024-05-01,2025-03-01,Inactive,beata@example.com,,,JPMorgan Chase London - Last payment March 2025
+CONS-010,Marianna,United Kingdom,Business Analyst,Requirements Analysis,70,Hourly,Wire Transfer,2024-05-01,2025-02-01,Inactive,marianna@example.com,,,JPMorgan Chase London - Last payment February 2025
+CONS-011,Nikola,Bulgaria,Software Consultant,Consulting Services,65,Hourly,Wire Transfer + Bill.com,2025-07-01,,Active,nikola@markman-group.com,,Nikola Draganov,"Bulgaria based (Sofia), 4 invoices in Bill.com totaling $3,870 ($1,890 outstanding)"

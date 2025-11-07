@@ -20,8 +20,13 @@ export interface AccountSummary {
   }
   balance?: number
   totalDebits: number
-  totalCredits: number
-  netAmount: number
+  totalCredits: number // Business revenue only
+  netAmount: number // Business net (revenue - expenses)
+  // Extended fields for better categorization
+  businessRevenue?: number
+  ownerEquity?: number
+  otherCredits?: number
+  totalAllCredits?: number
 }
 
 export interface CategorySummary {

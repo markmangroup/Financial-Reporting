@@ -1,4 +1,5 @@
 import { BankTransaction, AccountSummary, CategorySummary, MonthlyData, ParsedCSVData } from '@/types'
+import { roundToCents, roundAndSum, roundCalculation } from '@/lib/utils/rounding'
 
 export function parseChaseCheckingCSV(csvContent: string): ParsedCSVData {
   const lines = csvContent.split('\n').filter(line => line.trim())
@@ -12,9 +13,9 @@ export function parseChaseCheckingCSV(csvContent: string): ParsedCSVData {
       id: `checking-${index}`,
       date: columns[1] || '',
       description: columns[2] || '',
-      amount: parseFloat(columns[3]) || 0,
+      amount: roundToCents(parseFloat(columns[3]) || 0),
       type: columns[4] || '',
-      balance: parseFloat(columns[5]) || undefined,
+      balance: roundToCents(parseFloat(columns[5]) || 0),
       account: 'Chase-5939',
       category: categorizeCheckingTransaction(columns[2], columns[4])
     }
@@ -38,7 +39,7 @@ export function parseChaseCreditCSV(csvContent: string): ParsedCSVData {
       description: columns[3] || '',
       category: columns[4] || '',
       type: columns[5] || '',
-      amount: parseFloat(columns[6]) || 0,
+      amount: roundToCents(parseFloat(columns[6]) || 0),
       account: 'Chase-8008'
     }
   }).filter(t => t.date && t.amount !== 0)
@@ -91,31 +92,52 @@ function categorizeCheckingTransaction(description: string, type: string): strin
       return 'Consultant - Slovakia (Ivana)'
     }
     if (desc.includes('london') || desc.includes('jpmorgan chase bank na - london')) {
-      if (desc.includes('petrana')) return 'Consultant - UK (Petrana)'
+      if (desc.includes('petrana')) return 'Consultant - Bulgaria (Petrana)'
       if (desc.includes('beata')) return 'Consultant - UK (Beata)'
       if (desc.includes('marianna')) return 'Consultant - UK (Marianna)'
-      if (desc.includes('nikoleta')) return 'Consultant - UK (Nikoleta)'
+      if (desc.includes('nikoleta')) return 'Consultant - Slovakia (Nikoleta)'
       if (desc.includes('jan dzubak')) return 'Consultant - UK (Jan)'
       return 'Consultant - UK (Other)'
     }
     return 'Consultant Payment - International'
   }
 
-  // Credit card autopay - exact pattern
+  // Credit card autopay - exact pattern (case insensitive)
   if (desc.includes('chase credit crd') && desc.includes('autopaybussec') && type === 'ACH_DEBIT') {
     return 'Credit Card Autopay'
   }
 
-  // Business software and services
+  // Business software and services (Bill.com is used for consultant payments)
+  // Extract consultant name from Bill.com description if present
   if (desc.includes('bill.com')) {
-    return 'Business Services - Bill.com'
+    // Pattern: "IND NAME:Markman Group LLC [Consultant Name] Bill.com"
+    const nameMatch = description.match(/IND NAME:.*?(?:Markman Group LLC|Markman Associates)[\s]*([A-Za-z\s?]+?)(?:Bill\.com|Inv|TRN)/i)
+    if (nameMatch && nameMatch[1]) {
+      const consultantName = nameMatch[1].trim().replace(/\?/g, '')
+
+      // Match known consultants and their company names
+      if (consultantName.toLowerCase().includes('ivana')) return 'Consultant - Slovakia (Ivana)'
+      if (consultantName.toLowerCase().includes('nikoleta')) return 'Consultant - Slovakia (Nikoleta)'
+      if (consultantName.toLowerCase().includes('carmen')) return 'Consultant - Spain (Carmen)'
+      if (consultantName.toLowerCase().includes('pepi')) return 'Consultant - Bulgaria (Pepi)'
+      if (consultantName.toLowerCase().includes('petrana')) return 'Consultant - Bulgaria (Petrana)'
+      if (consultantName.toLowerCase().includes('trusted')) return 'Consultant - Bulgaria (Petrana)'
+      if (consultantName.toLowerCase().includes('inversiones')) return 'Consultant - Spain (Carmen)'
+      if (consultantName.toLowerCase().includes('beata')) return 'Consultant - UK (Beata)'
+      if (consultantName.toLowerCase().includes('marianna')) return 'Consultant - UK (Marianna)'
+      if (consultantName.toLowerCase().includes('jan')) return 'Consultant - Slovakia (Jan)'
+      if (consultantName.toLowerCase().includes('nikola')) return 'Consultant - Bulgaria (Nikola)'
+
+      return `Consultant - ${consultantName} (via Bill.com)`
+    }
+    return 'Consultant Payment Service - Bill.com'
   }
   if (desc.includes('swan softweb')) {
-    return 'Development Services - Swan'
+    return 'Consultant - Swan'
   }
 
-  // Auto loan payments - specific pattern
-  if (desc.includes('online payment') && desc.includes('auto loan 1105')) {
+  // Auto loan payments - specific pattern (both online payments and LOAN_PMT type)
+  if ((desc.includes('online payment') && desc.includes('auto loan 1105')) || type === 'LOAN_PMT') {
     return 'Auto Loan Payment'
   }
 
@@ -131,7 +153,7 @@ function categorizeCheckingTransaction(description: string, type: string): strin
 
   // Specific payment services
   if (desc.includes('abri') && type === 'ACH_PAYMENT') {
-    return 'Business Service - Abri'
+    return 'Consultant - South Africa (Abri)'
   }
 
   // Wire reversals
@@ -158,8 +180,44 @@ function categorizeCheckingTransaction(description: string, type: string): strin
 function generateSummaryData(transactions: BankTransaction[], accountType: 'checking' | 'credit'): ParsedCSVData {
   const sortedTransactions = transactions.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
 
-  const totalDebits = transactions.filter(t => t.amount < 0).reduce((sum, t) => sum + Math.abs(t.amount), 0)
-  const totalCredits = transactions.filter(t => t.amount > 0).reduce((sum, t) => sum + t.amount, 0)
+  // Separate business revenue from owner equity/transfers (with consistent rounding)
+  const businessRevenue = roundAndSum(
+    transactions
+      .filter(t => t.amount > 0 && t.category?.includes('Client Payment'))
+      .map(t => t.amount)
+  )
+
+  const ownerEquity = roundAndSum(
+    transactions
+      .filter(t =>
+        t.amount > 0 &&
+        (t.category === 'Account Transfer' ||
+         t.description.toLowerCase().includes('online transfer from chk') ||
+         t.description.toLowerCase().includes('online transfer to chk') ||
+         (t.type === 'ACH_CREDIT' && t.description.toLowerCase().includes('transfer')))
+      )
+      .map(t => t.amount)
+  )
+
+  const otherCredits = roundAndSum(
+    transactions
+      .filter(t =>
+        t.amount > 0 &&
+        !t.category?.includes('Client Payment') &&
+        t.category !== 'Account Transfer' &&
+        !t.description.toLowerCase().includes('online transfer from chk') &&
+        !t.description.toLowerCase().includes('online transfer to chk') &&
+        !(t.type === 'ACH_CREDIT' && t.description.toLowerCase().includes('transfer'))
+      )
+      .map(t => t.amount)
+  )
+
+  const totalDebits = roundAndSum(
+    transactions
+      .filter(t => t.amount < 0)
+      .map(t => Math.abs(t.amount))
+  )
+  const totalCredits = roundCalculation(businessRevenue + ownerEquity + otherCredits)
 
   // Find the most recent transaction (latest date) for current balance
   const mostRecentTransaction = sortedTransactions[sortedTransactions.length - 1]
@@ -172,10 +230,15 @@ function generateSummaryData(transactions: BankTransaction[], accountType: 'chec
       start: sortedTransactions[0]?.date || '',
       end: mostRecentTransaction?.date || ''
     },
-    balance: mostRecentTransaction?.balance, // Use balance from most recent transaction
+    balance: roundToCents(mostRecentTransaction?.balance || 0), // Use balance from most recent transaction
     totalDebits,
-    totalCredits,
-    netAmount: totalCredits - totalDebits
+    totalCredits: businessRevenue, // Only count business revenue as "income"
+    netAmount: roundCalculation(businessRevenue - totalDebits), // Net from business operations only
+    // Add custom fields for the other types
+    businessRevenue,
+    ownerEquity,
+    otherCredits,
+    totalAllCredits: totalCredits // Keep total for reference
   }
 
   // Category analysis
@@ -185,17 +248,17 @@ function generateSummaryData(transactions: BankTransaction[], accountType: 'chec
     const category = t.category || 'Other'
     const existing = categoryMap.get(category) || { amount: 0, count: 0 }
     categoryMap.set(category, {
-      amount: existing.amount + Math.abs(t.amount),
+      amount: roundCalculation(existing.amount + Math.abs(t.amount)),
       count: existing.count + 1
     })
   })
 
-  const totalAmount = totalDebits + totalCredits
+  const totalAmount = roundCalculation(totalDebits + totalCredits)
   const categories: CategorySummary[] = Array.from(categoryMap.entries()).map(([category, data]) => ({
     category,
     amount: data.amount,
     count: data.count,
-    percentage: totalAmount > 0 ? (data.amount / totalAmount) * 100 : 0
+    percentage: totalAmount > 0 ? roundCalculation((data.amount / totalAmount) * 100) : 0
   })).sort((a, b) => b.amount - a.amount)
 
   // Monthly analysis
@@ -206,8 +269,8 @@ function generateSummaryData(transactions: BankTransaction[], accountType: 'chec
     const existing = monthlyMap.get(month) || { debits: 0, credits: 0, count: 0 }
 
     monthlyMap.set(month, {
-      debits: existing.debits + (t.amount < 0 ? Math.abs(t.amount) : 0),
-      credits: existing.credits + (t.amount > 0 ? t.amount : 0),
+      debits: roundCalculation(existing.debits + (t.amount < 0 ? Math.abs(t.amount) : 0)),
+      credits: roundCalculation(existing.credits + (t.amount > 0 ? t.amount : 0)),
       count: existing.count + 1
     })
   })
@@ -217,7 +280,7 @@ function generateSummaryData(transactions: BankTransaction[], accountType: 'chec
       month,
       totalDebits: data.debits,
       totalCredits: data.credits,
-      netFlow: data.credits - data.debits,
+      netFlow: roundCalculation(data.credits - data.debits),
       transactionCount: data.count
     }))
     .sort((a, b) => a.month.localeCompare(b.month))

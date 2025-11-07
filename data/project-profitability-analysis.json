@@ -1,0 +1,351 @@
+{
+  "generatedAt": "2025-11-06T22:11:59.928Z",
+  "summary": {
+    "totalRevenue": 145830,
+    "totalConsultantCosts": 70492.75,
+    "grossProfit": 75337.25,
+    "grossMargin": "51.7%"
+  },
+  "revenueByClient": {
+    "Laurel AG": 134000,
+    "Metropolitan Partners": 11830
+  },
+  "costsByConsultant": {
+    "Unknown": 13315.5,
+    "Carmen": 8941.75,
+    "Pepi": 2460,
+    "Jan": 6630.5,
+    "Ivana": 1155,
+    "Petrana": 9990,
+    "Niki": 15000,
+    "Beata": 7640,
+    "Marianna": 5360
+  },
+  "revenuePayments": [
+    {
+      "date": "07/05/2024",
+      "client": "Laurel AG",
+      "amount": 15000,
+      "invoice": "0070",
+      "project": "Initial Design",
+      "description": "ORIG CO NAME:LAUREL MANAGEMEN       ORIG ID:6750070647 DESC DATE:       CO ENTRY DESCR:INITIAL DESEC:CCD    TRACE#:122016061274136 EED:240705   IND ID:                             IND NAME:MARKMAN GROUP LLC          0101 TRN: 1871274136TC"
+    },
+    {
+      "date": "08/27/2024",
+      "client": "Laurel AG",
+      "amount": 13000,
+      "invoice": "0070",
+      "project": "Initial Design",
+      "description": "ORIG CO NAME:LAUREL MANAGEMEN       ORIG ID:6750070647 DESC DATE:       CO ENTRY DESCR:INITIAL DESEC:CCD    TRACE#:122016063812283 EED:240827   IND ID:                             IND NAME:MARKMAN GROUP LLC          0116 TRN: 2403812283TC"
+    },
+    {
+      "date": "09/03/2024",
+      "client": "Laurel AG",
+      "amount": 15000,
+      "invoice": "0070",
+      "project": "Design & Development",
+      "description": "ORIG CO NAME:LAUREL MANAGEMEN       ORIG ID:6750070647 DESC DATE:       CO ENTRY DESCR:DESIGN ANDSEC:CCD    TRACE#:122016069884805 EED:240903   IND ID:                             IND NAME:MARKMAN GROUP LLC          0118 TRN: 2479884805TC"
+    },
+    {
+      "date": "01/07/2025",
+      "client": "Metropolitan Partners",
+      "amount": 11830,
+      "invoice": "0107",
+      "project": "Unknown Project",
+      "description": "ORIG CO NAME:METROPOLITAN EQ        ORIG ID:4814965905 DESC DATE:250107 CO ENTRY DESCR:ACH       SEC:CCD    TRACE#:122238204083747 EED:250107   IND ID:                             IND NAME:MARKMAN GROUP LLC          INVOICE 0128                                                                      1001653110 TRN: 0074083747TC"
+    },
+    {
+      "date": "01/10/2025",
+      "client": "Laurel AG",
+      "amount": 13000,
+      "invoice": "0070",
+      "project": "Design & Development",
+      "description": "ORIG CO NAME:LAUREL MANAGEMEN       ORIG ID:6750070647 DESC DATE:       CO ENTRY DESCR:DESIGN ANDSEC:CCD    TRACE#:122016060187186 EED:250110   IND ID:                             IND NAME:MARKMAN GROUP LLC          0126 TRN: 0100187186TC"
+    },
+    {
+      "date": "02/24/2025",
+      "client": "Laurel AG",
+      "amount": 22500,
+      "invoice": "0070",
+      "project": "Design & Development",
+      "description": "ORIG CO NAME:LAUREL MANAGEMEN       ORIG ID:6750070647 DESC DATE:       CO ENTRY DESCR:DESIGN ANDSEC:CCD    TRACE#:122016069947600 EED:250224   IND ID:                             IND NAME:MARKMAN GROUP LLC          0129 TRN: 0559947600TC"
+    },
+    {
+      "date": "04/10/2025",
+      "client": "Laurel AG",
+      "amount": 22500,
+      "invoice": "0070",
+      "project": "Design & Development",
+      "description": "ORIG CO NAME:LAUREL MANAGEMEN       ORIG ID:6750070647 DESC DATE:       CO ENTRY DESCR:DESIGN ANDSEC:CCD    TRACE#:122016060667467 EED:250410   IND ID:                             IND NAME:MARKMAN GROUP LLC          0131 TRN: 1000667467TC"
+    },
+    {
+      "date": "09/02/2025",
+      "client": "Laurel AG",
+      "amount": 16500,
+      "invoice": "0070",
+      "project": "Final Payment",
+      "description": "ORIG CO NAME:LAUREL MANAGEMEN       ORIG ID:6750070647 DESC DATE:       CO ENTRY DESCR:FINAL PAYMSEC:CCD    TRACE#:122016065463659 EED:250902   IND ID:                             IND NAME:MARKMAN GROUP LLC          0132-TBD TRN: 2455463659TC"
+    },
+    {
+      "date": "09/02/2025",
+      "client": "Laurel AG",
+      "amount": 16500,
+      "invoice": "0070",
+      "project": "Post-Development",
+      "description": "ORIG CO NAME:LAUREL MANAGEMEN       ORIG ID:6750070647 DESC DATE:       CO ENTRY DESCR:POST DEVELSEC:CCD    TRACE#:122016065463656 EED:250902   IND ID:                             IND NAME:MARKMAN GROUP LLC          0132 TRN: 2455463656TC"
+    }
+  ],
+  "consultantPayments": [
+    {
+      "date": "09/16/2024",
+      "consultant": "Unknown",
+      "amount": 1872,
+      "description": "Online ACH Payment 11145094278 To Abri (_###########3209)"
+    },
+    {
+      "date": "09/17/2024",
+      "consultant": "Niki",
+      "amount": 3780,
+      "description": "ONLINE INTERNATIONAL WIRE TRANSFER A/C: JPMORGAN CHASE BANK NA - LONDON LONDON UNITED KINGDOM E14 5JP GB BEN:/LT483250004599838436 NIKOLETA NOTOVA REF: NIKI PAYMENT CONSULTANCY EXPENSES TRN: 3198184261ES 09/17"
+    },
+    {
+      "date": "10/08/2024",
+      "consultant": "Unknown",
+      "amount": 1728,
+      "description": "Online ACH Payment 11147406682 To Abri (_###########3209)"
+    },
+    {
+      "date": "10/08/2024",
+      "consultant": "Niki",
+      "amount": 1980,
+      "description": "ONLINE INTERNATIONAL WIRE TRANSFER A/C: JPMORGAN CHASE BANK NA - LONDON LONDON UNITED KINGDOM E14 5JP GB BEN:/LT483250004599838436 NIKOLETA NOTOVA REF: NIKI PAYMENT CONSULTANCY EXPENSES TRN: 3078784282ES 10/08"
+    },
+    {
+      "date": "11/04/2024",
+      "consultant": "Jan",
+      "amount": 1430,
+      "description": "ONLINE INTERNATIONAL WIRE TRANSFER A/C: JPMORGAN CHASE BANK NA - LONDON LONDON UNITED KINGDOM E14 5JP GB BEN:/LT323250049512365310 JAN DZUBAK REF: SEP/OCT JAN WORK - MARKMAN GROUP CONSULTANCY EXPENSES TRN: 3554124309ES 11/04"
+    },
+    {
+      "date": "11/05/2024",
+      "consultant": "Carmen",
+      "amount": 1175,
+      "description": "ONLINE INTERNATIONAL WIRE TRANSFER A/C: BANCO BILBAO VIZCAYA ARGENTARIA SA BILBAO 48005 SPAIN ES REF: OCTOBER 2024 CARMEN/MARKMAN GROUPCONSULTANCY EXPENSES TRN: 3237584310ES 11/05"
+    },
+    {
+      "date": "11/15/2024",
+      "consultant": "Niki",
+      "amount": 1960,
+      "description": "ONLINE INTERNATIONAL WIRE TRANSFER A/C: JPMORGAN CHASE BANK NA - LONDON LONDON UNITED KINGDOM E14 5JP GB BEN:/LT483250004599838436 NIKOLETA NOTOVA REF: NIKI PAYMENT CONSULTANCY EXPENSES TRN: 3249284320ES 11/15"
+    },
+    {
+      "date": "11/18/2024",
+      "consultant": "Unknown",
+      "amount": 2556,
+      "description": "Online ACH Payment 11152149613 To Abri (_###########3209)"
+    },
+    {
+      "date": "12/04/2024",
+      "consultant": "Petrana",
+      "amount": 640,
+      "description": "ONLINE INTERNATIONAL WIRE TRANSFER A/C: JPMORGAN CHASE BANK NA - LONDON LONDON UNITED KINGDOM E14 5JP GB BEN:/LT863250065995442612 PETRANA GEORGIEVA PETROVA REF: PEPI - PROJECT PLANNING CONSULTANCYEXPENSES TRN: 3298474339ES 12/04"
+    },
+    {
+      "date": "12/06/2024",
+      "consultant": "Unknown",
+      "amount": 2160,
+      "description": "Online ACH Payment 11154174100 To Abri (_###########3209)"
+    },
+    {
+      "date": "12/06/2024",
+      "consultant": "Jan",
+      "amount": 594,
+      "description": "ONLINE INTERNATIONAL WIRE TRANSFER A/C: JPMORGAN CHASE BANK NA - LONDON LONDON UNITED KINGDOM E14 5JP GB BEN:/LT323250049512365310 JAN DZUBAK REF: JAN INVOICE NOV 24 CONSULTANCY EXPENSES TRN: 3160514341ES 12/06"
+    },
+    {
+      "date": "12/06/2024",
+      "consultant": "Carmen",
+      "amount": 1621.5,
+      "description": "ONLINE INTERNATIONAL WIRE TRANSFER A/C: BANCO BILBAO VIZCAYA ARGENTARIA SA BILBAO 48005 SPAIN ES REF: CARMEN INVOICE NOVEMBER 2024 CONSULTANCY EXPENSES TRN: 3010984341ES 12/06"
+    },
+    {
+      "date": "12/12/2024",
+      "consultant": "Niki",
+      "amount": 1560,
+      "description": "ONLINE INTERNATIONAL WIRE TRANSFER A/C: JPMORGAN CHASE BANK NA - LONDON LONDON UNITED KINGDOM E14 5JP GB BEN:/LT483250004599838436 NIKOLETA NOTOVA REF: NIKI PAYMENT CONSULTANCY EXPENSES TRN: 3089514347ES 12/12"
+    },
+    {
+      "date": "01/07/2025",
+      "consultant": "Marianna",
+      "amount": 3000,
+      "description": "ONLINE INTERNATIONAL WIRE TRANSFER A/C: JPMORGAN CHASE BANK NA - LONDON LONDON UNITED KINGDOM E14 5JP GB BEN:/LT763250046033576403 MARIANNA SADLONOVA REF: MARIANNA DEC HOURS CONSULTANCY EXPENSES TRN: 3250805007ES 01/07"
+    },
+    {
+      "date": "01/09/2025",
+      "consultant": "Carmen",
+      "amount": 1081,
+      "description": "ONLINE INTERNATIONAL WIRE TRANSFER A/C: BANCO BILBAO VIZCAYA ARGENTARIA SA BILBAO 48005 SPAIN ES REF: CONSULTANCY EXPENSES/BNF/CARMEN DEC24 TRN: 3190805009ES 01/09"
+    },
+    {
+      "date": "01/09/2025",
+      "consultant": "Petrana",
+      "amount": 2260,
+      "description": "ONLINE INTERNATIONAL WIRE TRANSFER A/C: JPMORGAN CHASE BANK NA - LONDON LONDON UNITED KINGDOM E14 5JP GB BEN:/LT863250065995442612 PETRANA GEORGIEVA PETROVA REF: CONSULTANCY EXPENSES/BNF/PETRANA DECEMBER 2024 TRN: 3187365009ES 01/09"
+    },
+    {
+      "date": "01/13/2025",
+      "consultant": "Jan",
+      "amount": 1672,
+      "description": "ONLINE INTERNATIONAL WIRE TRANSFER A/C: JPMORGAN CHASE BANK NA - LONDON LONDON UNITED KINGDOM E14 5JP GB BEN:/LT323250049512365310 JAN DZUBAK REF: CONSULTANCY EXPENSES/BNF/JAN PAYMENT DEC 24 TRN: 3280655013ES 01/13"
+    },
+    {
+      "date": "01/13/2025",
+      "consultant": "Unknown",
+      "amount": 1296,
+      "description": "Online ACH Payment 11158336458 To Abri (_###########3209)"
+    },
+    {
+      "date": "01/23/2025",
+      "consultant": "Niki",
+      "amount": 3280,
+      "description": "ONLINE INTERNATIONAL WIRE TRANSFER A/C: JPMORGAN CHASE BANK NA - LONDON LONDON UNITED KINGDOM E14 5JP GB BEN:/LT483250004599838436 NIKOLETA NOTOVA REF: NIKI PAYMENT CONSULTANCY EXPENSES/BNF/NIKI DEC 24 TRN: 3523095023ES 01/23"
+    },
+    {
+      "date": "02/03/2025",
+      "consultant": "Jan",
+      "amount": 162.5,
+      "description": "SERVICE CHARGES FOR THE MONTH OF JANUARY"
+    },
+    {
+      "date": "02/03/2025",
+      "consultant": "Carmen",
+      "amount": 2068,
+      "description": "ONLINE INTERNATIONAL WIRE TRANSFER A/C: BANCO BILBAO VIZCAYA ARGENTARIA SA BILBAO 48005 SPAIN ES REF: CONSULTANCY EXPENSES/BNF/CARMEN JANUARY 2025 TRN: 3106095034ES 02/03"
+    },
+    {
+      "date": "02/04/2025",
+      "consultant": "Marianna",
+      "amount": 2360,
+      "description": "ONLINE INTERNATIONAL WIRE TRANSFER A/C: JPMORGAN CHASE BANK NA - LONDON LONDON UNITED KINGDOM E14 5JP GB BEN:/LT763250046033576403 MARIANNA SADLONOVA REF: CONSULTANCY EXPENSES TRN: 3216105035ES 02/04"
+    },
+    {
+      "date": "02/04/2025",
+      "consultant": "Petrana",
+      "amount": 4220,
+      "description": "ONLINE INTERNATIONAL WIRE TRANSFER A/C: JPMORGAN CHASE BANK NA - LONDON LONDON UNITED KINGDOM E14 5JP GB BEN:/LT863250065995442612 PETRANA GEORGIEVA PETROVA REF: CONSULTANCY EXPENSES TRN: 3214705035ES 02/04"
+    },
+    {
+      "date": "02/07/2025",
+      "consultant": "Beata",
+      "amount": 6800,
+      "description": "ONLINE INTERNATIONAL WIRE TRANSFER A/C: JPMORGAN CHASE BANK NA - LONDON LONDON UNITED KINGDOM E14 5JP GB BEN:/LT763250003476894152 BEATA TROPPOVA REF: CONSULTANCY EXPENSES TRN: 3367225038ES 02/07"
+    },
+    {
+      "date": "02/10/2025",
+      "consultant": "Jan",
+      "amount": 1584,
+      "description": "ONLINE INTERNATIONAL WIRE TRANSFER A/C: JPMORGAN CHASE BANK NA - LONDON LONDON UNITED KINGDOM E14 5JP GB BEN:/LT323250049512365310 JAN DZUBAK REF: CONSULTANCY EXPENSES TRN: 3343125041ES 02/10"
+    },
+    {
+      "date": "03/03/2025",
+      "consultant": "Beata",
+      "amount": 840,
+      "description": "ONLINE INTERNATIONAL WIRE TRANSFER A/C: JPMORGAN CHASE BANK NA - LONDON LONDON UNITED KINGDOM E14 5JP GB BEN:/LT763250003476894152 BEATA TROPPOVA REF: CONSULTANCY EXPENSES TRN: 3791995062ES 03/03"
+    },
+    {
+      "date": "03/06/2025",
+      "consultant": "Jan",
+      "amount": 594,
+      "description": "ONLINE INTERNATIONAL WIRE TRANSFER A/C: JPMORGAN CHASE BANK NA - LONDON LONDON UNITED KINGDOM E14 5JP GB BEN:/LT323250049512365310 JAN DZUBAK REF: CONSULTANCY EXPENSES TRN: 3361785065ES 03/06"
+    },
+    {
+      "date": "03/11/2025",
+      "consultant": "Petrana",
+      "amount": 2130,
+      "description": "ONLINE INTERNATIONAL WIRE TRANSFER A/C: JPMORGAN CHASE BANK NA - LONDON LONDON UNITED KINGDOM E14 5JP GB BEN:/LT863250065995442612 PETRANA GEORGIEVA PETROVA REF: CONSULTANCY EXPENSES/BNF/PETRANA FEBRUARY 2025 TRN: 3428625070ES 03/11"
+    },
+    {
+      "date": "03/11/2025",
+      "consultant": "Unknown",
+      "amount": 1026,
+      "description": "Online ACH Payment 11164946583 To Abri (_###########3209)"
+    },
+    {
+      "date": "04/01/2025",
+      "consultant": "Niki",
+      "amount": 2440,
+      "description": "ONLINE INTERNATIONAL WIRE TRANSFER A/C: JPMORGAN CHASE BANK NA - LONDON LONDON UNITED KINGDOM E14 5JP GB BEN:/LT483250004599838436 NIKOLETA NOTOVA REF: NIKI PAYMENT CONSULTANCY EXPENSES/BNF/FEBRUARY CONSULTANCY TRN: 3495105091ES 04/01"
+    },
+    {
+      "date": "04/10/2025",
+      "consultant": "Petrana",
+      "amount": 740,
+      "description": "ONLINE INTERNATIONAL WIRE TRANSFER A/C: JPMORGAN CHASE BANK NA - LONDON LONDON UNITED KINGDOM E14 5JP GB BEN:/LT863250065995442612 PETRANA GEORGIEVA PETROVA REF: CONSULTANCY EXPENSES TRN: 3704475100ES 04/10"
+    },
+    {
+      "date": "04/15/2025",
+      "consultant": "Ivana",
+      "amount": 1155,
+      "description": "ONLINE INTERNATIONAL WIRE TRANSFER VIA: STANDARD CHARTERED BANK/0256 A/C: TATRA BANKA A.S. BRATISLAVA SLOVAKIA 811 06 SK BEN: ING IVANA KMECOVA SLOVAKIA SK REF: CONSULTANCY EXPENSES SSN: 00587016 TRN: 3503975105ES 04/15"
+    },
+    {
+      "date": "06/03/2025",
+      "consultant": "Carmen",
+      "amount": 928.25,
+      "description": "ONLINE INTERNATIONAL WIRE TRANSFER A/C: BANCO BILBAO VIZCAYA ARGENTARIA SA BILBAO 48005 SPAIN ES REF: CARMEN APRIL CONSULTANCY EXPENSES TRN: 3077845154ES 06/03"
+    },
+    {
+      "date": "06/10/2025",
+      "consultant": "Jan",
+      "amount": 594,
+      "description": "ONLINE INTERNATIONAL WIRE TRANSFER A/C: JPMORGAN CHASE BANK NA - LONDON LONDON UNITED KINGDOM E14 5JP GB BEN:/LT323250049512365310 JAN DZUBAK REF: CONSULTANCY EXPENSES TRN: 3080485161ES 06/10"
+    },
+    {
+      "date": "06/27/2025",
+      "consultant": "Pepi",
+      "amount": 1130,
+      "description": "ONLINE INTERNATIONAL WIRE TRANSFER A/C: UNICREDIT BULBANK SOFIA BULGARIA 1000 BG REF: PEPI PAYMENT CONSULTANCY EXPENSES TRN: 3274335178ES 06/27"
+    },
+    {
+      "date": "07/07/2025",
+      "consultant": "Carmen",
+      "amount": 951.75,
+      "description": "ONLINE INTERNATIONAL WIRE TRANSFER A/C: BANCO BILBAO VIZCAYA ARGENTARIA SA BILBAO 48005 SPAIN ES REF: CARMEN - JUNE 2025 CONSULTANCY EXPENSES TRN: 3485725188ES 07/07"
+    },
+    {
+      "date": "07/07/2025",
+      "consultant": "Pepi",
+      "amount": 730,
+      "description": "ONLINE INTERNATIONAL WIRE TRANSFER A/C: UNICREDIT BULBANK SOFIA BULGARIA 1000 BG REF: PEPI - JUNE 2025 CONSULTANCY EXPENSES TRN: 3480065188ES 07/07"
+    },
+    {
+      "date": "08/19/2025",
+      "consultant": "Carmen",
+      "amount": 1116.25,
+      "description": "ONLINE INTERNATIONAL WIRE TRANSFER A/C: BANCO BILBAO VIZCAYA ARGENTARIA SA BILBAO 48005 SPAIN ES REF: CARMEN JULY CONSULTANCY EXPENSES TRN: 3201285231ES 08/19"
+    },
+    {
+      "date": "08/19/2025",
+      "consultant": "Pepi",
+      "amount": 600,
+      "description": "ONLINE INTERNATIONAL WIRE TRANSFER A/C: UNICREDIT BULBANK SOFIA BULGARIA 1000 BG REF: PEPI JULY CONSULTANCY EXPENSES TRN: 3199695231ES 08/19"
+    },
+    {
+      "date": "09/08/2025",
+      "consultant": "Unknown",
+      "amount": 2677.5,
+      "description": "ORIG CO NAME:Bill.com               ORIG ID:1204895317 DESC DATE:       CO ENTRY DESCR:Payables  SEC:CCD    TRACE#:021000021342386 EED:250908   IND ID:015DZWHCRCN9GJ7              IND NAME:Markman Group LLC             Ivana Kmecov? Bill.com 015DZWHCR CN9GJ7 Inv # 20250003 TRN: 2511342386TC"
+    }
+  ],
+  "needsMapping": {
+    "message": "We need to map consultant costs to specific client projects",
+    "suggestions": {
+      "Swan ($47,230)": "Which projects? Laurel? Metropolitan? Both?",
+      "Niki ($15,000)": "Which projects?",
+      "Carmen ($14,342)": "Which projects?",
+      "Ivana ($11,104)": "Which projects?",
+      "Abri ($10,638)": "Which projects?",
+      "Others": "Need allocation guidance"
+    }
+  }
+}

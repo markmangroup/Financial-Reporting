@@ -1,0 +1,260 @@
+{
+  "generatedAt": "2025-11-07T11:30:00.000Z",
+  "totalRepos": 20,
+  "repositories": [
+    {
+      "name": "braindead",
+      "url": "https://github.com/markmangroup/braindead.git",
+      "localPath": "./data/github-repos/braindead",
+      "projectId": "braindead-portal",
+      "category": "client-project",
+      "status": "cloned",
+      "description": "BrainDead data and reporting portal",
+      "language": "TypeScript/React",
+      "priority": "high"
+    },
+    {
+      "name": "metropolitan-partners-portal",
+      "url": "https://github.com/markmangroup/metropolitan-partners-portal.git",
+      "localPath": null,
+      "projectId": "metropolitan-current-state",
+      "category": "client-project",
+      "status": "pending",
+      "description": "Metropolitan Partners application",
+      "language": "Unknown",
+      "priority": "high"
+    },
+    {
+      "name": "LaurelAG-app",
+      "url": "https://github.com/Markman-Group-Repo/LaurelAG-app.git",
+      "localPath": null,
+      "projectId": "laurel-ag-proposal-tools",
+      "category": "client-project",
+      "status": "pending",
+      "description": "Laurel AG Proposal and Rental Tools application",
+      "language": "Unknown",
+      "priority": "high"
+    },
+    {
+      "name": "mdl",
+      "url": "https://github.com/markmangroup/mdl.git",
+      "localPath": null,
+      "projectId": null,
+      "category": "pitch-failed",
+      "status": "pending",
+      "description": "Modern Day Lending pitch (not pursued)",
+      "language": "Unknown",
+      "priority": "medium"
+    },
+    {
+      "name": "Financial-Reporting",
+      "url": "https://github.com/markmangroup/Financial-Reporting.git",
+      "localPath": ".",
+      "projectId": "markman-internal",
+      "category": "internal-tool",
+      "status": "current",
+      "description": "This codebase - financial reporting dashboard",
+      "language": "TypeScript/Next.js",
+      "priority": "high"
+    },
+    {
+      "name": "Rental-Platform",
+      "url": "https://github.com/markmangroup/Rental-Platform.git",
+      "localPath": null,
+      "projectId": "laurel-ag-proposal-tools",
+      "category": "client-project",
+      "status": "pending",
+      "description": "Laurel AG Rental Application platform",
+      "language": "Unknown",
+      "priority": "high"
+    },
+    {
+      "name": "Estimation-Platform",
+      "url": "https://github.com/markmangroup/Estimation-Platform.git",
+      "localPath": null,
+      "projectId": "laurel-ag-proposal-tools",
+      "category": "client-project",
+      "status": "pending",
+      "description": "Laurel AG Proposal/Estimation platform",
+      "language": "Unknown",
+      "priority": "high"
+    },
+    {
+      "name": "notice-board",
+      "url": "https://github.com/Markman-Group-Repo/notice-board.git",
+      "localPath": null,
+      "projectId": "markman-internal",
+      "category": "internal-tool",
+      "status": "pending",
+      "description": "Internal notice board application",
+      "language": "Unknown",
+      "priority": "medium"
+    },
+    {
+      "name": "mike-os",
+      "url": "https://github.com/markmangroup/mike-os.git",
+      "localPath": null,
+      "projectId": null,
+      "category": "personal-experiment",
+      "status": "pending",
+      "description": "Personal OS experiment",
+      "language": "Unknown",
+      "priority": "low"
+    },
+    {
+      "name": "brian_m",
+      "url": "https://github.com/markmangroup/brian_m.git",
+      "localPath": null,
+      "projectId": null,
+      "category": "personal-experiment",
+      "status": "pending",
+      "description": "Personal project",
+      "language": "Unknown",
+      "priority": "low"
+    },
+    {
+      "name": "dad-ticker",
+      "url": "https://github.com/markmangroup/dad-ticker.git",
+      "localPath": null,
+      "projectId": null,
+      "category": "personal-experiment",
+      "status": "pending",
+      "description": "Personal ticker project",
+      "language": "Unknown",
+      "priority": "low"
+    },
+    {
+      "name": "gpt-command",
+      "url": "https://github.com/markmangroup/gpt-command.git",
+      "localPath": null,
+      "projectId": "markman-internal",
+      "category": "internal-tool",
+      "status": "pending",
+      "description": "GPT command-line tool",
+      "language": "Unknown",
+      "priority": "medium"
+    },
+    {
+      "name": "portal-command",
+      "url": "https://github.com/markmangroup/portal-command.git",
+      "localPath": null,
+      "projectId": "markman-internal",
+      "category": "internal-tool",
+      "status": "pending",
+      "description": "Portal command-line tool",
+      "language": "Unknown",
+      "priority": "medium"
+    },
+    {
+      "name": "finance-command",
+      "url": "https://github.com/markmangroup/finance-command.git",
+      "localPath": null,
+      "projectId": "markman-internal",
+      "category": "internal-tool",
+      "status": "pending",
+      "description": "Finance command-line tool",
+      "language": "Unknown",
+      "priority": "medium"
+    },
+    {
+      "name": "divorce",
+      "url": "https://github.com/markmangroup/divorce.git",
+      "localPath": null,
+      "projectId": null,
+      "category": "personal-experiment",
+      "status": "pending",
+      "description": "Personal project",
+      "language": "Unknown",
+      "priority": "low"
+    },
+    {
+      "name": "liguier-finance-hub",
+      "url": "https://github.com/markmangroup/liguier-finance-hub.git",
+      "localPath": null,
+      "projectId": null,
+      "category": "client-project",
+      "status": "pending",
+      "description": "Liguier finance hub",
+      "language": "Unknown",
+      "priority": "medium"
+    },
+    {
+      "name": "life_hud",
+      "url": "https://github.com/markmangroup/life_hud.git",
+      "localPath": null,
+      "projectId": null,
+      "category": "personal-experiment",
+      "status": "pending",
+      "description": "Personal HUD project",
+      "language": "Unknown",
+      "priority": "low"
+    },
+    {
+      "name": "poker-world",
+      "url": "https://github.com/markmangroup/poker-world.git",
+      "localPath": null,
+      "projectId": null,
+      "category": "personal-experiment",
+      "status": "pending",
+      "description": "Poker world project",
+      "language": "Unknown",
+      "priority": "low"
+    },
+    {
+      "name": "terraform-modules",
+      "url": "https://github.com/markmangroup/terraform-modules.git",
+      "localPath": null,
+      "projectId": "markman-internal",
+      "category": "infrastructure",
+      "status": "pending",
+      "description": "Terraform infrastructure modules",
+      "language": "HCL/Terraform",
+      "priority": "medium"
+    },
+    {
+      "name": "terraform-modules-abhishek",
+      "url": "https://github.com/abhishek-markman/terraform-modules.git",
+      "localPath": null,
+      "projectId": "markman-internal",
+      "category": "infrastructure",
+      "status": "pending",
+      "description": "Abhishek's Terraform modules fork",
+      "language": "HCL/Terraform",
+      "priority": "low"
+    }
+  ],
+  "categories": {
+    "client-project": {
+      "count": 6,
+      "repos": ["braindead", "metropolitan-partners-portal", "LaurelAG-app", "Rental-Platform", "Estimation-Platform", "liguier-finance-hub"]
+    },
+    "internal-tool": {
+      "count": 5,
+      "repos": ["Financial-Reporting", "notice-board", "gpt-command", "portal-command", "finance-command"]
+    },
+    "personal-experiment": {
+      "count": 6,
+      "repos": ["mike-os", "brian_m", "dad-ticker", "divorce", "life_hud", "poker-world"]
+    },
+    "infrastructure": {
+      "count": 2,
+      "repos": ["terraform-modules", "terraform-modules-abhishek"]
+    },
+    "pitch-failed": {
+      "count": 1,
+      "repos": ["mdl"]
+    }
+  },
+  "priorities": {
+    "high": ["braindead", "metropolitan-partners-portal", "LaurelAG-app", "Financial-Reporting", "Rental-Platform", "Estimation-Platform"],
+    "medium": ["mdl", "notice-board", "gpt-command", "portal-command", "finance-command", "liguier-finance-hub", "terraform-modules"],
+    "low": ["mike-os", "brian_m", "dad-ticker", "divorce", "life_hud", "poker-world", "terraform-modules-abhishek"]
+  },
+  "consolidationPlan": {
+    "clone": "Clone all repos to data/github-repos/ for preservation",
+    "extract": "Extract README, package.json, key docs from each",
+    "categorize": "Separate into keep/archive/reference based on relevance",
+    "integrate": "Link relevant repos to project metadata",
+    "archive": "Mark personal experiments and failed pitches as archived"
+  }
+}

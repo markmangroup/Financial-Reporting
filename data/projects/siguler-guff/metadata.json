@@ -1,0 +1,94 @@
+{
+  "id": "siguler-guff",
+  "name": "Siguler Guff & Company",
+  "client": "Siguler Guff & Company (Pitch/Demo - In Progress)",
+  "type": "application-development",
+  "status": "active",
+  "description": "Comprehensive pitch and demo development for Siguler Guff - private equity firm. Includes data visualization dashboards, CEO/CFO interfaces, portfolio management, compliance center, and full presentation orchestrator with scraped company data.",
+  "timeline": {
+    "startDate": "2024-06-01",
+    "lastActivityDate": "2025-11-07"
+  },
+  "financial": {
+    "revenue": 0,
+    "revenueDetails": [],
+    "costs": {
+      "consultants": [],
+      "totalConsultantCosts": 0,
+      "overheadAllocated": 0
+    },
+    "profitability": {
+      "grossProfit": 0,
+      "grossMargin": 0
+    }
+  },
+  "team": {
+    "consultants": [],
+    "primaryContact": "Mike"
+  },
+  "sharepoint": {
+    "path": "/Shared Documents/General/Pitches/Siguler Guff",
+    "url": "https://markmanassociates.sharepoint.com/Shared%20Documents/General/Pitches/Siguler%20Guff",
+    "lastSyncedAt": "2025-11-07T00:00:00.000Z"
+  },
+  "github": {
+    "repos": [
+      "https://github.com/markmangroup/mike-os.git",
+      "https://github.com/markmangroup/siguler-finance-hub.git"
+    ]
+  },
+  "codebase": {
+    "repos": [
+      {
+        "name": "mike-os",
+        "url": "https://github.com/markmangroup/mike-os.git",
+        "path": "data/github-repos/mike-os",
+        "files": 1694,
+        "size": 891320,
+        "lastCommit": "2025-10-14 12:51:15 -0400",
+        "primaryLanguage": "React/Next.js",
+        "description": null
+      },
+      {
+        "name": "siguler-finance-hub",
+        "url": "https://github.com/markmangroup/siguler-finance-hub.git",
+        "path": "data/github-repos/siguler-finance-hub",
+        "files": 27,
+        "size": 512,
+        "lastCommit": "2025-05-27 17:38:07 -0400",
+        "primaryLanguage": "React/Next.js",
+        "description": null
+      }
+    ],
+    "totalFiles": 1721,
+    "totalSizeKB": 891832,
+    "technologies": [
+      "React/Next.js"
+    ],
+    "analyzedAt": "2025-11-07T17:39:33.438Z"
+  },
+  "documents": {
+    "contracts": [],
+    "proposals": [],
+    "deliverables": [],
+    "documentation": []
+  },
+  "migrationStatus": {
+    "inventoryComplete": true,
+    "documentsDownloaded": false,
+    "validated": false,
+    "lastUpdated": "2025-11-07T00:00:00.000Z"
+  },
+  "notes": [
+    "Active pitch/demo development",
+    "Extensive work in mike-os repo including:",
+    "- Full data vault with funds, employees, news, fundraising data",
+    "- Multiple dashboards: CEO, CFO, Department, Portfolio Management",
+    "- Compliance Center, Deal Funnel, LP Reporting",
+    "- Website scrapers for live data integration",
+    "- Presentation orchestrator with scenes and transitions",
+    "- Team roster and metrics tracking",
+    "No revenue yet - still in pitch phase",
+    "Significant R&D investment in demo platform"
+  ]
+}

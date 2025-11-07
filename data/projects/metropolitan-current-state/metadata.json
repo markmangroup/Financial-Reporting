@@ -1,0 +1,210 @@
+{
+  "id": "metropolitan-current-state",
+  "name": "Metropolitan Partners - Current State Assessment",
+  "client": "Metropolitan Partners",
+  "type": "process-discovery",
+  "status": "completed",
+  "description": "Comprehensive current state assessment and process discovery across Asset Management, Investor Relations, Operations, and Operating Experts functions.",
+  "timeline": {
+    "startDate": "2024-12-01",
+    "endDate": "2025-02-28",
+    "lastActivityDate": "2025-02-03"
+  },
+  "financial": {
+    "revenue": 47320,
+    "revenueDetails": [
+      {
+        "date": "2025-01-07",
+        "amount": 11830,
+        "invoice": "0128",
+        "description": "Current State Assessment - Phase 1"
+      },
+      {
+        "date": "2025-05-07",
+        "amount": 35490,
+        "invoice": "0130",
+        "description": "Current State Assessment - Phase 2"
+      }
+    ],
+    "costs": {
+      "consultants": [
+        {
+          "name": "Petrana",
+          "totalCost": 12450,
+          "allocationPercent": 88.9,
+          "allocatedCost": 11068,
+          "sourceEvidence": "sharepoint-activity",
+          "notes": "40 files modified, primary documentation lead"
+        },
+        {
+          "name": "Carmen",
+          "totalCost": 14342,
+          "allocationPercent": 56.3,
+          "allocatedCost": 8075,
+          "sourceEvidence": "sharepoint-activity",
+          "notes": "147 files modified, significant involvement"
+        },
+        {
+          "name": "Abri",
+          "totalCost": 10638,
+          "allocationPercent": 100,
+          "allocatedCost": 10638,
+          "sourceEvidence": "sharepoint-activity",
+          "notes": "5 files modified, 100% Metropolitan focus"
+        },
+        {
+          "name": "Beata",
+          "totalCost": 7640,
+          "allocationPercent": 100,
+          "allocatedCost": 7640,
+          "sourceEvidence": "sharepoint-activity",
+          "notes": "36 files modified, 100% Metropolitan focus"
+        },
+        {
+          "name": "Jan",
+          "totalCost": 6630,
+          "allocationPercent": 100,
+          "allocatedCost": 6630,
+          "sourceEvidence": "sharepoint-activity",
+          "notes": "37 files modified, 100% Metropolitan focus"
+        },
+        {
+          "name": "Nikoleta",
+          "totalCost": 15000,
+          "allocationPercent": 20.1,
+          "allocatedCost": 3015,
+          "sourceEvidence": "sharepoint-activity",
+          "notes": "262 files modified, secondary involvement"
+        }
+      ],
+      "totalConsultantCosts": 47066,
+      "overheadAllocated": 0
+    },
+    "profitability": {
+      "grossProfit": 254,
+      "grossMargin": 0.5
+    }
+  },
+  "team": {
+    "consultants": [
+      "Petrana",
+      "Carmen",
+      "Abri",
+      "Beata",
+      "Jan",
+      "Nikoleta"
+    ],
+    "primaryContact": "Petrana"
+  },
+  "sharepoint": {
+    "path": "/General/Offerings & Projects/2. Process Discovery & Strategy/Metropolitan - Current State Assessment",
+    "url": "https://markmanassociates.sharepoint.com/sites/MarkmanAssociates/Shared%20Documents/General/Offerings%20%26%20Projects/2.%20Process%20Discovery%20%26%20Strategy/Metropolitan%20-%20Current%20State%20Assessment",
+    "lastSyncedAt": "2025-11-07T13:30:00Z"
+  },
+  "github": {
+    "repos": []
+  },
+  "documents": {
+    "contracts": [],
+    "proposals": [
+      {
+        "filename": "Metropolitan Quick Wins POC Proposal.pdf",
+        "localPath": "data/projects/metropolitan-current-state/proposals/Metropolitan Quick Wins POC Proposal.pdf",
+        "sharepointUrl": "https://markmanassociates.sharepoint.com/sites/MarkmanAssociates/Shared%20Documents/General/Offerings%20%26%20Projects/2.%20Process%20Discovery%20%26%20Strategy/Metropolitan%20-%20Deal%20Cloud%20Quick%20Wins/Key%20Deliverables/Metropolitan%20Quick%20Wins%20POC%20Proposal.pdf",
+        "sharepointPath": "/General/Offerings & Projects/2. Process Discovery & Strategy/Metropolitan - Deal Cloud Quick Wins/Key Deliverables/Metropolitan Quick Wins POC Proposal.pdf",
+        "downloadedAt": "2025-11-07T13:32:52.280Z",
+        "fileHash": "4bc74bef54f9cdf6854a48a843d0c043e41392c466273edc3a788bbf3a8652b1",
+        "fileSize": 661549,
+        "modifiedBy": "Carmen",
+        "modifiedDate": "2025-10-24T11:57:43Z",
+        "projectId": "metropolitan-current-state",
+        "category": "proposals",
+        "extractedText": "%PDF-1.7\r\n%µµµµ\r\n1 0 obj\r\n<</Type/Catalog/Pages 2 0 R/Lang(es) /StructTreeRoot 286 0 R/Outlines 266 0 R/MarkInfo<</Marked true>>/Metadata 4100 0 R/ViewerPreferences 4101 0 R>>\r\nendobj\r\n2 0 obj\r\n<</Type/Pages/Count 17/Kids[ 3 0 R 14 0 R 24 0 R 42 0 R 82 0 R 114 0 R 140 0 R 154 0 R 190 0 R 224 0 R 233 0 R 243 0 R 247 0 R 254 0 R 257 0 R 261 0 R 263 0 R] >>\r\nendobj\r\n3 0 obj\r\n<</Type/Page/Parent 2 0 R/Resources<</ExtGState<</GS5 5 0 R/GS8 8 0 R>>/Font<</F1 6 0 R/F2 10 0 R>>/XObject<</Image13 13 0 R>>/ProcSet[/PDF/Text/ImageB/ImageC/ImageI] >>/Annots[ 9 0 R 12 0 R] /MediaBox[ 0 0 960 540] /Contents 4 0 R/Group<</Type/Group/S/Transparency/CS/DeviceRGB>>/Tabs/S/StructParents 0>>\r\nendobj\r\n4 0 obj\r\n<</Filter/FlateDecode/Length 710>>\r\nstream\r\nxúµU€n”@\u0010}∑‰òGªR÷{øHUEoT\u0005\u0002Ö§‚\u0001Ò\u0010EI® nqÉ˙˚ÃÆ◊Ò∫\u0004BEQ§µÁƒ;3gÊÏlu‹lnñ≥˘\u0006N∆ß=œ(PB)eúS\u0003NSPíB≥»≥è\u0007PÁYu1Q∞∫«Ô\b”\f∫ï3\u000eÕjªõjFÖ\u001al_\u001e‰Ÿ˚<És\f\u0003’\u0015\u001c\u001eV„”À3†GGprvÍ=Qé´¥aU,¯≥÷\u0011'¿*\"ôÉuûq*à5\u001d-œ\f\u0006‘\n8sÑã\u0004êJ\u0012ew\u0003J\u0013&\u0012 F\u0011ú\u0012c\u0012†èÚ•%\u0010≥ü‹ÕÍ-\u0001VΩô’+(\u0016ıËzRF6æê°\u0010L\n™ÄÓ®‰…\u0014´˘íÅ·Ñr\t”eûa%Ò«Ä9C®\u0003A1\u000b\r”µˇg\u0015joCÌ\u0019\\‰Ÿßb\\éò0≈±Ë‚CkΩn≠Ù?[ºm-(?√ÙUûùO”^\fÿˇ∆ÜsAîÏŸD\u0012\u0017mÜ1˚wÌ„∫\u0005ØvÊ€kGƒ¸\u0004<DY\bf0& !\b∆`óQä\u0011¿VN¢£j†|J¨\ni)+\t◊ÄR‡48–®8a:\u0000\u001dhŒQ•) \u0019Q.\u00054\nÈ\u0017\u001b\u0015™\u0007\u001b\u0012†uô\u0000m–\u001eàiı¿\u001f\u0014)ˇ©á\u001c,·v–A\u001f\\\b<cÑbñæÉ\u001c¶ç?ˆB+„ãø-_˚\u0012:ª∆&∫bVét—¯Âk)=&\u00112EΩ_äÍπih¨ûtO•1⁄ü©~ˆL1Gı‰ÇØ\u001a,Ïm©ä\u001fXyV‹°E ë(ÊæË\u001e_Ôßbûõä1\u0002«Øß¢„,˚\u001b*ò2≥òÛ»\u0015uΩ@\"Å√¶DAΩ\bD¢åö“¶∫Bï’%ão˜˜∑ÛõR¥∆\u0006?Z\u0004î¯OÁ%£ø-…p2\u0018\u001ci.\u001cwã∑\u0005Êo)û\u0006◊\u0001˛∂\u0010äÿ‘÷\u0006/ƒ\u0014pñhæ\u0013‡è∑G>;{\u001b4\u0002}Z\u0011\u0018\u000eÑ~H⁄ÿDTT_Ì0*91\u001cÑ&ŒhœÀI„õ\u0017\u0000ìN ‘õÎ%a\u0004\u000e#◊]íL:\"d˜ËÖ\u0011Å Üˆu∏oéë´Àılµ¿+˘Ï\u0016∫&¸\u0004eÒæô\r\nendstream\r\nendobj\r\n5 0 obj\r\n<</Type/ExtGState/BM/Normal/ca 1>>\r\nendobj\r\n6 0 obj\r\n<</Type/Font/Subtype/TrueType/Name/F1/BaseFont/BCDEEE+Josefin#20Sans#20SemiBold/Encoding/WinAnsiEncoding/FontDescriptor 7 0 R/FirstChar 32/LastChar 90/Widths 4069 0 R>>\r\nendobj\r\n7 0 obj\r\n<</Type/FontDescriptor/FontName/BCDEEE+Josefin#20Sans#20SemiBold/Flags 32/ItalicAngle 0/Ascent 750/Descent -250/CapHeight 750/AvgWidth 591/MaxWidth 1448/FontWeight 600/XHeight 250/StemV 59/FontBBox[ -91 -250 1357 750] /FontFile2 4067 0 R>>\r\nendobj\r\n8 0 obj\r\n<</Type/ExtGState/BM/Normal/CA 1>>\r\nendobj\r\n9 0 obj\r\n<</Subtype/Link/Rect[ 584.23 19.44 660.79 26.76] /BS<</W 0>>/F 4/A<</Type/Action/S/URI/URI(https://markman-group.com/) >>/StructParent 1>>\r\nendobj\r\n10 0 obj\r\n<</Type/Font/Subtype/TrueType/Name/F2/BaseFont/BCDFEE+BritannicBold/Encoding/WinAnsiEncoding/FontDescriptor 11 0 R/FirstChar 45/LastChar 117/Widths 4070 0 R>>\r\nendobj\r\n11 0 obj\r\n<</Type/FontDescriptor/FontName/BCDFEE+BritannicBold/Flags 32/ItalicAngle 0/Ascent 833/Descent -167/CapHeight 677/AvgWidth 446/MaxWidth 1267/FontWeight 400/XHeight 250/StemV 44/FontBBox[ -148 -167 1119 677] /FontFile2 4071 0 R>>\r\nendobj\r\n12 0 obj\r\n<</Subtype/Link/Rect[ 773.02 20.04 898.8 27.48] /BS<</W 0>>/F 4/A<</Type/Action/S/URI/URI(mailto:connect@markmanassociates.com‚Äã) >>/StructParent 2>>\r\nendobj\r\n13 0 obj\r\n<</Type/XObject/Subtype/Image/Width 160/Height 160/ColorSpace/DeviceRGB/BitsPerComponent 8/Filter/DCTDecode/Interpolate true/Length 4916>>\r\nstream\r\nˇÿˇ‡\u0000\u0010JFIF\u0000\u0001\u0001\u0001\u0000`\u0000`\u0000\u0000ˇ·\u0000ZExif\u0000\u0000MM\u0000*\u0000\u0000\u0000\b\u0000\u0005\u0003\u0001\u0000\u0005\u0000\u0000\u0000\u0001\u0000\u0000\u0000J\u0003\u0003\u0000\u0001\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0000Q\u0010\u0000\u0001\u0000\u0000\u0000\u0001\u0001\u0000\u0000\u0000Q\u0011\u0000\u0004\u0000\u0000\u0000\u0001\u0000\u0000\u000e√Q\u0012\u0000\u0004\u0000\u0000\u0000\u0001\u0000\u0000\u000e√\u0000\u0000\u0000\u0000\u0000\u0001Ü†\u0000\u0000±èˇ€\u0000C\u0000\b\u0006\u0006\u0007\u0006\u0005\b\u0007\u0007\u0007\t\t\b\n\f\u0014\r\f\u000b\u000b\f\u0019\u0012\u0013\u000f\u0014\u001d\u001a\u001f\u001e\u001d\u001a\u001c\u001c $.' \",#\u001c\u001c(7),01444\u001f'9=82<.342ˇ€\u0000C\u0001\t\t\t\f\u000b\f\u0018\r\r\u00182!\u001c!22222222222222222222222222222222222222222222222222ˇ¿\u0000\u0011\b\u0000†\u0000†\u0003\u0001\"\u0000\u0002\u0011\u0001\u0003\u0011\u0001ˇƒ\u0000\u001f\u0000\u0000\u0001\u0005\u0001\u0001\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0003\u0004\u0005\u0006\u0007\b\t\n\u000bˇƒ\u0000µ\u0010\u0000\u0002\u0001\u0003\u0003\u0002\u0004\u0003\u0005\u0005\u0004\u0004\u0000\u0000\u0001}\u0001\u0002\u0003\u0000\u0004\u0011\u0005\u0012!1A\u0006\u0013Qa\u0007\"q\u00142Åë°\b#B±¡\u0015R—$3brÇ\t\n\u0016\u0017\u0018\u0019\u001a%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyzÉÑÖÜáàâäíìîïñóòôö¢£§•¶ß®©™≤≥¥µ∂∑∏π∫¬√ƒ≈∆«»… “”‘’÷◊ÿŸ⁄·‚„‰ÂÊÁËÈÍÒÚÛÙıˆ˜¯˘˙ˇƒ\u0000\u001f\u0001\u0000\u0003\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0002\u0003\u0004\u0005\u0006\u0007\b\t\n\u000bˇƒ\u0000µ\u0011\u0000\u0002\u0001\u0002\u0004\u0004\u0003\u0004\u0007\u0005\u0004\u0004\u0000\u0001\u0002w\u0000\u0001\u0002\u0003\u0011\u0004\u0005!1\u0006\u0012AQ\u0007aq\u0013\"2Å\b\u0014Bë°±¡\t#3R\u0015br—\n\u0016$4·%Ò\u0017\u0018\u0019\u001a&'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyzÇÉÑÖÜáàâäíìîïñóòôö¢£§•¶ß®©™≤≥¥µ∂∑∏π∫¬√ƒ≈∆«»… “”‘’÷◊ÿŸ⁄‚„‰ÂÊÁËÈÍÚÛÙıˆ˜¯˘˙ˇ⁄\u0000\f\u0003\u0001\u0000\u0002\u0011\u0003\u0011\u0000?\u0000ˆ?\u0015x™«¬\u001adZÜ°\u0015ƒëI0Ñ\u000buVm≈Yªë∆\u0014◊#ˇ\u0000\u000bø√_Û„´ﬂ®ˇ\u0000¯Â'«\u000f˘\u0012Ïˇ\u0000Ï\"ü˙.J1Z¬\t´≥)Mßcﬂá∆ﬂ\r\u001f˘q’øÔ‘¸rú>5xpˇ\u0000Àñ´ˇ\u0000~£ˇ\u0000„ï‡K÷ßZØg\u0012}£=‡|fÈˇ\u0000ó-S˛˝Gˇ\u0000≈”á∆O\u000f\u001f˘r’?Ô‘¸]xZöï)˚8á¥ëÓ#„\u0007áœ¸πÍ˜Í?˛.ú>.Ë\u0007˛\\ı?˚ı\u001fˇ\u0000\u0017^$Ωje•Ï‚/i#⁄á≈≠\u0004ˇ\u0000À¶•ˇ\u0000~„ˇ\u0000‚È·lh?ÛÈ©ﬂ¥ˇ\u0000‚Î∆\u0001ß\u0003G≥à˝£=ó˛\u0016∆Öˇ\u0000>öè˝˚O˛.ö~-h#˛]5/˚˜\u001fˇ\u0000\u0017^8ZòM\u001eŒ!Ì\u0019Ïá‚ˆÄ?ÂœSˇ\u0000øQˇ\u0000Òt”Òá√„˛\\ı?˚ı\u001fˇ\u0000\u0017^0ı\u000bQÏ‚/i#⁄œ∆O\u000eè˘s’?Ô‘¸]4¸g‡ˇ\u0000ó-W˛˝Gˇ\u0000≈◊áµD‘˝úGÌ${ë¯◊·±÷«Uˇ\u0000øQˇ\u0000Ò o¸.Ô\rœé≠ˇ\u0000~£ˇ\u0000„ï·MPö=úC⁄H˜£Òø√C˛\\uo˚ı\u001fˇ\u0000\u001cÆø¬æ*±Ò~ó.°ß≈q\u0014QÃa\"·U[pUnƒÒÜ\u0015Ú°Ø|¯\u001fˇ\u0000\"UÁ˝Ñ_ˇ\u0000E«Q8$ÆäÑõzâÒ«˛D´/˚\bß˛ãíº\fWæ|qˇ\u0000ë*À˛¬)ˇ\u0000¢‰Ø\u0003Z∫\t57%Nµ*‘KR≠Y\u0004´S%Bµ*P\"¬öïM@µ*ö@J\r8\u001a`ß\u0003@\nM4“ÊöM\u0000F∆†zï™\u0016†\bçD’+u®ö®\b⁄°aS5D‘ÜFN+ﬂ>\u0007»ïyˇ\u0000a\u0017ˇ\u0000—q◊Å5{Ô¿Ô˘\u0012Ø?Ï\"ˇ\u0000˙.:äü\tt˜\u000fé?Ú%YÿE?Ù\\ï‡k^˘ÒÀ˛D´/˚\bß˛ãíº\riS¯GSrU©V°ZôkC2U©V°ZïM\fíU5(5\b5‹¯k√∂\u0016zZ¯ãƒ`˝êúZZ\u000fΩpﬂOOÛıñÏRW2¥O\nÎ:˜6VåbÔ4ü*\u000fƒı¸+˛\u0015˝µ∞∆°‚m6\t;¢∂Ï~¢∫\u000b„™k0¥rJ-ëBàtÂS\u001c]\u0001;ôNH\u0000‡>aV\u001bM”R÷{{\bÌÌÆ\u0019\n«8_9ë±¡ÈÉYπ≥¶\u0018w%sóˇ\u0000Ñ\u0006“„Â±Ò>õ<ùëõnSX\u001aﬂÖ5ù\u000b-yhﬁOi„˘–˛#ß„äÙQ¶X˝Ü\u001b}A-ÆÁT\nÛ≤y.ÌÎ”\u0002´«˝ß¢ b—ÂíÚ‹˝˝2Ën‹Ωˆı®Scñ\u0019•s»ÿ‘-]ﬂà¸;a®ÈrxÉ√à…\fdã€\u0013˜Ì€æ\u0007ß˘˙pdÒZ'së´\u0011∑Zâ™CQµR\u00023Qö{Tlh\u0019\u001bWæ|\rˇ\u0000ë*Û˛¬/ˇ\u0000¢„Ø\u0002nµÔø\u0003‰JΩˇ\u0000∞ãˇ\u0000Ë∏Î:ü\t•=√„ó¸âV_ˆ\u0011O˝\u0017%x\u001aö˜œéÚ$ŸÿE?Ù\\ï‡\u0000—O`©π05*\u001aÑ\u001aëMhfX\u0006û\rD¶û(b:?\u0006ËÉƒ>%∂≤p~Œ\tísËã…¸¯\u001fçt˙Ü∑˝Ø¨\u001b¯ä•§{°”◊\u001f,0ß\r0\u001eß†ˇ\u0000Î\n°‡ƒíﬂ¬>(Ω∂Rnﬁ\u0004¥á\u0007\u0018.pyÌ‘~Uù∑…Ç\u0000≤$ñÓëE\u001b∆ŸVDRŒ\u0007¸\f\u001aÕÍÕÈ$u⁄KO},vvp±ﬁr#'ˇ\u0000\u001eê˜=Ò⁄ª˚O\nBëèµ\\K+„ïFÿ£\u0015œ|6Öc”Ó/§;ßëÇdˆ‡1˝OË+π˚Hı¨Âπ”*Ødc›¯R\u0019#?eπö\u0017Ï\u0019∑)˙É\\\u000e•5Óëzˆ”+§®r\u00166#˛\u0004á¯N?\u0003^≠ˆ°Î\\GƒõxÁ“`ºOñx§ÿ\u001cu¡\u0004è…Ä˝}hã◊PU^Ã„lı«—µÑ’∑â!¬•ÚÅ≈Õª\u001cyÑwe<\u001fˇ\u0000]sﬁ6—\u0013@Ò$ˆ",
+        "extractedTextLength": 661549,
+        "textExtractedAt": "2025-11-07T16:32:18.311Z"
+      }
+    ],
+    "deliverables": [],
+    "documentation": [
+      {
+        "filename": "Current State Overview_V01.docx",
+        "localPath": "data/projects/metropolitan-current-state/documentation/Current State Overview_V01.docx",
+        "sharepointUrl": "https://markmanassociates.sharepoint.com/sites/MarkmanAssociates/_layouts/15/Doc.aspx?sourcedoc=%7B352E5756-AAFC-492D-A00A-5F81D9112E1F%7D&file=Current%20State%20Overview_V01.docx&action=default&mobileredirect=true",
+        "sharepointPath": "/General/Offerings & Projects/2. Process Discovery & Strategy/Metropolitan - Current State Assessment/Working Files/Phase 1 - Current State Assessment/Process Discovery/Discovery Sessions/!Documentation/!Working Files_Nikoleta/1. Documentation/0. Summary Sections/Current State Overview_V01.docx",
+        "downloadedAt": "2025-11-07T13:33:01.235Z",
+        "fileHash": "63cc5d8ba9cef525994fb3cf697bee938b06c471080411652a5809e85b33eaad",
+        "fileSize": 1722830,
+        "modifiedBy": "Nikoleta Notova",
+        "modifiedDate": "2025-10-21T14:50:55Z",
+        "projectId": "metropolitan-current-state",
+        "category": "documentation",
+        "extractedText": "Current State Overview\n\nCurrent State Overview\t1\nOrganizational Structure\t2\nKey Systems and Tools\t2\nExisting Data Infrastructure\t2\nInterdepartmental dependencies\t2\n\n\f\nOrganizational Structure\nOverview\nMetropolitan’s organizational structure is designed for strategic leadership, investment execution, and operational efficiency. The firm operates through four primary divisions:\n\t•\tSenior Management – Provides overall governance, risk oversight, and firm-wide leadership.\n\t•\tInvestment Management – Responsible for deal sourcing, underwriting, and asset management.\n\t•\tBusiness Management – Oversees finance, investor relations, legal, and operations.\n\t•\tInvestment Committee – Exercises final investment decision-making authority.\nWith 31 professionals as of December 2024, Metropolitan maintains a highly specialized and disciplined team, ensuring robust investment strategy execution.\n\nSenior Management\nThe Senior Management team is responsible for corporate governance, compliance, and strategic oversight.\nKey Executives\n\t•\tPaul Lisiak – Managing Partner, Chief Investment Officer (CIO) | 26 years of experience | University of Pennsylvania\n\t•\tJulian Weldon – General Counsel, Chief Compliance Officer (CCO) | 27+ years of experience | University of East Anglia\n\t•\tStephen Faughnan – Managing Director | 26+ years of experience | Pace University, NYU Stern\nPrimary Responsibilities\n✔ Investment Strategy & Execution\n✔ Legal & Compliance Oversight\n✔ Firm-wide Governance & Risk Management\nSenior Management provides firm-wide leadership while ensuring regulatory compliance and risk mitigation.\n\nInvestment Committee\nThe Investment Committee (IC) is responsible for final investment approvals, portfolio oversight, and risk assessment.\nCommittee Members\n\t•\tPaul Lisiak – Managing Partner, CIO\n\t•\tAdrian Blumfield – IC Member | 30+ years of experience | University of Cambridge, London Business School\n\t•\tFred Ganning – IC Member | 30+ years of experience | Seton Hall University\nCore Functions\n✔ Final Investment Decision-Making\n✔ Risk & Portfolio Management\n✔ Fund Strategy & Capital Allocation\nThe IC ensures disciplined investment selection, risk mitigation, and adherence to the firm’s strategic objectives.\n\nInvestment Management\nThe Investment Management team is responsible for deal origination, underwriting, and active asset management.\nInvestment Sourcing & Underwriting\nHandles deal origination, due diligence, and underwriting.\nLeadership\n\t•\tGeorge Alifragis – Head of Operating Expert Network\n\t•\tRichard Lin – Managing Director\nTeam Structure\n✔ Vice Presidents & Principals – Lead investment sourcing and execution.\n✔ Associates & Analysts – Support financial modeling, due diligence, and execution.\n✔ 500+ Operating Expert Network – Provides specialized industry insights.\nAsset Management\nResponsible for post-investment oversight, loan servicing, and portfolio monitoring.\nLeadership\n\t•\tAlex Verba – Managing Director\nTeam Composition\n✔ Vice Presidents & Associates – Oversee borrower relationships, financial monitoring, and performance optimization.\nTotal Investment Management Team: 14 Professionals\n\nBusiness Management\nThe Business Management division oversees finance, investor relations, operations, and legal compliance.\nFinance & Accounting\nResponsible for financial reporting, fund accounting, and audit coordination.\n\t•\tDouglas Gold – Chief Accounting Officer & Senior Vice President\n\t•\tTeam: Vice Presidents, Controllers, Fund Accountants.\nInvestment Operations & Reporting\nManages data analytics, investment performance reporting, and internal controls.\n\t•\tJason Bircann – Vice President\n\t•\tTeam: Senior Operations Associates & Analysts.\nInvestor Relations\nHandles LP communications, fundraising support, and investor reporting.\n\t•\tScarly Almonte – Senior Associate\nFirm Operations\nEnsures legal compliance, administrative efficiency, and corporate governance.\n\t•\tKevin O’Block & Megan Krishnamurthy – Vice Presidents, Office of the CIO\n\t•\tBenjamin Bertan – Associate General Counsel\nTotal Business Management Team: 14 Professionals\nKey Systems and Tools – TO BE ADDED\nExisting Data Infrastructure – TO BE ADDED\nInterdepartmental Dependencies\n\nNetwork graph -Report/Deliverable with Data Sources and Data Source Owner\n\nAs visible in the network graphs, Metropolitan leverages multiple data sources to produce the majority of its deliverables. While this approach allows for the incorporation of diverse and detailed inputs, it inherently demands significant coordination and effort across various teams. This reliance on cross-functional collaboration introduces challenges, particularly when team availability is constrained, leading to inefficiencies, delays, and bottlenecks in the process. The time and resources required to synchronize efforts across departments highlight an opportunity to optimize workflows.\nCompounding these challenges, several reports require insights and input from Asset Managers and Deal Team members, which are often not formally docu",
+        "extractedTextLength": 7974,
+        "textExtractedAt": "2025-11-07T16:32:18.364Z"
+      },
+      {
+        "filename": "Current State Overview_V02.docx",
+        "localPath": "data/projects/metropolitan-current-state/documentation/Current State Overview_V02.docx",
+        "sharepointUrl": "https://markmanassociates.sharepoint.com/sites/MarkmanAssociates/_layouts/15/Doc.aspx?sourcedoc=%7BE3CA0A96-AE56-431C-B90F-23E442729BCF%7D&file=Current%20State%20Overview_V02.docx&action=default&mobileredirect=true",
+        "sharepointPath": "/General/Offerings & Projects/2. Process Discovery & Strategy/Metropolitan - Current State Assessment/Working Files/Phase 1 - Current State Assessment/Process Discovery/Discovery Sessions/!Documentation/!Working Files_Nikoleta/1. Documentation/0. Summary Sections/Current State Overview_V02.docx",
+        "downloadedAt": "2025-11-07T13:33:02.364Z",
+        "fileHash": "08c8ad6f7ab87f9e4151b2316cefe0835cf5e64b348c65eb5d805cdf44a93e4a",
+        "fileSize": 1729219,
+        "modifiedBy": "Nikoleta Notova",
+        "modifiedDate": "2025-10-21T14:50:56Z",
+        "projectId": "metropolitan-current-state",
+        "category": "documentation",
+        "extractedText": "Current State Overview\n\nCurrent State Overview\t1\nOrganizational Structure\t2\nKey Systems and Tools\t2\nExisting Data Infrastructure\t2\nInterdepartmental dependencies\t2\n\n\f\nOrganizational Structure\nOverview\nMetropolitan’s organizational structure is designed for strategic leadership, investment execution, and operational efficiency. The firm operates through four primary divisions:\n\t•\tSenior Management – Provides overall governance, risk oversight, and firm-wide leadership.\n\t•\tInvestment Committee – Exercises final investment decision-making authority.\n\t•\tInvestment Management – Responsible for deal sourcing, underwriting, and asset management.\n\t•\tBusiness Management – Oversees finance, investor relations, legal, and operations.\nWith 31 professionals as of December 2024, Metropolitan maintains a highly specialized and disciplined team, ensuring robust investment strategy execution.\n\n\t•\tSenior Management\nThe Senior Management team is responsible for corporate governance, compliance, and strategic oversight.\nKey Executives\n\t•\tPaul Lisiak – Managing Partner, Chief Investment Officer (CIO) | 26 years of experience | University of Pennsylvania\n\t•\tJulian Weldon – General Counsel, Chief Compliance Officer (CCO) | 27+ years of experience | University of East Anglia\n\t•\tStephen Faughnan – Managing Director | 26+ years of experience | Pace University, NYU Stern\nPrimary Responsibilities\n\t•\tInvestment Strategy & Execution\n\t•\tLegal & Compliance Oversight\n\t•\tFirm-wide Governance & Risk Management\nSenior Management provides firm-wide leadership while ensuring regulatory compliance and risk mitigation.\n\n\t•\tInvestment Committee\nThe Investment Committee (IC) is responsible for final investment approvals, portfolio oversight, and risk assessment.\nCommittee Members\n\t•\tPaul Lisiak – Managing Partner, CIO\n\t•\tAdrian Blumfield – IC Member | 30+ years of experience | University of Cambridge, London Business School\n\t•\tFred Ganning – IC Member | 30+ years of experience | Seton Hall University\nPrimary Responsibilities\n\t•\tFinal Investment Decision-Making\n\t•\tRisk & Portfolio Management\n\t•\tFund Strategy & Capital Allocation\nThe IC ensures disciplined investment selection, risk mitigation, and adherence to the firm’s strategic objectives.\n\n\t•\tInvestment Management\nThe Investment Management team is responsible for deal origination, underwriting, and active asset management.\n\t•\tInvestment Sourcing & Underwriting\nHandles deal origination, due diligence, and underwriting.\nLeadership\n\t•\tGeorge Alifragis – Head of Operating Expert Network\n\t•\tRichard Lin – Managing Director\nTeam Structure\n\t•\tVice Presidents & Principals – Lead investment sourcing and execution.\n\t•\tAssociates & Analysts – Support financial modeling, due diligence, and execution.\n\t•\t500+ Operating Expert Network – Provides specialized industry insights.\n\t•\tAsset Management\nResponsible for post-investment oversight, loan servicing, and portfolio monitoring.\nLeadership\n\t•\tAlex Verba – Managing Director\nTeam Composition\n\t•\tVice Presidents & Associates – Oversee borrower relationships, financial monitoring, and performance optimization.\nTotal Investment Management Team: 14 Professionals\n\n\t•\tBusiness Management\nThe Business Management division oversees finance, investor relations, operations, and legal compliance.\n\t•\tFinance & Accounting\nResponsible for financial reporting, fund accounting, and audit coordination.\n\t•\tDouglas Gold – Chief Accounting Officer & Senior Vice President\n\t•\tTeam: Vice Presidents, Controllers, Fund Accountants.\n\t•\tInvestment Operations & Reporting\nManages data analytics, investment performance reporting, and internal controls.\n\t•\tJason Bircann – Vice President\n\t•\tTeam: Senior Operations Associates & Analysts.\n\t•\tInvestor Relations\nHandles LP communications, fundraising support, and investor reporting.\n\t•\tScarly Almonte – Senior Associate\n\t•\tFirm Operations\nEnsures legal compliance, administrative efficiency, and corporate governance.\n\t•\tKevin O’Block & Megan Krishnamurthy – Vice Presidents, Office of the CIO\n\t•\tBenjamin Bertan – Associate General Counsel\nTotal Business Management Team: 14 Professionals\nKey Systems and Tools – TO BE ADDED\nExisting Data Infrastructure – TO BE ADDED\nInterdepartmental Dependencies\nWorkstream Dependencies\nOverview\nEffective collaboration across departments is essential to ensuring seamless operations, regulatory compliance, and data integrity. Each functional team plays a critical role in the broader ecosystem, contributing to portfolio oversight, financial accuracy, deal execution, and investor communications. This document consolidates the key interdepartmental dependencies, illustrating how various teams work together to drive efficiency and maintain strategic alignment.\nKey Interdepartmental Dependencies – MISSING COCD, OE\n\t•\tAsset Management Team \n\t•\tServes as the primary collaborator, managing the debt portfolio and ensuring efficient handling of related activities.\n\t•\tWorks with Legal on deal amendments, regulatory compliance, and c",
+        "extractedTextLength": 13440,
+        "textExtractedAt": "2025-11-07T16:32:18.413Z"
+      },
+      {
+        "filename": "Current State Overview_V03.docx",
+        "localPath": "data/projects/metropolitan-current-state/documentation/Current State Overview_V03.docx",
+        "sharepointUrl": "https://markmanassociates.sharepoint.com/sites/MarkmanAssociates/_layouts/15/Doc.aspx?sourcedoc=%7B0630D72C-69E2-4EAC-9A2E-8CC2D406AAA3%7D&file=Current%20State%20Overview_V03.docx&action=default&mobileredirect=true",
+        "sharepointPath": "/General/Offerings & Projects/2. Process Discovery & Strategy/Metropolitan - Current State Assessment/Working Files/Phase 1 - Current State Assessment/Process Discovery/Discovery Sessions/!Documentation/0. General/Current State Overview/Current State Overview_V03.docx",
+        "downloadedAt": "2025-11-07T13:33:03.920Z",
+        "fileHash": "8658e51febc4b1ce7797b2e98ef3391f177bcaf84d153595bcd96ba81423816d",
+        "fileSize": 1311818,
+        "modifiedBy": "Petrana",
+        "modifiedDate": "2025-01-28T10:32:58Z",
+        "projectId": "metropolitan-current-state",
+        "category": "documentation",
+        "extractedText": "Current State Overview\n\nCurrent State Overview\t1\nOrganizational Structure\t3\nOverview\t3\n1.\tSenior Management\t3\nKey Executives\t3\nPrimary Responsibilities\t3\n2.\tInvestment Committee\t3\nCommittee Members\t4\nPrimary Responsibilities\t4\n3.\tInvestment Management\t4\n1.\tInvestment Sourcing & Underwriting\t4\nLeadership\t4\nTeam Structure\t4\n2.\tAsset Management\t4\nLeadership\t4\nTeam Composition\t4\n3.\tBusiness Management\t5\n1.\tFinance & Accounting\t5\n2.\tInvestment Operations & Reporting\t5\n3.\tInvestor Relations\t5\n4.\tFirm Operations\t5\nKey Systems and Tools – TO BE ADDED\t5\nExisting Data Infrastructure – TO BE ADDED\t5\nInterdepartmental Dependencies\t5\nReporting Dependencies\t5\nOverview\t5\nReporting Workflow and Data Dependencies\t6\nKey Reports and Their Dependencies\t6\n\n\f\nOrganizational Structure\nOverview\nMetropolitan’s organizational structure is designed for strategic leadership, investment execution, and operational efficiency. The firm operates through four primary divisions:\n\t•\tSenior Management – Provides overall governance, risk oversight, and firm-wide leadership.\n\t•\tInvestment Committee – Exercises final investment decision-making authority.\n\t•\tInvestment Management – Responsible for deal sourcing, underwriting, and asset management.\n\t•\tBusiness Management – Oversees finance, investor relations, legal, and operations.\nWith 31 professionals as of December 2024, Metropolitan maintains a highly specialized and disciplined team, ensuring robust investment strategy execution.\n\n\t•\tSenior Management\nThe Senior Management team is responsible for corporate governance, compliance, and strategic oversight.\nKey Executives\n\t•\tPaul Lisiak – Managing Partner, Chief Investment Officer (CIO) | 26 years of experience | University of Pennsylvania\n\t•\tJulian Weldon – General Counsel, Chief Compliance Officer (CCO) | 27+ years of experience | University of East Anglia\n\t•\tStephen Faughnan – Managing Director | 26+ years of experience | Pace University, NYU Stern\nPrimary Responsibilities\n\t•\tInvestment Strategy & Execution\n\t•\tLegal & Compliance Oversight\n\t•\tFirm-wide Governance & Risk Management\nSenior Management provides firm-wide leadership while ensuring regulatory compliance and risk mitigation.\n\n\t•\tInvestment Committee\nThe Investment Committee (IC) is responsible for final investment approvals, portfolio oversight, and risk assessment.\nCommittee Members\n\t•\tPaul Lisiak – Managing Partner, CIO\n\t•\tAdrian Blumfield – IC Member | 30+ years of experience | University of Cambridge, London Business School\n\t•\tFred Ganning – IC Member | 30+ years of experience | Seton Hall University\nPrimary Responsibilities\n\t•\tFinal Investment Decision-Making\n\t•\tRisk & Portfolio Management\n\t•\tFund Strategy & Capital Allocation\nThe IC ensures disciplined investment selection, risk mitigation, and adherence to the firm’s strategic objectives.\n\n\t•\tInvestment Management\nThe Investment Management team is responsible for deal origination, underwriting, and active asset management.\n\t•\tInvestment Sourcing & Underwriting\nHandles deal origination, due diligence, and underwriting.\nLeadership\n\t•\tGeorge Alifragis – Head of Operating Expert Network\n\t•\tRichard Lin – Managing Director\nTeam Structure\n\t•\tVice Presidents & Principals – Lead investment sourcing and execution.\n\t•\tAssociates & Analysts – Support financial modeling, due diligence, and execution.\n\t•\t500+ Operating Expert Network – Provides specialized industry insights.\n\t•\tAsset Management\nResponsible for post-investment oversight, loan servicing, and portfolio monitoring.\nLeadership\n\t•\tAlex Verba – Managing Director\nTeam Composition\n\t•\tVice Presidents & Associates – Oversee borrower relationships, financial monitoring, and performance optimization.\nTotal Investment Management Team: 14 Professionals\n\n\t•\tBusiness Management\nThe Business Management division oversees finance, investor relations, operations, and legal compliance.\n\t•\tFinance & Accounting\nResponsible for financial reporting, fund accounting, and audit coordination.\n\t•\tDouglas Gold – Chief Accounting Officer & Senior Vice President\n\t•\tTeam: Vice Presidents, Controllers, Fund Accountants.\n\t•\tInvestment Operations & Reporting\nManages data analytics, investment performance reporting, and internal controls.\n\t•\tJason Bircann – Vice President\n\t•\tTeam: Senior Operations Associates & Analysts.\n\t•\tInvestor Relations\nHandles LP communications, fundraising support, and investor reporting.\n\t•\tScarly Almonte – Senior Associate\n\t•\tFirm Operations\nEnsures legal compliance, administrative efficiency, and corporate governance.\n\t•\tKevin O’Block & Megan Krishnamurthy – Vice Presidents, Office of the CIO\n\t•\tBenjamin Bertan – Associate General Counsel\nTotal Business Management Team: 14 Professionals\nKey Systems and Tools – TO BE ADDED\nExisting Data Infrastructure – TO BE ADDED\nInterdepartmental Dependencies\nReporting Dependencies\nOverview\n\n    \nNetwork graphs -Report/Deliverable with Data Sources and Data Source Owner\nMetropolitan’s reporting framework relies on multiple data sources and interde",
+        "extractedTextLength": 8880,
+        "textExtractedAt": "2025-11-07T16:32:18.459Z"
+      }
+    ]
+  },
+  "migrationStatus": {
+    "inventoryComplete": true,
+    "documentsDownloaded": false,
+    "validated": false,
+    "lastUpdated": "2025-11-07T13:33:03.920Z"
+  },
+  "notes": [
+    "Project barely broke even (0.5% margin)",
+    "Primarily documentation and process discovery work",
+    "High consultant costs relative to revenue suggest possible scope expansion or pricing issue"
+  ],
+  "codebase": {
+    "repos": [
+      {
+        "name": "metropolitan-partners-portal",
+        "url": "https://github.com/markmangroup/metropolitan-partners-portal.git",
+        "path": "data/github-repos/metropolitan-partners-portal",
+        "files": 219,
+        "size": 15876,
+        "lastCommit": "2025-05-26 18:31:17 -0400",
+        "primaryLanguage": "React/Next.js",
+        "description": null
+      }
+    ],
+    "totalFiles": 219,
+    "totalSizeKB": 15876,
+    "technologies": [
+      "React/Next.js"
+    ],
+    "analyzedAt": "2025-11-07T17:39:33.437Z"
+  }
+}
