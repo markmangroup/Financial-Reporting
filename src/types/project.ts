@@ -63,6 +63,22 @@ export interface ProjectMetadata {
   github?: {
     repos: string[]
   }
+  codebase?: {
+    repos: Array<{
+      name: string
+      url: string
+      path: string
+      files: number
+      size: number
+      lastCommit: string
+      primaryLanguage: string | null
+      description: string | null
+    }>
+    totalFiles: number
+    totalSizeKB: number
+    technologies: string[]
+    analyzedAt: string
+  }
   documents: {
     contracts: ProjectDocument[]
     proposals: ProjectDocument[]

@@ -298,43 +298,43 @@ export default function ProjectDetail({ project, onBack }: ProjectDetailProps) {
         </div>
 
         {/* Codebase & GitHub Repos */}
-        {(project as any).codebase && (
+        {project.codebase && (
           <div className="bg-white rounded-lg border border-gray-200 p-4 mb-4">
             <h2 className="text-base font-bold text-gray-900 mb-3">💻 Codebase Analysis</h2>
 
             {/* Summary Stats */}
-            {((project as any).codebase.totalFiles || (project as any).codebase.totalSizeKB || (project as any).codebase.technologies) && (
+            {(project.codebase.totalFiles || project.codebase.totalSizeKB || project.codebase.technologies) && (
               <div className="grid grid-cols-3 gap-3 mb-4">
-                {(project as any).codebase.totalFiles && (
+                {project.codebase.totalFiles && (
                   <div className="bg-gradient-to-br from-indigo-50 to-purple-50 border border-indigo-100 rounded-lg p-3">
                     <div className="text-xs font-semibold text-indigo-600 uppercase tracking-wide mb-1">Total Files</div>
-                    <div className="text-xl font-bold text-indigo-900">{(project as any).codebase.totalFiles.toLocaleString()}</div>
+                    <div className="text-xl font-bold text-indigo-900">{project.codebase.totalFiles.toLocaleString()}</div>
                   </div>
                 )}
-                {(project as any).codebase.totalSizeKB && (
+                {project.codebase.totalSizeKB && (
                   <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-100 rounded-lg p-3">
                     <div className="text-xs font-semibold text-blue-600 uppercase tracking-wide mb-1">Code Size</div>
-                    <div className="text-xl font-bold text-blue-900">{((project as any).codebase.totalSizeKB / 1024).toFixed(1)} MB</div>
+                    <div className="text-xl font-bold text-blue-900">{(project.codebase.totalSizeKB / 1024).toFixed(1)} MB</div>
                   </div>
                 )}
-                {(project as any).codebase.technologies && (project as any).codebase.technologies.length > 0 && (
+                {project.codebase.technologies && project.codebase.technologies.length > 0 && (
                   <div className="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-100 rounded-lg p-3">
                     <div className="text-xs font-semibold text-green-600 uppercase tracking-wide mb-1">Stack</div>
-                    <div className="text-base font-bold text-green-900">{(project as any).codebase.technologies[0]}</div>
+                    <div className="text-base font-bold text-green-900">{project.codebase.technologies[0]}</div>
                   </div>
                 )}
               </div>
             )}
 
             {/* Repos */}
-            {(project as any).codebase.repos && (project as any).codebase.repos.length > 0 && (
+            {project.codebase.repos && project.codebase.repos.length > 0 && (
               <div>
                 <h3 className="text-xs font-semibold text-gray-700 mb-3 flex items-center gap-1.5">
                   <span>📦 GitHub Repositories</span>
-                  <span className="bg-gray-200 text-gray-700 px-2 py-0.5 rounded-full text-xs">{(project as any).codebase.repos.length}</span>
+                  <span className="bg-gray-200 text-gray-700 px-2 py-0.5 rounded-full text-xs">{project.codebase.repos.length}</span>
                 </h3>
                 <div className="space-y-3">
-                  {(project as any).codebase.repos.map((repo: any, index: number) => (
+                  {project.codebase.repos.map((repo, index) => (
                     <div key={index} className="border border-gray-200 rounded-lg p-3 bg-gradient-to-r from-gray-50 to-white hover:border-blue-300 hover:shadow-sm transition-all">
                       <div className="flex items-start justify-between">
                         <div className="flex-1">
