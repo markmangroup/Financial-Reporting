@@ -24,8 +24,9 @@ export default function InsightsInterface({ checkingData, creditData }: Insights
   const [consultantSubledger, setConsultantSubledger] = useState<any>(null)
   const [billComData, setBillComData] = useState<any>(null)
   const [consultantWorkHistories, setConsultantWorkHistories] = useState<Map<string, ConsultantWorkHistory>>(new Map())
+  const [projects, setProjects] = useState<any[]>([])
 
-  // Load full credit card data, consultant sub-ledger, Bill.com data, and work histories on mount
+  // Load full credit card data, consultant sub-ledger, Bill.com data, work histories, and projects on mount
   useEffect(() => {
     loadCreditCardData().then(data => {
       setFullCreditCardData(data)
@@ -36,6 +37,15 @@ export default function InsightsInterface({ checkingData, creditData }: Insights
     loadBillComData().then(data => {
       setBillComData(data)
     })
+
+    // Load project metadata for project-aware insights
+    fetch('/api/projects')
+      .then(res => res.json())
+      .then(data => {
+        setProjects(data.projects || [])
+        console.log('📊 Loaded project data for insights:', data.projects?.length || 0, 'projects')
+      })
+      .catch(err => console.error('Failed to load projects:', err))
 
     // Load work histories for all consultants
     const consultantNames = ['Swan', 'Niki', 'Abri', 'Carmen', 'Jan', 'Petrana']
@@ -67,6 +77,7 @@ export default function InsightsInterface({ checkingData, creditData }: Insights
             consultantSubledger, // Add consultant sub-ledger data
             billComData, // Add Bill.com data
             consultantWorkHistories, // Add work histories loaded from JSON files
+            projects, // Add project metadata for project-aware insights
             period: {
               start: checkingData.summary.dateRange.start,
               end: checkingData.summary.dateRange.end,
@@ -80,7 +91,7 @@ export default function InsightsInterface({ checkingData, creditData }: Insights
         }
       }, 300)
     }
-  }, [selectedInsightId, checkingData, fullCreditCardData, consultantSubledger, billComData, consultantWorkHistories])
+  }, [selectedInsightId, checkingData, fullCreditCardData, consultantSubledger, billComData, consultantWorkHistories, projects])
 
   const handleSelectInsight = (insightId: string) => {
     setSelectedInsightId(insightId)

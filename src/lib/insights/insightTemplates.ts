@@ -1693,6 +1693,395 @@ export const insightTemplates: InsightTemplate[] = [
       }
     }
   }
+  // ====================
+  // PROJECT-AWARE INSIGHTS
+  // ====================
+
+  // PROJECT PROFITABILITY OVERVIEW
+  {
+    id: 'project-profitability-overview',
+    triggers: ['project profit', 'project profitability', 'which projects are profitable', 'project performance', 'project margins', 'project roi'],
+    category: 'profitability',
+    titleTemplate: 'Project Profitability Overview',
+    priority: 95,
+    nextQuestions: ['consultant-project-allocation', 'project-revenue-breakdown'],
+    generateNarrative: (data: InsightData) => {
+      const projects = data.projects || []
+
+      if (projects.length === 0) {
+        return {
+          headline: {
+            title: 'No Project Data Available',
+            subtitle: 'Project metadata is not loaded',
+            metric: {
+              value: '0',
+              label: 'Projects'
+            }
+          },
+          sections: [{
+            type: 'callout',
+            content: 'Project data needs to be loaded to generate this insight.'
+          }],
+          relatedInsights: []
+        }
+      }
+
+      // Calculate project stats
+      const activeProjects = projects.filter((p: any) => p.status === 'active')
+      const totalRevenue = projects.reduce((sum: number, p: any) => sum + (p.financial?.revenue || 0), 0)
+      const totalCosts = projects.reduce((sum: number, p: any) => sum + (p.financial?.costs?.totalConsultantCosts || 0), 0)
+      const totalProfit = totalRevenue - totalCosts
+      const overallMargin = totalRevenue > 0 ? (totalProfit / totalRevenue) * 100 : 0
+
+      // Sort projects by profitability
+      const projectsWithMargins = projects
+        .filter((p: any) => p.financial?.revenue > 0)
+        .map((p: any) => ({
+          name: p.name,
+          revenue: p.financial.revenue,
+          costs: p.financial.costs.totalConsultantCosts,
+          profit: p.financial.profitability.grossProfit,
+          margin: p.financial.profitability.grossMargin,
+          status: p.status
+        }))
+        .sort((a: any, b: any) => b.profit - a.profit)
+
+      // Find most and least profitable
+      const mostProfitable = projectsWithMargins[0]
+      const leastProfitable = projectsWithMargins[projectsWithMargins.length - 1]
+
+      return {
+        headline: {
+          title: `Analyzing ${projects.length} Projects Across Portfolio`,
+          subtitle: `${activeProjects.length} currently active`,
+          metric: {
+            value: formatCurrency(totalProfit),
+            label: 'Total Gross Profit',
+            trend: {
+              direction: overallMargin > 30 ? 'up' : overallMargin > 15 ? 'flat' : 'down',
+              percentage: overallMargin,
+              comparison: 'average margin'
+            }
+          }
+        },
+        sections: [
+          {
+            type: 'metric',
+            title: 'Portfolio Summary',
+            content: `Your ${projects.length} projects have generated ${formatCurrency(totalRevenue)} in revenue with ${formatCurrency(totalCosts)} in consultant costs, yielding an overall margin of ${formatPercent(overallMargin)}.`,
+            data: {
+              metrics: [
+                { label: 'Total Revenue', value: formatCurrency(totalRevenue), icon: '💰' },
+                { label: 'Total Costs', value: formatCurrency(totalCosts), icon: '💸' },
+                { label: 'Gross Profit', value: formatCurrency(totalProfit), icon: '📈' },
+                { label: 'Avg Margin', value: formatPercent(overallMargin), icon: '🎯' }
+              ]
+            }
+          },
+          {
+            type: 'breakdown',
+            title: '🏆 Most Profitable Project',
+            content: mostProfitable ?
+              `**${mostProfitable.name}** leads with ${formatCurrency(mostProfitable.profit)} profit (${formatPercent(mostProfitable.margin)} margin) on ${formatCurrency(mostProfitable.revenue)} revenue.` :
+              'No profitable projects yet.'
+          },
+          {
+            type: 'breakdown',
+            title: '⚠️ Least Profitable Project',
+            content: leastProfitable && projectsWithMargins.length > 1 ?
+              `**${leastProfitable.name}** shows ${formatCurrency(leastProfitable.profit)} profit (${formatPercent(leastProfitable.margin)} margin). ${leastProfitable.margin < 15 ? 'Consider reviewing cost structure.' : 'Still healthy margins.'}` :
+              'All projects performing well.'
+          },
+          {
+            type: 'chart',
+            title: 'Project Performance Comparison',
+            visualization: {
+              type: 'bar',
+              data: projectsWithMargins.slice(0, 8),
+              config: {
+                xKey: 'name',
+                yKey: 'profit',
+                format: 'currency'
+              }
+            }
+          }
+        ],
+        recommendations: [
+          overallMargin > 35 ? {
+            type: 'success',
+            icon: '🎉',
+            title: 'Excellent portfolio performance',
+            description: `Your ${formatPercent(overallMargin)} average margin is outstanding. Focus on scaling your high-performing projects.`
+          } : overallMargin > 20 ? {
+            type: 'info',
+            icon: '💡',
+            title: 'Solid profitability',
+            description: `${formatPercent(overallMargin)} margin is healthy. Look for opportunities to optimize lower-margin projects.`
+          } : {
+            type: 'warning',
+            icon: '⚠️',
+            title: 'Margin improvement needed',
+            description: `${formatPercent(overallMargin)} margin suggests cost optimization opportunities. Review consultant allocations.`,
+            action: {
+              label: 'Analyze consultant costs',
+              insightId: 'consultant-project-allocation'
+            }
+          },
+          {
+            type: 'opportunity',
+            icon: '🔍',
+            title: 'Deep-dive into top performers',
+            description: `Study what makes ${mostProfitable?.name || 'your best projects'} successful and replicate those patterns.`
+          }
+        ],
+        relatedInsights: ['consultant-project-allocation', 'project-revenue-breakdown', 'profitability-check']
+      }
+    }
+  },
+
+  // CONSULTANT SPEND BY PROJECT
+  {
+    id: 'consultant-project-allocation',
+    triggers: ['consultant by project', 'consultant spend project', 'project consultant costs', 'who worked on project', 'consultant allocation'],
+    category: 'expense',
+    titleTemplate: 'Consultant Allocation by Project',
+    priority: 90,
+    nextQuestions: ['project-profitability-overview', 'consultant-analysis'],
+    generateNarrative: (data: InsightData) => {
+      const projects = data.projects || []
+
+      if (projects.length === 0) {
+        return {
+          headline: {
+            title: 'No Project Data Available',
+            metric: { value: '0', label: 'Projects' }
+          },
+          sections: [],
+          relatedInsights: []
+        }
+      }
+
+      // Build consultant → projects mapping
+      const consultantProjectMap = new Map<string, any[]>()
+      let totalConsultantCosts = 0
+
+      projects.forEach((project: any) => {
+        if (project.financial?.costs?.consultants) {
+          project.financial.costs.consultants.forEach((consultant: any) => {
+            if (!consultantProjectMap.has(consultant.name)) {
+              consultantProjectMap.set(consultant.name, [])
+            }
+            consultantProjectMap.get(consultant.name)!.push({
+              projectName: project.name,
+              projectStatus: project.status,
+              allocatedCost: consultant.allocatedCost,
+              allocationPercent: consultant.allocationPercent
+            })
+            totalConsultantCosts += consultant.allocatedCost
+          })
+        }
+      })
+
+      // Sort consultants by total spend
+      const consultantSummaries = Array.from(consultantProjectMap.entries())
+        .map(([name, projectAllocations]) => ({
+          name,
+          totalSpend: projectAllocations.reduce((sum, p) => sum + p.allocatedCost, 0),
+          projectCount: projectAllocations.length,
+          projects: projectAllocations
+        }))
+        .sort((a, b) => b.totalSpend - a.totalSpend)
+
+      const topConsultant = consultantSummaries[0]
+
+      return {
+        headline: {
+          title: 'Consultant Costs Across All Projects',
+          subtitle: `${consultantSummaries.length} consultants working across ${projects.length} projects`,
+          metric: {
+            value: formatCurrency(totalConsultantCosts),
+            label: 'Total Consultant Spend'
+          }
+        },
+        sections: [
+          {
+            type: 'breakdown',
+            title: '👥 Top Consultant by Spend',
+            content: topConsultant ?
+              `**${topConsultant.name}** has been allocated ${formatCurrency(topConsultant.totalSpend)} across ${topConsultant.projectCount} project${topConsultant.projectCount > 1 ? 's' : ''}.` :
+              'No consultant allocations found.'
+          },
+          {
+            type: 'list',
+            title: 'Consultant Breakdown',
+            data: {
+              items: consultantSummaries.slice(0, 10).map(c => ({
+                label: c.name,
+                value: formatCurrency(c.totalSpend),
+                detail: `${c.projectCount} project${c.projectCount > 1 ? 's' : ''}`,
+                subItems: c.projects.map((p: any) =>
+                  `${p.projectName}: ${formatCurrency(p.allocatedCost)} (${formatPercent(p.allocationPercent)})`
+                )
+              }))
+            }
+          },
+          {
+            type: 'chart',
+            title: 'Consultant Spend Distribution',
+            visualization: {
+              type: 'bar',
+              data: consultantSummaries.slice(0, 8).map(c => ({
+                consultant: c.name,
+                spend: c.totalSpend
+              })),
+              config: {
+                xKey: 'consultant',
+                yKey: 'spend',
+                format: 'currency'
+              }
+            }
+          }
+        ],
+        recommendations: [
+          {
+            type: 'info',
+            icon: '📊',
+            title: 'Well-distributed workload',
+            description: `Consultant work is spread across ${consultantSummaries.length} team members, with ${topConsultant?.name || 'your lead consultant'} carrying the largest allocation.`
+          },
+          consultantSummaries.some(c => c.projectCount > 3) ? {
+            type: 'warning',
+            icon: '⚠️',
+            title: 'Watch for overallocation',
+            description: 'Some consultants are spread across many projects. Monitor for burnout risk and quality impacts.'
+          } : {
+            type: 'success',
+            icon: '✅',
+            title: 'Healthy project distribution',
+            description: 'No consultants are overextended across too many concurrent projects.'
+          }
+        ],
+        relatedInsights: ['project-profitability-overview', 'consultant-analysis', 'largest-expense-ytd']
+      }
+    }
+  },
+
+  // PROJECT REVENUE BREAKDOWN
+  {
+    id: 'project-revenue-breakdown',
+    triggers: ['project revenue', 'revenue by project', 'which projects make money', 'project income', 'revenue sources project'],
+    category: 'revenue',
+    titleTemplate: 'Revenue by Project',
+    priority: 88,
+    nextQuestions: ['project-profitability-overview', 'revenue-sources'],
+    generateNarrative: (data: InsightData) => {
+      const projects = data.projects || []
+
+      if (projects.length === 0) {
+        return {
+          headline: {
+            title: 'No Project Data Available',
+            metric: { value: '0', label: 'Projects' }
+          },
+          sections: [],
+          relatedInsights: []
+        }
+      }
+
+      // Calculate revenue stats
+      const projectRevenues = projects
+        .filter((p: any) => p.financial?.revenue > 0)
+        .map((p: any) => ({
+          name: p.name,
+          client: p.client,
+          revenue: p.financial.revenue,
+          status: p.status,
+          invoiceCount: p.financial.revenueDetails?.length || 0
+        }))
+        .sort((a, b) => b.revenue - a.revenue)
+
+      const totalRevenue = projectRevenues.reduce((sum, p) => sum + p.revenue, 0)
+      const activeRevenue = projectRevenues.filter(p => p.status === 'active').reduce((sum, p) => sum + p.revenue, 0)
+      const topProject = projectRevenues[0]
+      const topProjectShare = topProject ? (topProject.revenue / totalRevenue) * 100 : 0
+
+      return {
+        headline: {
+          title: 'Revenue Distribution Across Projects',
+          subtitle: `${projectRevenues.length} revenue-generating projects`,
+          metric: {
+            value: formatCurrency(totalRevenue),
+            label: 'Total Project Revenue'
+          }
+        },
+        sections: [
+          {
+            type: 'breakdown',
+            title: '🏆 Top Revenue Generator',
+            content: topProject ?
+              `**${topProject.name}** for ${topProject.client} leads with ${formatCurrency(topProject.revenue)} (${formatPercent(topProjectShare)} of total revenue). ${topProject.invoiceCount} invoice${topProject.invoiceCount !== 1 ? 's' : ''} issued.` :
+              'No revenue-generating projects yet.'
+          },
+          {
+            type: 'metric',
+            title: 'Revenue Stats',
+            data: {
+              metrics: [
+                { label: 'Total Revenue', value: formatCurrency(totalRevenue), icon: '💰' },
+                { label: 'Active Projects', value: formatCurrency(activeRevenue), icon: '🔄' },
+                { label: 'Avg per Project', value: formatCurrency(totalRevenue / Math.max(projectRevenues.length, 1)), icon: '📊' }
+              ]
+            }
+          },
+          {
+            type: 'list',
+            title: 'Revenue by Project',
+            data: {
+              items: projectRevenues.slice(0, 10).map(p => ({
+                label: p.name,
+                value: formatCurrency(p.revenue),
+                detail: `${p.client} • ${p.status}`,
+                badge: p.status === 'active' ? '🟢' : p.status === 'completed' ? '✅' : '⏸️'
+              }))
+            }
+          },
+          {
+            type: 'chart',
+            title: 'Project Revenue Comparison',
+            visualization: {
+              type: 'bar',
+              data: projectRevenues.slice(0, 8),
+              config: {
+                xKey: 'name',
+                yKey: 'revenue',
+                format: 'currency'
+              }
+            }
+          }
+        ],
+        recommendations: [
+          topProjectShare > 50 ? {
+            type: 'warning',
+            icon: '⚠️',
+            title: 'Revenue concentration risk',
+            description: `${topProject?.name || 'Your top project'} represents ${formatPercent(topProjectShare)} of revenue. Consider diversifying client base.`
+          } : {
+            type: 'success',
+            icon: '✅',
+            title: 'Well-diversified revenue',
+            description: 'Revenue is balanced across multiple projects, reducing dependency risk.'
+          },
+          {
+            type: 'opportunity',
+            icon: '💡',
+            title: 'Replicate top performers',
+            description: `Study the engagement model of ${topProject?.name || 'high-revenue projects'} and apply learnings to other clients.`
+          }
+        ],
+        relatedInsights: ['project-profitability-overview', 'revenue-sources', 'profitability-check']
+      }
+    }
+  },
 ]
 
 // Helper function to search insights

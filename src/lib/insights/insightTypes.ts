@@ -16,6 +16,7 @@ export interface InsightData {
   consultantSubledger?: any
   billComData?: any
   consultantWorkHistories?: Map<string, any> // Consultant name -> work history
+  projects?: any[] // Project metadata for cross-referencing financial data
   period?: {
     start: string
     end: string
