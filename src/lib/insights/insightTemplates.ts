@@ -1692,7 +1692,7 @@ export const insightTemplates: InsightTemplate[] = [
         relatedInsights: ['profitability-check', 'largest-expense-ytd', 'revenue-sources']
       }
     }
-  }
+  },
   // ====================
   // PROJECT-AWARE INSIGHTS
   // ====================

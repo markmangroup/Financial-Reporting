@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import SearchBox from './SearchBox'
 import NarrativeBlock from './NarrativeBlock'
+import QuickCapture from './QuickCapture'
 import { getInsightTemplate } from '@/lib/insights/insightTemplates'
 import { InsightNarrative, InsightData, Recommendation } from '@/lib/insights/insightTypes'
 import { ParsedCSVData } from '@/types'
@@ -145,6 +146,9 @@ export default function InsightsInterface({ checkingData, creditData }: Insights
       <div className="max-w-7xl mx-auto px-6 py-6">
         {!selectedInsightId && (
           <div className="space-y-6 animate-fade-in">
+            {/* Quick Capture - Command Center Feature */}
+            <QuickCapture />
+
             {/* Welcome State */}
             <div className="text-center py-8">
               <div className="text-6xl mb-4 animate-bounce-slow">💡</div>
