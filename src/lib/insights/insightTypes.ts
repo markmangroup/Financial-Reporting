@@ -3,6 +3,8 @@
 export interface InsightTemplate {
   id: string
   triggers: string[] // Keywords that activate this insight
+  tags: string[] // Semantic tags for better discovery (e.g., "travel", "risk", "recurring")
+  relatedTags?: string[] // Tags that this insight naturally leads to
   category: 'expense' | 'revenue' | 'cash' | 'profitability' | 'efficiency' | 'vendors'
   titleTemplate: string
   generateNarrative: (data: InsightData) => InsightNarrative
@@ -80,4 +82,17 @@ export interface SearchSuggestion {
   confidence: number // 0-1 relevance score
   category: string
   icon: string
+}
+
+export interface ConsultantWorkHistory {
+  consultantName: string
+  projects: {
+    projectName: string
+    role: string
+    startDate: string
+    endDate?: string
+    allocation: number
+  }[]
+  totalEarnings: number
+  activeStatus: 'active' | 'inactive'
 }

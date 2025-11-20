@@ -227,7 +227,7 @@ export default function NarrativeBlock({ section, index }: NarrativeBlockProps) 
           style={{ animationDelay }}
         >
           <p className="text-gray-700 leading-relaxed"
-             dangerouslySetInnerHTML={{ __html: section.content?.replace(/\*\*(.*?)\*\*/g, '<strong class="text-gray-900">$1</strong>') || '' }}
+            dangerouslySetInnerHTML={{ __html: section.content?.replace(/\*\*(.*?)\*\*/g, '<strong class="text-gray-900">$1</strong>') || '' }}
           />
         </div>
       )
@@ -246,6 +246,26 @@ export default function NarrativeBlock({ section, index }: NarrativeBlockProps) 
       )
 
     case 'breakdown':
+      // If it has content but no data, render as a highlighted text block
+      if (section.content && (!section.data || section.data.length === 0)) {
+        return (
+          <div
+            className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg border border-blue-200 p-3 animate-slide-up h-full"
+            style={{ animationDelay }}
+          >
+            {section.title && (
+              <h3 className="text-sm font-bold text-gray-900 mb-2">{section.title}</h3>
+            )}
+            <div
+              className="text-sm text-gray-700 leading-relaxed"
+              dangerouslySetInnerHTML={{
+                __html: section.content.replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold text-blue-900">$1</strong>')
+              }}
+            />
+          </div>
+        )
+      }
+
       return section.data && section.data.length > 0 ? (
         <div
           className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg border border-blue-200 p-3 animate-slide-up h-full"
@@ -301,7 +321,10 @@ export default function NarrativeBlock({ section, index }: NarrativeBlockProps) 
       )
 
     case 'list':
-      return section.data ? (
+      // Handle both array and { items: [...] } format
+      const listData = Array.isArray(section.data) ? section.data : section.data?.items
+
+      return listData ? (
         <div
           className="bg-white rounded-lg border border-gray-200 overflow-hidden animate-slide-up h-full"
           style={{ animationDelay }}
@@ -312,13 +335,16 @@ export default function NarrativeBlock({ section, index }: NarrativeBlockProps) 
             </div>
           )}
           <div className="divide-y divide-gray-200">
-            {section.data.map((item: any, idx: number) => (
+            {listData.map((item: any, idx: number) => (
               <div key={idx} className="px-3 py-2 hover:bg-gray-50 transition-colors flex items-center justify-between">
                 <span className="text-xs font-medium text-gray-900">{item.label}</span>
                 <div className="text-right">
                   <div className="text-sm font-bold text-gray-900">{item.value}</div>
                   {item.percentage && (
                     <div className="text-xs text-gray-500">{item.percentage}</div>
+                  )}
+                  {item.detail && (
+                    <div className="text-xs text-gray-400">{item.detail}</div>
                   )}
                 </div>
               </div>

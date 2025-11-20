@@ -1,0 +1,172 @@
+{
+  "lastUpdated": "2025-11-10",
+  "vendors": [
+    {
+      "name": "Nikoleta Nôtová - NikyN",
+      "country": "Slovakia",
+      "email": "niky.notova@gmail.com",
+      "phone": "+421918629725",
+      "address": "Trebefovce 179, Trebefovce, 983 31",
+      "iban": "LT04 3250 0122 3530 9173",
+      "bicSwift": "REVOLT21",
+      "companyId": "55686548",
+      "totalPaid": 12300.00,
+      "paymentCount": 1,
+      "recentInvoices": [
+        {
+          "invoiceNumber": "20250002",
+          "date": "2025-01-02",
+          "dueDate": "2025-09-30",
+          "amount": 12300.00,
+          "paidDate": "2025-11-06",
+          "description": "Business Consulting Services for months of Jan, Mar, Apr, May, Jun, Jul and Aug",
+          "hours": {
+            "january": 123.00,
+            "march": 44.00,
+            "april": 38.50,
+            "may": 31.00,
+            "june": 38.50,
+            "july": 25.00,
+            "august": 7.50
+          },
+          "hourlyRate": 40.00
+        }
+      ]
+    },
+    {
+      "name": "Nikola Draganov",
+      "country": "Bulgaria",
+      "email": "nikola@markman-group.com",
+      "phone": "+359876991121",
+      "address": "Bulgaria blvd., Sofia, Sofia 1618",
+      "iban": "LT04 3250 0122 3530 9173",
+      "bicSwift": "REVOLT21",
+      "totalPaid": 2880.00,
+      "paymentCount": 3,
+      "recentInvoices": [
+        {
+          "invoiceNumber": "04-2025",
+          "date": "2025-10-31",
+          "dueDate": "2025-10-31",
+          "amount": 900.00,
+          "paidDate": "2025-11-06",
+          "description": "Consulting services for month of October",
+          "project": "INT4",
+          "hours": 15,
+          "hourlyRate": 60.00,
+          "serviceType": "Scope & Solution"
+        },
+        {
+          "invoiceNumber": "01-2025",
+          "amount": 1500.00,
+          "paidDate": "2025-10-01",
+          "description": "Consulting services"
+        },
+        {
+          "invoiceNumber": "02-2025",
+          "amount": 480.00,
+          "paidDate": "2025-09-16",
+          "description": "Consulting services"
+        }
+      ]
+    },
+    {
+      "name": "Trusted Ltd",
+      "country": "Bulgaria",
+      "email": "petrana@markmanassociates.com",
+      "address": "36B Boulevard \"Simeonovsko Shose\", Sofia, Sofia City Province 1700",
+      "companyNumber": "205437109",
+      "vatNumber": "BG206437109",
+      "totalPaid": 1310.00,
+      "paymentCount": 3,
+      "recentInvoices": [
+        {
+          "invoiceNumber": "841",
+          "date": "2025-10-18",
+          "dueDate": "2025-10-18",
+          "amount": 350.00,
+          "paidDate": "2025-11-06",
+          "description": "Consulting services for month of August",
+          "services": [
+            {
+              "project": "INT2",
+              "description": "Strategic & Operational Overview (Development)",
+              "quantity": 8.5,
+              "rate": 40.00,
+              "total": 260.00
+            },
+            {
+              "project": "INT4",
+              "description": "Reporting Package (Development)",
+              "quantity": 2.58,
+              "rate": 40.00,
+              "total": 90.00
+            }
+          ]
+        },
+        {
+          "invoiceNumber": "826",
+          "amount": 450.00,
+          "paidDate": "2025-10-03"
+        },
+        {
+          "invoiceNumber": "810",
+          "amount": 510.00,
+          "paidDate": "2025-09-16"
+        }
+      ]
+    },
+    {
+      "name": "Ivana Kmecová",
+      "country": "Slovakia",
+      "totalPaid": 2677.50,
+      "paymentCount": 1,
+      "recentInvoices": [
+        {
+          "invoiceNumber": "20250003",
+          "amount": 2677.50,
+          "paidDate": "2025-09-08",
+          "paymentMethod": "Local Transfer"
+        }
+      ]
+    },
+    {
+      "name": "Inversiones Teiz, S.L",
+      "country": "Spain",
+      "totalPaid": 1010.50,
+      "paymentCount": 1,
+      "recentInvoices": [
+        {
+          "invoiceNumber": "110-2025",
+          "amount": 1010.50,
+          "paidDate": "2025-10-03"
+        }
+      ]
+    },
+    {
+      "name": "Jan Dzubak",
+      "totalPaid": 682.00,
+      "paymentCount": 1,
+      "recentInvoices": [
+        {
+          "invoiceNumber": "7",
+          "amount": 682.00,
+          "paidDate": "2025-10-03"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "totalVendors": 6,
+    "totalPaid": 20860.00,
+    "totalPayments": 10,
+    "periodStart": "2025-09-08",
+    "periodEnd": "2025-11-06",
+    "byCountry": {
+      "Slovakia": 14977.50,
+      "Bulgaria": 4190.00,
+      "Spain": 1010.50,
+      "Other": 682.00
+    }
+  }
+}

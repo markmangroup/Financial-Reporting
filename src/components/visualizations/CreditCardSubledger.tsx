@@ -70,10 +70,14 @@ export default function CreditCardSubledger({ creditCardData: propData, checking
     }
   }, [propData, creditCardData])
 
-  // Set LTD as default date range when data loads
+  // Set LTD as default date range when data loads, but use today as end date
   useEffect(() => {
     if (ltdDateRange.start && ltdDateRange.end && dateRangeFilter.start === '' && dateRangeFilter.end === '') {
-      setDateRangeFilter(ltdDateRange)
+      const today = new Date().toISOString().split('T')[0]
+      setDateRangeFilter({
+        start: ltdDateRange.start,
+        end: today // Always use today's date as the default end date
+      })
     }
   }, [ltdDateRange, dateRangeFilter])
 

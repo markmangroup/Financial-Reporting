@@ -1,31 +1,36 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import SearchBox from './SearchBox'
 import NarrativeBlock from './NarrativeBlock'
+import SmartDiscovery from './SmartDiscovery'
 import QuickCapture from './QuickCapture'
+import InsightSkeleton from './InsightSkeleton'
 import { getInsightTemplate } from '@/lib/insights/insightTemplates'
-import { InsightNarrative, InsightData, Recommendation } from '@/lib/insights/insightTypes'
-import { ParsedCSVData } from '@/types'
-import { loadCreditCardData } from '@/lib/creditCardDataLoader'
-import { loadConsultantSubledger } from '@/lib/consultantSubledgerLoader'
-import { loadBillComData } from '@/lib/billComDataLoader'
-import { loadConsultantWorkHistoryAsync, ConsultantWorkHistory } from '@/lib/consultantWorkHistoryLoader'
+import { InsightData, InsightNarrative, Recommendation, ConsultantWorkHistory } from '@/lib/insights/insightTypes'
+import { loadCreditCardData, loadConsultantSubledger, loadBillComData, loadConsultantWorkHistoryAsync } from '@/lib/insights/dataLoader'
 
 interface InsightsInterfaceProps {
-  checkingData: ParsedCSVData | null
-  creditData?: ParsedCSVData | null
+  checkingData: any
+  creditData: any
 }
 
+type TimelineItem =
+  | { type: 'user'; text: string; id: string }
+  | { type: 'insight'; data: InsightNarrative; id: string; insightId: string }
+
 export default function InsightsInterface({ checkingData, creditData }: InsightsInterfaceProps) {
-  const [selectedInsightId, setSelectedInsightId] = useState<string | null>(null)
-  const [narrative, setNarrative] = useState<InsightNarrative | null>(null)
-  const [isLoading, setIsLoading] = useState(false)
+  // State for the "Conversation"
+  const [timeline, setTimeline] = useState<TimelineItem[]>([])
+  const [isThinking, setIsThinking] = useState(false)
   const [fullCreditCardData, setFullCreditCardData] = useState<any>(null)
   const [consultantSubledger, setConsultantSubledger] = useState<any>(null)
   const [billComData, setBillComData] = useState<any>(null)
   const [consultantWorkHistories, setConsultantWorkHistories] = useState<Map<string, ConsultantWorkHistory>>(new Map())
   const [projects, setProjects] = useState<any[]>([])
+  const [activeTags, setActiveTags] = useState<string[]>([])
+
+  const bottomRef = useRef<HTMLDivElement>(null)
 
   // Load full credit card data, consultant sub-ledger, Bill.com data, work histories, and projects on mount
   useEffect(() => {
@@ -64,45 +69,67 @@ export default function InsightsInterface({ checkingData, creditData }: Insights
     loadAllWorkHistories()
   }, [])
 
+  // Auto-scroll to bottom when timeline updates
   useEffect(() => {
-    if (selectedInsightId && checkingData) {
-      setIsLoading(true)
-
-      // Simulate a slight delay for better UX (makes it feel more "intelligent")
-      setTimeout(() => {
-        const template = getInsightTemplate(selectedInsightId)
-        if (template) {
-          const insightData: InsightData = {
-            checkingData,
-            creditCardData: fullCreditCardData, // Use full credit card data with majorCategory
-            consultantSubledger, // Add consultant sub-ledger data
-            billComData, // Add Bill.com data
-            consultantWorkHistories, // Add work histories loaded from JSON files
-            projects, // Add project metadata for project-aware insights
-            period: {
-              start: checkingData.summary.dateRange.start,
-              end: checkingData.summary.dateRange.end,
-              label: 'YTD'
-            }
-          }
-
-          const generatedNarrative = template.generateNarrative(insightData)
-          setNarrative(generatedNarrative)
-          setIsLoading(false)
-        }
-      }, 300)
+    if (bottomRef.current) {
+      bottomRef.current.scrollIntoView({ behavior: 'smooth' })
     }
-  }, [selectedInsightId, checkingData, fullCreditCardData, consultantSubledger, billComData, consultantWorkHistories, projects])
+  }, [timeline, isThinking])
 
-  const handleSelectInsight = (insightId: string) => {
-    setSelectedInsightId(insightId)
-    // Smooth scroll to top
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+  // Function to add an insight to the conversation
+  const addInsightToConversation = (insightId: string, userQuery?: string) => {
+    if (isThinking) return
+
+    const template = getInsightTemplate(insightId)
+    if (!template) return
+
+    // 1. Add User Message
+    const queryText = userQuery || template.titleTemplate
+    setTimeline(prev => [...prev, { type: 'user', text: queryText, id: Date.now().toString() }])
+
+    // 2. Show Thinking State
+    setIsThinking(true)
+
+    // Simulate "reading/thinking" delay
+    setTimeout(() => {
+      const insightData: InsightData = {
+        checkingData,
+        creditCardData: fullCreditCardData,
+        consultantSubledger,
+        billComData,
+        consultantWorkHistories,
+        projects,
+        period: {
+          start: checkingData.summary.dateRange.start,
+          end: checkingData.summary.dateRange.end,
+          label: 'YTD'
+        }
+      }
+
+      const generatedNarrative = template.generateNarrative(insightData)
+
+      // 3. Add Insight Message
+      setTimeline(prev => [
+        ...prev,
+        {
+          type: 'insight',
+          data: generatedNarrative,
+          id: (Date.now() + 1).toString(),
+          insightId: insightId
+        }
+      ])
+
+      // Update active tags
+      const newTags = [...activeTags, ...template.tags]
+      setActiveTags([...new Set(newTags)]) // Unique tags only
+
+      setIsThinking(false)
+    }, 800) // Slightly longer delay for "premium" feel
   }
 
-  const handleRelatedInsightClick = (insightId: string) => {
-    setSelectedInsightId(insightId)
-    setNarrative(null)
+  const handleClearCanvas = () => {
+    setTimeline([])
+    setActiveTags([])
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
@@ -119,253 +146,192 @@ export default function InsightsInterface({ checkingData, creditData }: Insights
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
-      {/* Header - Compact */}
-      <div className="bg-white border-b border-gray-200 sticky top-0 z-40 shadow-sm">
-        <div className="max-w-7xl mx-auto px-6 py-3">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 pb-32">
+      {/* Header - Glassmorphism */}
+      <div className="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-gray-200/50 shadow-sm transition-all duration-200">
+        <div className="max-w-4xl mx-auto px-4 py-3">
           <div className="flex items-center gap-4">
             <div className="flex-1">
-              <SearchBox onSelectInsight={handleSelectInsight} checkingData={checkingData} />
+              <SearchBox onSelectInsight={(id, query) => addInsightToConversation(id, query)} checkingData={checkingData} />
             </div>
-            {selectedInsightId && (
+            {timeline.length > 0 && (
               <button
-                onClick={() => {
-                  setSelectedInsightId(null)
-                  setNarrative(null)
-                }}
-                className="px-3 py-2 text-sm font-medium text-blue-600 hover:text-blue-700 hover:bg-blue-50 rounded-lg transition-colors whitespace-nowrap"
+                onClick={handleClearCanvas}
+                className="p-2 text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-full transition-colors"
+                title="Clear Conversation"
               >
-                ← Start New Search
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                </svg>
               </button>
             )}
           </div>
         </div>
       </div>
 
-      {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-6 py-6">
-        {!selectedInsightId && (
-          <div className="space-y-6 animate-fade-in">
-            {/* Quick Capture - Command Center Feature */}
-            <QuickCapture />
-
+      {/* Main Content - Conversation Stream */}
+      <div className="max-w-4xl mx-auto px-4 py-6">
+        {timeline.length === 0 && (
+          <div className="space-y-8 animate-fade-in mt-8">
             {/* Welcome State */}
             <div className="text-center py-8">
-              <div className="text-6xl mb-4 animate-bounce-slow">💡</div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-3">
-                What would you like to know?
+              <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-blue-100 to-purple-100 mb-6 shadow-inner">
+                <span className="text-4xl">👋</span>
+              </div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-3 tracking-tight">
+                Good morning, Mike.
               </h2>
-              <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-                Start typing to explore insights about your expenses, revenue, profitability, and more.
+              <p className="text-lg text-gray-600 mb-8 max-w-xl mx-auto leading-relaxed">
+                I've analyzed your financials. I can help you track expenses, monitor project profitability, or identify risks.
               </p>
 
-              {/* Suggested Questions */}
-              <div className="max-w-4xl mx-auto">
-                <h3 className="text-base font-semibold text-gray-900 mb-4">Popular questions:</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
-                  {[
-                    { id: 'largest-expense-ytd', icon: '💸', question: 'What is my largest expense?', category: 'Expenses' },
-                    { id: 'consultant-analysis', icon: '👥', question: 'How much do I spend on consultants?', category: 'Expenses' },
-                    { id: 'revenue-sources', icon: '💰', question: 'What are my revenue sources?', category: 'Revenue' },
-                    { id: 'top-client-analysis', icon: '🏢', question: 'Who is my top client?', category: 'Revenue' },
-                    { id: 'profitability-check', icon: '📊', question: 'Am I profitable?', category: 'Profitability' },
-                    { id: 'expense-efficiency', icon: '⚡', question: 'How efficient is my business?', category: 'Profitability' },
-                    { id: 'cash-position', icon: '🏦', question: 'What is my cash position?', category: 'Cash Flow' },
-                    { id: 'monthly-burn-rate', icon: '📉', question: 'What is my monthly burn rate?', category: 'Cash Flow' },
-                    { id: 'revenue-concentration-risk', icon: '⚠️', question: 'Am I too dependent on one client?', category: 'Risk' },
-                    { id: 'travel-spending', icon: '✈️', question: 'How much do I spend on travel?', category: 'Expenses' },
-                    { id: 'software-spending', icon: '💻', question: 'What are my software costs?', category: 'Expenses' }
-                  ].map((suggestion) => (
-                    <button
-                      key={suggestion.id}
-                      onClick={() => handleSelectInsight(suggestion.id)}
-                      className="flex flex-col p-3 bg-white rounded-lg border-2 border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all text-left group"
-                    >
-                      <div className="flex items-center space-x-2 mb-2">
-                        <span className="text-2xl">{suggestion.icon}</span>
-                        <span className="text-xs text-gray-500">{suggestion.category}</span>
-                      </div>
-                      <span className="text-sm font-medium text-gray-900 group-hover:text-blue-600 mb-2">
-                        {suggestion.question}
-                      </span>
-                      <div className="flex items-center text-xs text-gray-400 group-hover:text-blue-500">
-                        <span>View insight</span>
-                        <svg className="ml-1 h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </div>
-                    </button>
-                  ))}
-                </div>
+              {/* Quick Starters */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-2xl mx-auto text-left">
+                {[
+                  { id: 'largest-expense-ytd', icon: '💸', label: 'What is my largest expense?' },
+                  { id: 'revenue-sources', icon: '💰', label: 'Show me revenue sources' },
+                  { id: 'profitability-check', icon: '📊', label: 'Am I profitable right now?' },
+                  { id: 'consultant-analysis', icon: '👥', label: 'Analyze consultant spending' },
+                ].map((starter) => (
+                  <button
+                    key={starter.id}
+                    onClick={() => addInsightToConversation(starter.id, starter.label)}
+                    className="group p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-400 hover:shadow-md transition-all duration-200 flex items-center space-x-3"
+                  >
+                    <span className="text-2xl group-hover:scale-110 transition-transform duration-200">{starter.icon}</span>
+                    <span className="font-medium text-gray-700 group-hover:text-blue-700">{starter.label}</span>
+                  </button>
+                ))}
               </div>
             </div>
           </div>
         )}
 
-        {/* Loading State */}
-        {isLoading && (
-          <div className="flex items-center justify-center py-12">
-            <div className="text-center">
-              <div className="inline-block animate-spin rounded-full h-10 w-10 border-4 border-blue-500 border-t-transparent mb-3"></div>
-              <p className="text-sm text-gray-600">Analyzing your data...</p>
-            </div>
-          </div>
-        )}
-
-        {/* Insight Narrative - Compact Grid Layout */}
-        {narrative && !isLoading && (
-          <div className="animate-fade-in">
-            {/* Compact Headline Bar */}
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-4 text-white shadow-lg mb-4">
-              <div className="flex items-center justify-between">
-                <div className="flex-1">
-                  <h2 className="text-xl font-bold mb-1">{narrative.headline.title}</h2>
-                  {narrative.headline.subtitle && (
-                    <p className="text-blue-100 text-sm">{narrative.headline.subtitle}</p>
-                  )}
+        {/* Conversation Timeline */}
+        <div className="space-y-8">
+          {timeline.map((item) => (
+            <div key={item.id} className="animate-slide-up-fade">
+              {item.type === 'user' ? (
+                <div className="flex justify-end mb-6">
+                  <div className="bg-blue-600 text-white px-5 py-3 rounded-2xl rounded-tr-sm shadow-md max-w-[80%] text-lg font-medium">
+                    {item.text}
+                  </div>
                 </div>
-                <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-lg px-4 py-2 text-right">
-                  <div className="text-xs text-blue-100 uppercase tracking-wide mb-1">
-                    {narrative.headline.metric.label}
-                  </div>
-                  <div className="text-2xl font-black">
-                    {narrative.headline.metric.value}
-                  </div>
-                  {narrative.headline.metric.trend && (
-                    <div className="text-xs mt-1">
-                      <span className={`font-semibold ${
-                        narrative.headline.metric.trend.direction === 'up' ? 'text-green-200' :
-                        narrative.headline.metric.trend.direction === 'down' ? 'text-red-200' :
-                        'text-yellow-200'
-                      }`}>
-                        {narrative.headline.metric.trend.direction === 'up' ? '↑' :
-                         narrative.headline.metric.trend.direction === 'down' ? '↓' : '→'}
-                        {narrative.headline.metric.trend.percentage.toFixed(1)}%
-                      </span>
+              ) : (
+                <div className="space-y-6">
+                  {/* Insight Card */}
+                  <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow duration-300">
+                    {/* Header */}
+                    <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-6 text-white">
+                      <div className="flex items-start justify-between">
+                        <div>
+                          <h2 className="text-2xl font-bold mb-1">{item.data.headline.title}</h2>
+                          {item.data.headline.subtitle && (
+                            <p className="text-blue-100 text-lg opacity-90">{item.data.headline.subtitle}</p>
+                          )}
+                        </div>
+                        <div className="bg-white/20 backdrop-blur-md rounded-lg px-4 py-2 text-right min-w-[120px]">
+                          <div className="text-xs text-blue-100 uppercase tracking-wide font-semibold mb-1">
+                            {item.data.headline.metric.label}
+                          </div>
+                          <div className="text-3xl font-black tracking-tight">
+                            {item.data.headline.metric.value}
+                          </div>
+                          {item.data.headline.metric.trend && (
+                            <div className="text-sm mt-1 font-medium">
+                              <span className={`${item.data.headline.metric.trend.direction === 'up' ? 'text-green-300' :
+                                item.data.headline.metric.trend.direction === 'down' ? 'text-red-300' :
+                                  'text-yellow-300'
+                                } `}>
+                                {item.data.headline.metric.trend.direction === 'up' ? '↑' :
+                                  item.data.headline.metric.trend.direction === 'down' ? '↓' : '→'}
+                                {item.data.headline.metric.trend.percentage.toFixed(1)}%
+                              </span>
+                            </div>
+                          )}
+                        </div>
+                      </div>
                     </div>
-                  )}
-                </div>
-              </div>
-            </div>
 
-            {/* Grid Layout - Main visualizations get more space */}
-            <div className="grid grid-cols-12 gap-3">
-              {narrative.sections.map((section, index) => {
-                // Determine grid span based on section type
-                let colSpan = 'col-span-12'
+                    {/* Content Grid */}
+                    <div className="p-6">
+                      <div className="grid grid-cols-12 gap-6">
+                        {item.data.sections.map((section, idx) => {
+                          let colSpan = 'col-span-12'
+                          if (section.type === 'chart' && section.visualization) {
+                            colSpan = section.visualization.type === 'bar' || section.visualization.type === 'pie'
+                              ? 'col-span-12 md:col-span-8'
+                              : 'col-span-12 md:col-span-6'
+                          } else if (section.type === 'list' || section.type === 'breakdown') {
+                            colSpan = 'col-span-12 md:col-span-4'
+                          }
 
-                if (section.type === 'chart' && section.visualization) {
-                  // Large charts get full width or 2/3 width
-                  colSpan = section.visualization.type === 'bar' || section.visualization.type === 'pie'
-                    ? 'col-span-12 md:col-span-8'
-                    : 'col-span-12 md:col-span-6'
-                } else if (section.type === 'metric') {
-                  // Metrics are compact
-                  colSpan = 'col-span-12'
-                } else if (section.type === 'list' || section.type === 'breakdown') {
-                  // Lists take sidebar space
-                  colSpan = 'col-span-12 md:col-span-4'
-                } else if (section.type === 'callout') {
-                  // Callouts are full width but compact
-                  colSpan = 'col-span-12'
-                }
+                          return (
+                            <div key={idx} className={colSpan}>
+                              <NarrativeBlock section={section} index={idx} />
+                            </div>
+                          )
+                        })}
 
-                return (
-                  <div key={index} className={colSpan}>
-                    <NarrativeBlock section={section} index={index} />
-                  </div>
-                )
-              })}
-
-              {/* Recommendations - Full Width Grid */}
-              {narrative.recommendations && narrative.recommendations.length > 0 && (
-                <div className="col-span-12">
-                  <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg border border-blue-200 p-4 shadow-sm">
-                    <h3 className="text-base font-bold text-gray-900 mb-3 flex items-center">
-                      <span className="mr-2">💡</span> Actionable Recommendations
-                    </h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                      {narrative.recommendations.map((rec: Recommendation, index: number) => (
-                        <div
-                          key={index}
-                          className={`p-3 rounded-lg border-2 bg-white shadow-sm hover:shadow-md transition-shadow ${
-                            rec.type === 'warning' ? 'border-yellow-300 hover:border-yellow-400' :
-                            rec.type === 'opportunity' ? 'border-blue-300 hover:border-blue-400' :
-                            rec.type === 'success' ? 'border-green-300 hover:border-green-400' :
-                            'border-gray-300 hover:border-gray-400'
-                          }`}
-                        >
-                          <div className="flex items-start space-x-2">
-                            <span className="text-2xl flex-shrink-0">{rec.icon}</span>
-                            <div className="flex-1 min-w-0">
-                              <h4 className="text-sm font-bold text-gray-900 mb-1">{rec.title}</h4>
-                              <p className="text-sm text-gray-700 mb-2 leading-relaxed">{rec.description}</p>
-                              {rec.action && (
-                                <button
-                                  onClick={() => handleRelatedInsightClick(rec.action!.insightId)}
-                                  className="inline-flex items-center space-x-1 text-sm font-semibold text-blue-600 hover:text-blue-700 hover:underline"
+                        {/* Recommendations */}
+                        {item.data.recommendations && item.data.recommendations.length > 0 && (
+                          <div className="col-span-12 mt-4">
+                            <h3 className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-4">Recommended Actions</h3>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                              {item.data.recommendations.map((rec: Recommendation, rIdx: number) => (
+                                <div
+                                  key={rIdx}
+                                  className={`p - 4 rounded - xl border - l - 4 bg - gray - 50 hover: bg - white hover: shadow - md transition - all duration - 200 ${rec.type === 'warning' ? 'border-yellow-400' :
+                                    rec.type === 'opportunity' ? 'border-blue-400' :
+                                      rec.type === 'success' ? 'border-green-400' :
+                                        'border-gray-300'
+                                    } `}
                                 >
-                                  <span>{rec.action.label}</span>
-                                  <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                  </svg>
-                                </button>
-                              )}
+                                  <div className="flex items-start space-x-3">
+                                    <span className="text-2xl">{rec.icon}</span>
+                                    <div className="flex-1">
+                                      <h4 className="font-bold text-gray-900 mb-1">{rec.title}</h4>
+                                      <p className="text-sm text-gray-600 mb-3">{rec.description}</p>
+                                      {rec.action && (
+                                        <button
+                                          onClick={() => addInsightToConversation(rec.action!.insightId, `Show me ${rec.action!.label.toLowerCase()} `)}
+                                          className="text-sm font-semibold text-blue-600 hover:text-blue-800 flex items-center gap-1"
+                                        >
+                                          {rec.action.label} →
+                                        </button>
+                                      )}
+                                    </div>
+                                  </div>
+                                </div>
+                              ))}
                             </div>
                           </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {/* Related Insights - Full Width Grid */}
-              {narrative.relatedInsights && narrative.relatedInsights.length > 0 && (
-                <div className="col-span-12">
-                  <div className="bg-white rounded-lg border border-gray-200 p-4 shadow-sm">
-                    <h3 className="text-base font-bold text-gray-900 mb-3 flex items-center">
-                      <span className="mr-2">🔍</span> Explore Related Insights
-                    </h3>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-                      {narrative.relatedInsights.slice(0, 3).map((insightId: string) => {
-                        const template = getInsightTemplate(insightId)
-                        if (!template) return null
-
-                        const categoryIcons = {
-                          expense: '💸',
-                          revenue: '💰',
-                          cash: '🏦',
-                          profitability: '📊',
-                          efficiency: '⚡',
-                          vendors: '🏢'
-                        }
-
-                        return (
-                          <button
-                            key={insightId}
-                            onClick={() => handleRelatedInsightClick(insightId)}
-                            className="p-3 bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg border-2 border-gray-200 hover:border-blue-400 hover:shadow-lg transition-all text-left group"
-                          >
-                            <div className="text-3xl mb-2">{categoryIcons[template.category]}</div>
-                            <div className="text-sm font-bold text-gray-900 group-hover:text-blue-600 mb-1">
-                              {template.titleTemplate}
-                            </div>
-                            <div className="flex items-center text-xs text-gray-500 group-hover:text-blue-500">
-                              <span>View insight</span>
-                              <svg className="ml-1 h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                              </svg>
-                            </div>
-                          </button>
-                        )
-                      })}
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>
               )}
             </div>
-          </div>
+          ))}
+
+          {/* Thinking State */}
+          {isThinking && (
+            <div className="animate-fade-in">
+              <InsightSkeleton />
+            </div>
+          )}
+
+          <div ref={bottomRef} />
+        </div>
+
+        {/* Smart Discovery - Contextual Suggestions */}
+        {timeline.length > 0 && !isThinking && (
+          <SmartDiscovery
+            activeTags={activeTags}
+            historyIds={timeline.filter(t => t.type === 'insight').map(t => (t as any).insightId)}
+            onSelectInsight={(id) => addInsightToConversation(id)}
+          />
         )}
       </div>
     </div>

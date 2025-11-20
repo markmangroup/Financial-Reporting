@@ -25,6 +25,7 @@ export const insightTemplates: InsightTemplate[] = [
   {
     id: 'largest-expense-ytd',
     triggers: ['largest expense', 'biggest expense', 'top expense', 'most expensive', 'where am i spending'],
+    tags: ['expense', 'cost-saving', 'trend'],
     category: 'expense',
     titleTemplate: 'Your Largest Expense Category',
     priority: 100,
@@ -357,6 +358,7 @@ export const insightTemplates: InsightTemplate[] = [
   {
     id: 'revenue-sources',
     triggers: ['revenue', 'income', 'clients', 'who pays me', 'revenue sources', 'top client'],
+    tags: ['revenue', 'client', 'growth', 'risk'],
     category: 'revenue',
     titleTemplate: 'Your Revenue Sources',
     priority: 95,
@@ -444,6 +446,7 @@ export const insightTemplates: InsightTemplate[] = [
   {
     id: 'profitability-check',
     triggers: ['profitable', 'profit', 'net income', 'am i making money', 'bottom line', 'margin'],
+    tags: ['profitability', 'efficiency', 'margin'],
     category: 'profitability',
     titleTemplate: 'Your Profitability',
     priority: 90,
@@ -545,6 +548,7 @@ export const insightTemplates: InsightTemplate[] = [
   {
     id: 'cash-position',
     triggers: ['cash', 'balance', 'bank balance', 'how much money', 'cash position', 'runway'],
+    tags: ['cash-flow', 'runway', 'risk'],
     category: 'cash',
     titleTemplate: 'Your Cash Position',
     priority: 85,
@@ -579,8 +583,8 @@ export const insightTemplates: InsightTemplate[] = [
             content: runwayMonths > 6
               ? `✅ **Strong Cash Position**: You have over 6 months of runway - excellent financial cushion.`
               : runwayMonths > 3
-              ? `⚠️ **Adequate Cash**: 3-6 months of runway. Monitor closely and consider building reserves.`
-              : `🚨 **Low Cash**: Less than 3 months runway. Immediate action needed to improve cash position.`
+                ? `⚠️ **Adequate Cash**: 3-6 months of runway. Monitor closely and consider building reserves.`
+                : `🚨 **Low Cash**: Less than 3 months runway. Immediate action needed to improve cash position.`
           }
         ],
         recommendations: [
@@ -604,6 +608,7 @@ export const insightTemplates: InsightTemplate[] = [
   {
     id: 'software-spending',
     triggers: ['software', 'subscriptions', 'saas', 'software costs', 'tools', 'platforms'],
+    tags: ['expense', 'software', 'optimization', 'recurring'],
     category: 'expense',
     titleTemplate: 'Software & Subscription Spending',
     priority: 80,
@@ -635,6 +640,7 @@ export const insightTemplates: InsightTemplate[] = [
   {
     id: 'consultant-analysis',
     triggers: ['consultant', 'consultants', 'contractor', 'international', 'freelancer', 'consultant costs', 'consultant spending'],
+    tags: ['expense', 'consultant', 'vendor', 'risk'],
     category: 'expense',
     titleTemplate: 'Consultant & Contractor Spending',
     priority: 85,
@@ -817,6 +823,7 @@ export const insightTemplates: InsightTemplate[] = [
   {
     id: 'individual-consultant-detail',
     triggers: ['swan', 'niki', 'abri', 'carmen', 'jan', 'petrana', 'beata', 'consultant detail', 'consultant payments'],
+    tags: ['expense', 'consultant', 'vendor', 'trend'],
     category: 'expense',
     titleTemplate: 'Consultant Detail Analysis',
     priority: 80,
@@ -1132,6 +1139,7 @@ export const insightTemplates: InsightTemplate[] = [
   {
     id: 'travel-spending',
     triggers: ['travel', 'travel costs', 'travel expenses', 'transportation', 'flights', 'hotels', 'airfare'],
+    tags: ['expense', 'travel', 'cost-saving'],
     category: 'expense',
     titleTemplate: 'Travel & Transportation Spending',
     priority: 75,
@@ -1188,6 +1196,7 @@ export const insightTemplates: InsightTemplate[] = [
   {
     id: 'top-client-analysis',
     triggers: ['top client', 'biggest client', 'largest client', 'best client', 'client revenue'],
+    tags: ['revenue', 'client', 'growth', 'risk'],
     category: 'revenue',
     titleTemplate: 'Your Top Client Analysis',
     priority: 80,
@@ -1328,6 +1337,7 @@ export const insightTemplates: InsightTemplate[] = [
   {
     id: 'revenue-concentration-risk',
     triggers: ['concentration', 'risk', 'diversification', 'client risk', 'revenue risk', 'too dependent'],
+    tags: ['revenue', 'risk', 'client'],
     category: 'revenue',
     titleTemplate: 'Revenue Concentration Risk Assessment',
     priority: 70,
@@ -1458,6 +1468,7 @@ export const insightTemplates: InsightTemplate[] = [
   {
     id: 'monthly-burn-rate',
     triggers: ['burn rate', 'monthly spending', 'cash burn', 'spending rate', 'how much per month'],
+    tags: ['cash-flow', 'burn-rate', 'runway'],
     category: 'cash',
     titleTemplate: 'Monthly Burn Rate Analysis',
     priority: 85,
@@ -1598,6 +1609,7 @@ export const insightTemplates: InsightTemplate[] = [
   {
     id: 'expense-efficiency',
     triggers: ['efficiency', 'efficient', 'revenue per dollar', 'expense ratio', 'operating efficiency', 'productivity'],
+    tags: ['efficiency', 'profitability', 'optimization'],
     category: 'efficiency',
     titleTemplate: 'Expense Efficiency Analysis',
     priority: 65,
@@ -1701,6 +1713,7 @@ export const insightTemplates: InsightTemplate[] = [
   {
     id: 'project-profitability-overview',
     triggers: ['project profit', 'project profitability', 'which projects are profitable', 'project performance', 'project margins', 'project roi'],
+    tags: ['profitability', 'project', 'margin'],
     category: 'profitability',
     titleTemplate: 'Project Profitability Overview',
     priority: 95,
@@ -1843,6 +1856,7 @@ export const insightTemplates: InsightTemplate[] = [
   {
     id: 'consultant-project-allocation',
     triggers: ['consultant by project', 'consultant spend project', 'project consultant costs', 'who worked on project', 'consultant allocation'],
+    tags: ['expense', 'consultant', 'project', 'allocation'],
     category: 'expense',
     titleTemplate: 'Consultant Allocation by Project',
     priority: 90,
@@ -1970,6 +1984,7 @@ export const insightTemplates: InsightTemplate[] = [
   {
     id: 'project-revenue-breakdown',
     triggers: ['project revenue', 'revenue by project', 'which projects make money', 'project income', 'revenue sources project'],
+    tags: ['revenue', 'project', 'growth'],
     category: 'revenue',
     titleTemplate: 'Revenue by Project',
     priority: 88,

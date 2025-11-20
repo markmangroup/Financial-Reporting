@@ -107,6 +107,13 @@ export default function Navigation({ activeTab, onTabChange }: NavigationProps) 
           {/* Additional Actions */}
           <div className="flex items-center space-x-4">
             <a
+              href="/wind-down"
+              className="px-3 py-2 text-sm font-medium text-orange-600 hover:text-orange-700 hover:bg-orange-50 rounded-md transition-colors"
+              title="Business wind-down checklist and planning"
+            >
+              📋 Wind-Down
+            </a>
+            <a
               href="/review-consultant-emails"
               className="px-3 py-2 text-sm font-medium text-blue-600 hover:text-blue-700 hover:bg-blue-50 rounded-md transition-colors"
               title="Review consultant emails and extract project details"
